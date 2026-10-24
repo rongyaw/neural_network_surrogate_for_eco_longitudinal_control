@@ -1,0 +1,14 @@
+<configuration>
+    <input>
+        <net-file value="custom.net.xml"/>
+        <route-files value="custom.rou.xml"/>
+    </input>
+    <time>
+        <begin value="0"/>
+        <end value="200"/>
+        <step-length value="0.1"/>
+    </time>
+    <gui_only>
+		<start value="true"/>
+	</gui_only>
+</configuration>

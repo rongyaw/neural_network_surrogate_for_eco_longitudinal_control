@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-02-17 11:00:57 by Eclipse SUMO GUI Version 1.22.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="/home/tony/CorridorCalibration/sumo/on_ramp/onramp.net.xml"/>
+        <route-files value="/home/tony/CorridorCalibration/sumo/on_ramp/onramp_gt.rou.xml"/>
+        <additional-files value="/home/tony/CorridorCalibration/sumo/on_ramp/detectors_gt.add.xml"/>
+    </input>
+
+    <time>
+        <begin value="0"/>
+        <end value="480"/>
+        <step-length value="0.1"/>
+    </time>
+
+    <gui_only>
+        <start value="t"/>
+    </gui_only>
+
+</sumoConfiguration>
+-->
+
+<detector xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/det_e1_file.xsd">
+    <interval begin="0.00" end="6.00" id="downstream_0" nVehContrib="0" flow="0.00" occupancy="0.00" speed="-1.00" harmonicMeanSpeed="-1.00" length="-1.00" nVehEntered="0"/>
+</detector>

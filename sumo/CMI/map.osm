@@ -1,0 +1,1748 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="openstreetmap-cgimap 2.0.1 (2557199 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+ <bounds minlat="34.8150060" minlon="-82.3226270" maxlat="34.8173880" maxlon="-82.3203800"/>
+ <node id="898253806" visible="true" version="3" changeset="30249051" timestamp="2015-04-15T21:01:38Z" user="samely" uid="2512300" lat="34.8155621" lon="-82.3199692"/>
+ <node id="898253809" visible="true" version="3" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163" lat="34.8165821" lon="-82.3207410"/>
+ <node id="898253813" visible="true" version="5" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8173115" lon="-82.3221577"/>
+ <node id="898253824" visible="true" version="5" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8171884" lon="-82.3220496"/>
+ <node id="898253827" visible="true" version="2" changeset="30249051" timestamp="2015-04-15T21:01:39Z" user="samely" uid="2512300" lat="34.8175736" lon="-82.3202282"/>
+ <node id="898253917" visible="true" version="3" changeset="30249051" timestamp="2015-04-15T21:01:42Z" user="samely" uid="2512300" lat="34.8155818" lon="-82.3202426"/>
+ <node id="898253922" visible="true" version="3" changeset="30249051" timestamp="2015-04-15T21:01:42Z" user="samely" uid="2512300" lat="34.8172615" lon="-82.3215922"/>
+ <node id="898253928" visible="true" version="5" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8171605" lon="-82.3220114"/>
+ <node id="898253938" visible="true" version="3" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163" lat="34.8166683" lon="-82.3203155"/>
+ <node id="898253948" visible="true" version="3" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163" lat="34.8161119" lon="-82.3201615"/>
+ <node id="898253950" visible="true" version="2" changeset="30249051" timestamp="2015-04-15T21:01:43Z" user="samely" uid="2512300" lat="34.8174162" lon="-82.3201092"/>
+ <node id="898254030" visible="true" version="3" changeset="30249051" timestamp="2015-04-15T21:01:46Z" user="samely" uid="2512300" lat="34.8156704" lon="-82.3202522"/>
+ <node id="898254057" visible="true" version="3" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163" lat="34.8162028" lon="-82.3206475"/>
+ <node id="898254063" visible="true" version="5" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8172932" lon="-82.3221916"/>
+ <node id="898254076" visible="true" version="5" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8171790" lon="-82.3221477"/>
+ <node id="898254077" visible="true" version="2" changeset="30249051" timestamp="2015-04-15T21:01:47Z" user="samely" uid="2512300" lat="34.8175784" lon="-82.3201783"/>
+ <node id="898254113" visible="true" version="3" changeset="30249051" timestamp="2015-04-15T21:01:49Z" user="samely" uid="2512300" lat="34.8155149" lon="-82.3200412"/>
+ <node id="898254116" visible="true" version="2" changeset="30249051" timestamp="2015-04-15T21:01:49Z" user="samely" uid="2512300" lat="34.8169402" lon="-82.3209903"/>
+ <node id="898254127" visible="true" version="5" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8172463" lon="-82.3220477"/>
+ <node id="898254136" visible="true" version="5" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163" lat="34.8158159" lon="-82.3204786"/>
+ <node id="898254152" visible="true" version="2" changeset="30249051" timestamp="2015-04-15T21:01:50Z" user="samely" uid="2512300" lat="34.8175673" lon="-82.3198944"/>
+ <node id="898254259" visible="true" version="3" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163" lat="34.8162861" lon="-82.3206714"/>
+ <node id="898254268" visible="true" version="5" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8172800" lon="-82.3220115"/>
+ <node id="898254286" visible="true" version="5" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8171657" lon="-82.3221147"/>
+ <node id="898254295" visible="true" version="3" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163" lat="34.8172228" lon="-82.3205699"/>
+ <node id="898254391" visible="true" version="4" changeset="52385325" timestamp="2017-09-26T13:45:08Z" user="MikeN" uid="135163" lat="34.8157311" lon="-82.3204241"/>
+ <node id="898254400" visible="true" version="3" changeset="30249051" timestamp="2015-04-15T21:01:57Z" user="samely" uid="2512300" lat="34.8170700" lon="-82.3211629"/>
+ <node id="898254415" visible="true" version="5" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8172016" lon="-82.3222281"/>
+ <node id="898254429" visible="true" version="4" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163" lat="34.8158965" lon="-82.3203349"/>
+ <node id="898254433" visible="true" version="3" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163" lat="34.8169652" lon="-82.3204843"/>
+ <node id="898254516" visible="true" version="4" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8154644" lon="-82.3197038"/>
+ <node id="898254540" visible="true" version="3" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163" lat="34.8159236" lon="-82.3205448"/>
+ <node id="898254543" visible="true" version="5" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8173167" lon="-82.3220779"/>
+ <node id="898254566" visible="true" version="5" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8172351" lon="-82.3221658"/>
+ <node id="898254570" visible="true" version="2" changeset="30249051" timestamp="2015-04-15T21:02:01Z" user="samely" uid="2512300" lat="34.8173800" lon="-82.3204392"/>
+ <node id="898254591" visible="true" version="2" changeset="30249051" timestamp="2015-04-15T21:02:01Z" user="samely" uid="2512300" lat="34.8179201" lon="-82.3192097"/>
+ <node id="898254602" visible="true" version="2" changeset="30249051" timestamp="2015-04-15T21:02:02Z" user="samely" uid="2512300" lat="34.8177746" lon="-82.3195257"/>
+ <node id="898254686" visible="true" version="4" changeset="52385325" timestamp="2017-09-26T13:45:08Z" user="MikeN" uid="135163" lat="34.8156881" lon="-82.3203836"/>
+ <node id="898254692" visible="true" version="2" changeset="30249051" timestamp="2015-04-15T21:02:04Z" user="samely" uid="2512300" lat="34.8167257" lon="-82.3208273"/>
+ <node id="898254715" visible="true" version="5" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8171386" lon="-82.3220389"/>
+ <node id="898254728" visible="true" version="5" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8172171" lon="-82.3220383"/>
+ <node id="898254734" visible="true" version="2" changeset="30249051" timestamp="2015-04-15T21:02:05Z" user="samely" uid="2512300" lat="34.8172209" lon="-82.3202876"/>
+ <node id="898254872" visible="true" version="3" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163" lat="34.8160773" lon="-82.3206167"/>
+ <node id="898254914" visible="true" version="3" changeset="30249051" timestamp="2015-04-15T21:02:09Z" user="samely" uid="2512300" lat="34.8172916" lon="-82.3217887"/>
+ <node id="898254926" visible="true" version="5" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8172049" lon="-82.3221668"/>
+ <node id="898254931" visible="true" version="3" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163" lat="34.8170570" lon="-82.3205197"/>
+ <node id="898254966" visible="true" version="3" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163" lat="34.8162168" lon="-82.3201364"/>
+ <node id="898254967" visible="true" version="3" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163" lat="34.8167329" lon="-82.3203497"/>
+ <node id="898255008" visible="true" version="2" changeset="30249051" timestamp="2015-04-15T21:02:11Z" user="samely" uid="2512300" lat="34.8178909" lon="-82.3192968"/>
+ <node id="898255043" visible="true" version="4" changeset="52385325" timestamp="2017-09-26T13:45:09Z" user="MikeN" uid="135163" lat="34.8157558" lon="-82.3203575"/>
+ <node id="898255078" visible="true" version="3" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163" lat="34.8168397" lon="-82.3209019"/>
+ <node id="898255103" visible="true" version="5" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8172667" lon="-82.3222162"/>
+ <node id="898255149" visible="true" version="5" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8172667" lon="-82.3220749"/>
+ <node id="898255151" visible="true" version="2" changeset="30249051" timestamp="2015-04-15T21:02:16Z" user="samely" uid="2512300" lat="34.8175485" lon="-82.3201188"/>
+ <node id="898255178" visible="true" version="3" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163" lat="34.8165072" lon="-82.3201923"/>
+ <node id="898255315" visible="true" version="5" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8172504" lon="-82.3219929"/>
+ <node id="898255327" visible="true" version="5" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8172718" lon="-82.3221111"/>
+ <node id="898255333" visible="true" version="3" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163" lat="34.8174129" lon="-82.3206509"/>
+ <node id="898255368" visible="true" version="3" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163" lat="34.8163648" lon="-82.3201421"/>
+ <node id="898255372" visible="true" version="2" changeset="30249051" timestamp="2015-04-15T21:02:20Z" user="samely" uid="2512300" lat="34.8177563" lon="-82.3195607"/>
+ <node id="898255460" visible="true" version="4" changeset="52385325" timestamp="2017-09-26T13:45:09Z" user="MikeN" uid="135163" lat="34.8157884" lon="-82.3204606"/>
+ <node id="898255475" visible="true" version="3" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163" lat="34.8163995" lon="-82.3206908"/>
+ <node id="898255517" visible="true" version="5" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8172350" lon="-82.3222288"/>
+ <node id="898255560" visible="true" version="5" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8171692" lon="-82.3220781"/>
+ <node id="898255570" visible="true" version="2" changeset="30249051" timestamp="2015-04-15T21:02:24Z" user="samely" uid="2512300" lat="34.8174697" lon="-82.3200249"/>
+ <node id="898255782" visible="true" version="3" changeset="30249051" timestamp="2015-04-15T21:02:30Z" user="samely" uid="2512300" lat="34.8171954" lon="-82.3213939"/>
+ <node id="898255789" visible="true" version="5" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8172600" lon="-82.3221450"/>
+ <node id="898255791" visible="true" version="3" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163" lat="34.8165493" lon="-82.3202311"/>
+ <node id="898255815" visible="true" version="3" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163" lat="34.8159827" lon="-82.3202269"/>
+ <node id="898255818" visible="true" version="2" changeset="30249051" timestamp="2015-04-15T21:02:31Z" user="samely" uid="2512300" lat="34.8178854" lon="-82.3193133"/>
+ <node id="3155518307" visible="true" version="5" changeset="132656181" timestamp="2023-02-17T03:39:34Z" user="shinylman" uid="17102828" lat="34.8170042" lon="-82.3231275"/>
+ <node id="3155518317" visible="true" version="4" changeset="132656181" timestamp="2023-02-17T03:39:34Z" user="shinylman" uid="17102828" lat="34.8163470" lon="-82.3236293"/>
+ <node id="3155518318" visible="true" version="4" changeset="132656181" timestamp="2023-02-17T03:39:34Z" user="shinylman" uid="17102828" lat="34.8147131" lon="-82.3234340"/>
+ <node id="3155518319" visible="true" version="4" changeset="132656181" timestamp="2023-02-17T03:39:34Z" user="shinylman" uid="17102828" lat="34.8147043" lon="-82.3226911"/>
+ <node id="3171499079" visible="true" version="3" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8164909" lon="-82.3202395"/>
+ <node id="3171499080" visible="true" version="3" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165063" lon="-82.3201294"/>
+ <node id="3171499081" visible="true" version="3" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8168243" lon="-82.3204693"/>
+ <node id="3171499082" visible="true" version="3" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8168833" lon="-82.3198745"/>
+ <node id="3171499083" visible="true" version="3" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8170740" lon="-82.3197077"/>
+ <node id="3171499084" visible="true" version="3" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8171883" lon="-82.3219936"/>
+ <node id="3171499085" visible="true" version="3" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8172491" lon="-82.3206263"/>
+ <node id="3171499086" visible="true" version="3" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8173564" lon="-82.3193791"/>
+ <node id="3171499087" visible="true" version="3" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8173197" lon="-82.3221183"/>
+ <node id="3171499088" visible="true" version="3" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8173030" lon="-82.3220409"/>
+ <node id="3171499089" visible="true" version="3" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8173723" lon="-82.3193674"/>
+ <node id="3171499090" visible="true" version="3" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175415" lon="-82.3203977"/>
+ <node id="3171499091" visible="true" version="3" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175933" lon="-82.3200894"/>
+ <node id="3171499092" visible="true" version="3" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8177300" lon="-82.3194347"/>
+ <node id="3171499093" visible="true" version="3" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8177775" lon="-82.3195852"/>
+ <node id="4085812828" visible="true" version="2" changeset="52385325" timestamp="2017-09-26T13:45:09Z" user="MikeN" uid="135163" lat="34.8144288" lon="-82.3221606"/>
+ <node id="4085812829" visible="true" version="3" changeset="132656181" timestamp="2023-02-17T03:39:34Z" user="shinylman" uid="17102828" lat="34.8143692" lon="-82.3225951"/>
+ <node id="4085812830" visible="true" version="2" changeset="52385325" timestamp="2017-09-26T13:45:09Z" user="MikeN" uid="135163" lat="34.8151466" lon="-82.3219245"/>
+ <node id="4085812831" visible="true" version="1" changeset="38156189" timestamp="2016-03-30T01:54:03Z" user="MikeN" uid="135163" lat="34.8151988" lon="-82.3237136"/>
+ <node id="4085812832" visible="true" version="2" changeset="52385325" timestamp="2017-09-26T13:45:09Z" user="MikeN" uid="135163" lat="34.8154725" lon="-82.3211413"/>
+ <node id="4085812833" visible="true" version="2" changeset="52385325" timestamp="2017-09-26T13:45:09Z" user="MikeN" uid="135163" lat="34.8156135" lon="-82.3204494"/>
+ <node id="4085812834" visible="true" version="2" changeset="52385325" timestamp="2017-09-26T13:45:09Z" user="MikeN" uid="135163" lat="34.8167366" lon="-82.3209215"/>
+ <node id="4085812835" visible="true" version="2" changeset="52385325" timestamp="2017-09-26T13:45:09Z" user="MikeN" uid="135163" lat="34.8170228" lon="-82.3213399"/>
+ <node id="4085812836" visible="true" version="1" changeset="38156189" timestamp="2016-03-30T01:54:03Z" user="MikeN" uid="135163" lat="34.8169611" lon="-82.3222786"/>
+ <node id="4085812837" visible="true" version="2" changeset="52385325" timestamp="2017-09-26T13:45:09Z" user="MikeN" uid="135163" lat="34.8170888" lon="-82.3217260"/>
+ <node id="4085812838" visible="true" version="1" changeset="38156189" timestamp="2016-03-30T01:54:03Z" user="MikeN" uid="135163" lat="34.8173179" lon="-82.3224717"/>
+ <node id="5130858636" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8164931" lon="-82.3217495"/>
+ <node id="5130858637" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163067" lon="-82.3218648"/>
+ <node id="5130858638" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161564" lon="-82.3219823"/>
+ <node id="5130858639" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161723" lon="-82.3220376"/>
+ <node id="5130858640" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8160389" lon="-82.3220958"/>
+ <node id="5130858641" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8160290" lon="-82.3220530"/>
+ <node id="5130858642" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158305" lon="-82.3220998"/>
+ <node id="5130858643" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8156127" lon="-82.3220713"/>
+ <node id="5130858644" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8154338" lon="-82.3219834"/>
+ <node id="5130858645" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8153546" lon="-82.3221551"/>
+ <node id="5130858646" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8155715" lon="-82.3222624"/>
+ <node id="5130858647" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8159798" lon="-82.3222709"/>
+ <node id="5130858648" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8159859" lon="-82.3222110"/>
+ <node id="5130858649" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161536" lon="-82.3221603"/>
+ <node id="5130858650" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161686" lon="-82.3221996"/>
+ <node id="5130858651" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8164941" lon="-82.3219652"/>
+ <node id="5130858652" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8167277" lon="-82.3218870"/>
+ <node id="5130858653" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8167226" lon="-82.3216868"/>
+ <node id="5130858654" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165264" lon="-82.3214609"/>
+ <node id="5130858655" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163592" lon="-82.3215265"/>
+ <node id="5130858656" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161747" lon="-82.3216474"/>
+ <node id="5130858657" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161817" lon="-82.3217136"/>
+ <node id="5130858658" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161039" lon="-82.3217547"/>
+ <node id="5130858659" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8160730" lon="-82.3217050"/>
+ <node id="5130858660" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158309" lon="-82.3217501"/>
+ <node id="5130858661" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8157040" lon="-82.3217273"/>
+ <node id="5130858662" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8155705" lon="-82.3216594"/>
+ <node id="5130858663" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8154928" lon="-82.3218311"/>
+ <node id="5130858664" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8156900" lon="-82.3219252"/>
+ <node id="5130858665" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158698" lon="-82.3219475"/>
+ <node id="5130858666" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8160815" lon="-82.3219087"/>
+ <node id="5130858667" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8160698" lon="-82.3218636"/>
+ <node id="5130858668" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161644" lon="-82.3218129"/>
+ <node id="5130858669" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161962" lon="-82.3218591"/>
+ <node id="5130858670" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163493" lon="-82.3217484"/>
+ <node id="5130858671" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165320" lon="-82.3216617"/>
+ <node id="5130858672" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8167282" lon="-82.3216212"/>
+ <node id="5130858673" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8167306" lon="-82.3214210"/>
+ <node id="5130858674" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161058" lon="-82.3215316"/>
+ <node id="5130858675" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161690" lon="-82.3214946"/>
+ <node id="5130858676" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:05Z" user="MikeN" uid="135163" lat="34.8165647" lon="-82.3211762"/>
+ <node id="5130858677" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8164238" lon="-82.3212156"/>
+ <node id="5130858678" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161644" lon="-82.3213434"/>
+ <node id="5130858679" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161803" lon="-82.3213856"/>
+ <node id="5130858680" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8160965" lon="-82.3214369"/>
+ <node id="5130858681" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8160777" lon="-82.3213845"/>
+ <node id="5130858682" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158749" lon="-82.3214061"/>
+ <node id="5130858683" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8156834" lon="-82.3213491"/>
+ <node id="5130858684" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8156211" lon="-82.3215345"/>
+ <node id="5130858685" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158506" lon="-82.3216007"/>
+ <node id="5130858686" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161152" lon="-82.3215738"/>
+ <node id="5130858687" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161967" lon="-82.3215430"/>
+ <node id="5130858688" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:05Z" user="MikeN" uid="135163" lat="34.8162785" lon="-82.3215008"/>
+ <node id="5130858689" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:05Z" user="MikeN" uid="135163" lat="34.8164987" lon="-82.3213989"/>
+ <node id="5130858690" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8167441" lon="-82.3213554"/>
+ <node id="5130858691" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8167380" lon="-82.3212122"/>
+ <node id="5130858692" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8166790" lon="-82.3212014"/>
+ <node id="5130858693" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8166786" lon="-82.3211586"/>
+ <node id="5130858694" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8164477" lon="-82.3209355"/>
+ <node id="5130858695" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161157" lon="-82.3210673"/>
+ <node id="5130858696" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161227" lon="-82.3211050"/>
+ <node id="5130858697" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8160351" lon="-82.3211449"/>
+ <node id="5130858698" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8160215" lon="-82.3210896"/>
+ <node id="5130858699" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:05Z" user="MikeN" uid="135163" lat="34.8157698" lon="-82.3210555"/>
+ <node id="5130858700" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8157232" lon="-82.3212481"/>
+ <node id="5130858701" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158796" lon="-82.3212852"/>
+ <node id="5130858702" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8160646" lon="-82.3212812"/>
+ <node id="5130858703" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8160604" lon="-82.3212344"/>
+ <node id="5130858704" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161297" lon="-82.3212042"/>
+ <node id="5130858705" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161545" lon="-82.3212590"/>
+ <node id="5130858706" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165128" lon="-82.3211204"/>
+ <node id="5130858707" visible="true" version="2" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163" lat="34.8161006" lon="-82.3220096"/>
+ <node id="5130858708" visible="true" version="2" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8154337" lon="-82.3199505"/>
+ <node id="5130858709" visible="true" version="2" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8154977" lon="-82.3201490"/>
+ <node id="5130858710" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:05Z" user="MikeN" uid="135163" lat="34.8156112" lon="-82.3203769"/>
+ <node id="5130858711" visible="true" version="3" changeset="156648021" timestamp="2024-09-15T13:37:13Z" user="itsamap!" uid="3854496" lat="34.8157920" lon="-82.3205387">
+  <tag k="crossing" v="marked"/>
+  <tag k="crossing:markings" v="lines"/>
+  <tag k="highway" v="crossing"/>
+ </node>
+ <node id="5130858712" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:05Z" user="MikeN" uid="135163" lat="34.8158997" lon="-82.3206344"/>
+ <node id="5130858713" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:05Z" user="MikeN" uid="135163" lat="34.8159438" lon="-82.3207337"/>
+ <node id="5130858714" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:05Z" user="MikeN" uid="135163" lat="34.8160340" lon="-82.3209804"/>
+ <node id="5130858715" visible="true" version="2" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163" lat="34.8161403" lon="-82.3215846"/>
+ <node id="5130858716" visible="true" version="2" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163" lat="34.8161185" lon="-82.3218966"/>
+ <node id="5130858717" visible="true" version="2" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163" lat="34.8160377" lon="-82.3222645"/>
+ <node id="5130858718" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8160274" lon="-82.3223537"/>
+ <node id="5130858719" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8160645" lon="-82.3226359"/>
+ <node id="5130858720" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8152982" lon="-82.3220345"/>
+ <node id="5130858921" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8155914" lon="-82.3221821"/>
+ <node id="5130858922" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8157808" lon="-82.3222116"/>
+ <node id="5130858923" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8159129" lon="-82.3221982"/>
+ <node id="5130858924" visible="true" version="3" changeset="156610747" timestamp="2024-09-14T12:41:28Z" user="itsamap!" uid="3854496" lat="34.8160671" lon="-82.3221472">
+  <tag k="crossing" v="unmarked"/>
+  <tag k="crossing:markings" v="no"/>
+  <tag k="highway" v="crossing"/>
+ </node>
+ <node id="5130858925" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8161221" lon="-82.3221391"/>
+ <node id="5130858926" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8162432" lon="-82.3220533"/>
+ <node id="5130858927" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8164348" lon="-82.3218843"/>
+ <node id="5130858928" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8165978" lon="-82.3218173"/>
+ <node id="5130858929" visible="true" version="2" changeset="152742388" timestamp="2024-06-16T01:05:36Z" user="itsamap!" uid="3854496" lat="34.8168122" lon="-82.3218064"/>
+ <node id="5130858930" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8154399" lon="-82.3217101"/>
+ <node id="5130858931" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8156707" lon="-82.3218253"/>
+ <node id="5130858932" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8158182" lon="-82.3218602"/>
+ <node id="5130858933" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8159526" lon="-82.3218522"/>
+ <node id="5130858934" visible="true" version="3" changeset="156610747" timestamp="2024-09-14T12:41:28Z" user="itsamap!" uid="3854496" lat="34.8161305" lon="-82.3217878">
+  <tag k="crossing" v="unmarked"/>
+  <tag k="crossing:markings" v="no"/>
+  <tag k="highway" v="crossing"/>
+ </node>
+ <node id="5130858935" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8162388" lon="-82.3217315"/>
+ <node id="5130858936" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8164282" lon="-82.3216027"/>
+ <node id="5130858937" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8165339" lon="-82.3215571"/>
+ <node id="5130858938" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8165780" lon="-82.3212808"/>
+ <node id="5130858939" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8164128" lon="-82.3213157"/>
+ <node id="5130858940" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8162476" lon="-82.3213908"/>
+ <node id="5130858941" visible="true" version="3" changeset="156610747" timestamp="2024-09-14T12:41:28Z" user="itsamap!" uid="3854496" lat="34.8161361" lon="-82.3214683">
+  <tag k="crossing" v="unmarked"/>
+  <tag k="crossing:markings" v="no"/>
+  <tag k="highway" v="crossing"/>
+ </node>
+ <node id="5130858942" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8160208" lon="-82.3214954"/>
+ <node id="5130858943" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8159063" lon="-82.3215142"/>
+ <node id="5130858944" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8157478" lon="-82.3214901"/>
+ <node id="5130858945" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8156555" lon="-82.3211315"/>
+ <node id="5130858946" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8159636" lon="-82.3212057"/>
+ <node id="5130858947" visible="true" version="3" changeset="156610747" timestamp="2024-09-14T12:41:28Z" user="itsamap!" uid="3854496" lat="34.8160969" lon="-82.3211782">
+  <tag k="crossing" v="unmarked"/>
+  <tag k="crossing:markings" v="no"/>
+  <tag k="highway" v="crossing"/>
+ </node>
+ <node id="5130858948" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8164877" lon="-82.3210314"/>
+ <node id="5130858949" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8166308" lon="-82.3210368"/>
+ <node id="5130858950" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8167343" lon="-82.3211226"/>
+ <node id="5130858951" visible="true" version="2" changeset="152742388" timestamp="2024-06-16T01:05:36Z" user="itsamap!" uid="3854496" lat="34.8168197" lon="-82.3212586"/>
+ <node id="5130858952" visible="true" version="2" changeset="152742388" timestamp="2024-06-16T01:05:36Z" user="itsamap!" uid="3854496" lat="34.8168329" lon="-82.3213623"/>
+ <node id="5130858953" visible="true" version="2" changeset="152742388" timestamp="2024-06-16T01:05:36Z" user="itsamap!" uid="3854496" lat="34.8168313" lon="-82.3215383"/>
+ <node id="5130858954" visible="true" version="2" changeset="152742388" timestamp="2024-06-16T01:05:36Z" user="itsamap!" uid="3854496" lat="34.8168132" lon="-82.3219972"/>
+ <node id="5130858957" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8157081" lon="-82.3206827"/>
+ <node id="5130858958" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8156729" lon="-82.3208758"/>
+ <node id="5130858959" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8156619" lon="-82.3211038"/>
+ <node id="5130858960" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8156421" lon="-82.3211896"/>
+ <node id="5130858961" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8155760" lon="-82.3213989"/>
+ <node id="5130858962" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8152149" lon="-82.3222250"/>
+ <node id="5130858963" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8150563" lon="-82.3227078"/>
+ <node id="5130858964" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8150475" lon="-82.3230913"/>
+ <node id="5130858965" visible="true" version="2" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8171248" lon="-82.3220733"/>
+ <node id="5130858966" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8168422" lon="-82.3219997"/>
+ <node id="5130858967" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8166594" lon="-82.3220024"/>
+ <node id="5130858968" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8164767" lon="-82.3220801"/>
+ <node id="5130858969" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:06Z" user="MikeN" uid="135163" lat="34.8162653" lon="-82.3222947"/>
+ <node id="5130858970" visible="true" version="2" changeset="156610747" timestamp="2024-09-14T12:41:28Z" user="itsamap!" uid="3854496" lat="34.8160451" lon="-82.3224556">
+  <tag k="crossing" v="unmarked"/>
+  <tag k="crossing:markings" v="no"/>
+  <tag k="highway" v="crossing"/>
+ </node>
+ <node id="5130858971" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163" lat="34.8158469" lon="-82.3225308"/>
+ <node id="5130858972" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163" lat="34.8155518" lon="-82.3225361"/>
+ <node id="5130858973" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163" lat="34.8153316" lon="-82.3224986"/>
+ <node id="5130858974" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163" lat="34.8151290" lon="-82.3223591"/>
+ <node id="5130858975" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163" lat="34.8149528" lon="-82.3222679"/>
+ <node id="5130858976" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163" lat="34.8147590" lon="-82.3222840"/>
+ <node id="5130858977" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163" lat="34.8144860" lon="-82.3223269"/>
+ <node id="5130858979" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163" lat="34.8150233" lon="-82.3221177"/>
+ <node id="5130858980" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163" lat="34.8155011" lon="-82.3230913"/>
+ <node id="5130858981" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163" lat="34.8153426" lon="-82.3231047"/>
+ <node id="5130858982" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163" lat="34.8153602" lon="-82.3233488"/>
+ <node id="5130858983" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163" lat="34.8157390" lon="-82.3232630"/>
+ <node id="5130858984" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163" lat="34.8157434" lon="-82.3233005"/>
+ <node id="5130858985" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163" lat="34.8159394" lon="-82.3232281"/>
+ <node id="5130858986" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163" lat="34.8159416" lon="-82.3232710"/>
+ <node id="5130858987" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163" lat="34.8161441" lon="-82.3231798"/>
+ <node id="5130858988" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163" lat="34.8161860" lon="-82.3233113"/>
+ <node id="5130858989" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163" lat="34.8162895" lon="-82.3232523"/>
+ <node id="5130858990" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163" lat="34.8162542" lon="-82.3231718"/>
+ <node id="5130858991" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163" lat="34.8168180" lon="-82.3228553"/>
+ <node id="5130858992" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163" lat="34.8167453" lon="-82.3226541"/>
+ <node id="5130858993" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163" lat="34.8167233" lon="-82.3226783"/>
+ <node id="5130858994" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163" lat="34.8166572" lon="-82.3224852"/>
+ <node id="5130858995" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163" lat="34.8161287" lon="-82.3227641"/>
+ <node id="5130858996" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163" lat="34.8160891" lon="-82.3226273"/>
+ <node id="5130858997" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163" lat="34.8160428" lon="-82.3226434"/>
+ <node id="5130858998" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163" lat="34.8160583" lon="-82.3228070"/>
+ <node id="5130858999" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163" lat="34.8154791" lon="-82.3229170"/>
+ <node id="7993541961" visible="true" version="2" changeset="129140293" timestamp="2022-11-19T22:43:15Z" user="KB-01" uid="9509339" lat="34.8143393" lon="-82.3223032"/>
+ <node id="7993541962" visible="true" version="1" changeset="92257407" timestamp="2020-10-09T22:01:43Z" user="Feathered Mapper" uid="11559381" lat="34.8144315" lon="-82.3223161"/>
+ <node id="7993541963" visible="true" version="1" changeset="92257407" timestamp="2020-10-09T22:01:43Z" user="Feathered Mapper" uid="11559381" lat="34.8143880" lon="-82.3223117"/>
+ <node id="8161213953" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8136500" lon="-82.3233060"/>
+ <node id="8161213954" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8137895" lon="-82.3227145"/>
+ <node id="8161213955" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8138666" lon="-82.3225960"/>
+ <node id="8161213956" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8139823" lon="-82.3225032"/>
+ <node id="8161213957" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8140759" lon="-82.3224182"/>
+ <node id="8161213958" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8141016" lon="-82.3223724"/>
+ <node id="8161213959" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8141512" lon="-82.3223489"/>
+ <node id="8161213960" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8142081" lon="-82.3223411"/>
+ <node id="8161213961" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8142567" lon="-82.3223411"/>
+ <node id="8161213962" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8143329" lon="-82.3223646"/>
+ <node id="8161213963" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8143742" lon="-82.3223791"/>
+ <node id="8161213964" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8144725" lon="-82.3223724"/>
+ <node id="8161213965" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8145771" lon="-82.3223612"/>
+ <node id="8161213966" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8147938" lon="-82.3223109"/>
+ <node id="8161213967" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8148957" lon="-82.3223075"/>
+ <node id="8161213968" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8149792" lon="-82.3223288"/>
+ <node id="8161213969" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8150233" lon="-82.3223523"/>
+ <node id="8161213970" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8150600" lon="-82.3224193"/>
+ <node id="8161213971" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8151811" lon="-82.3224831"/>
+ <node id="8161213972" visible="true" version="2" changeset="151555209" timestamp="2024-05-19T23:16:37Z" user="MikeN" uid="135163" lat="34.8151109" lon="-82.3224461">
+  <tag k="crossing" v="marked"/>
+  <tag k="crossing:markings" v="ladder"/>
+  <tag k="highway" v="crossing"/>
+ </node>
+ <node id="8161213973" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8152133" lon="-82.3224775"/>
+ <node id="8161213974" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8153418" lon="-82.3225446"/>
+ <node id="8161213975" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8154620" lon="-82.3225848"/>
+ <node id="8161213976" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8156824" lon="-82.3226172"/>
+ <node id="8161213977" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8158301" lon="-82.3225971"/>
+ <node id="8161213978" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8159844" lon="-82.3225524"/>
+ <node id="8161213979" visible="true" version="2" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163" lat="34.8160492" lon="-82.3225197"/>
+ <node id="8161213981" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8138221" lon="-82.3226644"/>
+ <node id="8161213984" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8141914" lon="-82.3223434"/>
+ <node id="8161214006" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8153903" lon="-82.3198379"/>
+ <node id="8161214007" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496" lat="34.8154099" lon="-82.3198878"/>
+ <node id="8162167221" visible="true" version="1" changeset="94726395" timestamp="2020-11-24T19:36:43Z" user="itsamap!" uid="3854496" lat="34.8153999" lon="-82.3198623"/>
+ <node id="8162167223" visible="true" version="2" changeset="151555209" timestamp="2024-05-19T23:16:37Z" user="MikeN" uid="135163" lat="34.8155156" lon="-82.3198430">
+  <tag k="crossing" v="marked"/>
+  <tag k="crossing:markings" v="surface"/>
+  <tag k="highway" v="crossing"/>
+ </node>
+ <node id="8162167224" visible="true" version="2" changeset="151555209" timestamp="2024-05-19T23:16:37Z" user="MikeN" uid="135163" lat="34.8154860" lon="-82.3198480">
+  <tag k="crossing" v="marked"/>
+  <tag k="crossing:markings" v="surface"/>
+  <tag k="highway" v="crossing"/>
+ </node>
+ <node id="8162167225" visible="true" version="1" changeset="94726395" timestamp="2020-11-24T19:36:43Z" user="itsamap!" uid="3854496" lat="34.8157655" lon="-82.3202872"/>
+ <node id="8165064093" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8159629" lon="-82.3204908"/>
+ <node id="8165064094" visible="true" version="3" changeset="156648021" timestamp="2024-09-15T13:37:13Z" user="itsamap!" uid="3854496" lat="34.8158667" lon="-82.3203915">
+  <tag k="crossing" v="marked"/>
+  <tag k="crossing:markings" v="lines"/>
+  <tag k="highway" v="crossing"/>
+ </node>
+ <node id="8165064095" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8160413" lon="-82.3205254"/>
+ <node id="8165064096" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8162313" lon="-82.3205970"/>
+ <node id="8165064097" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8164732" lon="-82.3206447"/>
+ <node id="8165064098" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8166074" lon="-82.3206972"/>
+ <node id="8165064099" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8167925" lon="-82.3207974"/>
+ <node id="8165064100" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8169923" lon="-82.3209728"/>
+ <node id="8165064101" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8171666" lon="-82.3212078"/>
+ <node id="8165064102" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8172802" lon="-82.3214727"/>
+ <node id="8165064103" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8173507" lon="-82.3217494"/>
+ <node id="8165064104" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8173674" lon="-82.3219606"/>
+ <node id="8165064105" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8173625" lon="-82.3221694"/>
+ <node id="8165064106" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8173184" lon="-82.3222529"/>
+ <node id="8165064107" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8172596" lon="-82.3222851"/>
+ <node id="8165064108" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8171832" lon="-82.3222946"/>
+ <node id="8165064109" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8171196" lon="-82.3222552"/>
+ <node id="8165064110" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8170794" lon="-82.3221861"/>
+ <node id="8165064111" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8170785" lon="-82.3221276"/>
+ <node id="8165064112" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8170931" lon="-82.3220011"/>
+ <node id="8165064113" visible="true" version="2" changeset="151548901" timestamp="2024-05-19T19:27:03Z" user="MikeN" uid="135163" lat="34.8170861" lon="-82.3220615">
+  <tag k="crossing" v="unmarked"/>
+  <tag k="crossing:markings" v="no"/>
+  <tag k="highway" v="crossing"/>
+ </node>
+ <node id="8165064114" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8171217" lon="-82.3219679"/>
+ <node id="8165064115" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8171861" lon="-82.3219306"/>
+ <node id="8165064116" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8172368" lon="-82.3218959"/>
+ <node id="8165066617" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8172579" lon="-82.3218277"/>
+ <node id="8165066618" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8172632" lon="-82.3217801"/>
+ <node id="8165066619" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8172093" lon="-82.3215447"/>
+ <node id="8165066620" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8171227" lon="-82.3213390"/>
+ <node id="8165066621" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8169633" lon="-82.3210997"/>
+ <node id="8165066622" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8168271" lon="-82.3209595"/>
+ <node id="8165066623" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8166497" lon="-82.3208386"/>
+ <node id="8165066624" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8164776" lon="-82.3207640"/>
+ <node id="8165066625" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8163210" lon="-82.3207340"/>
+ <node id="8165066626" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8161158" lon="-82.3206999"/>
+ <node id="8165066627" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8160129" lon="-82.3206695"/>
+ <node id="8165066628" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8159149" lon="-82.3206284"/>
+ <node id="8165066629" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8172193" lon="-82.3219872"/>
+ <node id="8165066630" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8171704" lon="-82.3222139"/>
+ <node id="8165066631" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8171447" lon="-82.3221880"/>
+ <node id="8165066632" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8171275" lon="-82.3221533"/>
+ <node id="8165066633" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496" lat="34.8171206" lon="-82.3221136"/>
+ <node id="8365789630" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8178205" lon="-82.3195119"/>
+ <node id="8365789631" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8177748" lon="-82.3195927"/>
+ <node id="8365789632" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8177742" lon="-82.3196008"/>
+ <node id="8365789633" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8177773" lon="-82.3196123"/>
+ <node id="8365789634" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8177797" lon="-82.3196163"/>
+ <node id="8365789635" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8178063" lon="-82.3196408"/>
+ <node id="8365789636" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8176724" lon="-82.3198770"/>
+ <node id="8365789637" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8176241" lon="-82.3199537"/>
+ <node id="8365789638" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175729" lon="-82.3200275"/>
+ <node id="8365789639" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175421" lon="-82.3199943"/>
+ <node id="8365789640" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175383" lon="-82.3199933"/>
+ <node id="8365789641" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175327" lon="-82.3199950"/>
+ <node id="8365789642" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175277" lon="-82.3200018"/>
+ <node id="8365789643" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175271" lon="-82.3200087"/>
+ <node id="8365789644" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175294" lon="-82.3200151"/>
+ <node id="8365789645" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8176074" lon="-82.3201159"/>
+ <node id="8365789646" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8176132" lon="-82.3201340"/>
+ <node id="8365789647" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8176165" lon="-82.3201529"/>
+ <node id="8365789648" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8176175" lon="-82.3201723"/>
+ <node id="8365789649" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8176159" lon="-82.3201916"/>
+ <node id="8365789650" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8176120" lon="-82.3202104"/>
+ <node id="8365789651" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8176056" lon="-82.3202282"/>
+ <node id="8365789652" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175971" lon="-82.3202446"/>
+ <node id="8365789653" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175732" lon="-82.3202745"/>
+ <node id="8365789654" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175709" lon="-82.3202814"/>
+ <node id="8365789655" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175734" lon="-82.3202900"/>
+ <node id="8365789656" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8176035" lon="-82.3203292"/>
+ <node id="8365789657" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8174768" lon="-82.3204624"/>
+ <node id="8365789658" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8174095" lon="-82.3205232"/>
+ <node id="8365789659" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8173892" lon="-82.3204866"/>
+ <node id="8365789660" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8173829" lon="-82.3204822"/>
+ <node id="8365789661" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8173779" lon="-82.3204816"/>
+ <node id="8365789662" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8173732" lon="-82.3204831"/>
+ <node id="8365789663" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8171870" lon="-82.3206041"/>
+ <node id="8365789664" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8171237" lon="-82.3205871"/>
+ <node id="8365789665" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8170239" lon="-82.3205564"/>
+ <node id="8365789666" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8169013" lon="-82.3205084"/>
+ <node id="8365789667" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8167491" lon="-82.3204252"/>
+ <node id="8365789668" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8166715" lon="-82.3203731"/>
+ <node id="8365789669" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165538" lon="-82.3202819"/>
+ <node id="8365789670" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165137" lon="-82.3202533"/>
+ <node id="8365789671" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8166563" lon="-82.3200621"/>
+ <node id="8365789672" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8166607" lon="-82.3200560"/>
+ <node id="8365789673" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8166622" lon="-82.3200481"/>
+ <node id="8365789674" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8166507" lon="-82.3199965"/>
+ <node id="8365789675" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8167316" lon="-82.3199614"/>
+ <node id="8365789676" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8168109" lon="-82.3199210"/>
+ <node id="8365789677" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8169528" lon="-82.3198219"/>
+ <node id="8365789678" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8170191" lon="-82.3197636"/>
+ <node id="8365789679" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8171256" lon="-82.3196475"/>
+ <node id="8365789680" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8171739" lon="-82.3195833"/>
+ <node id="8365789681" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8172185" lon="-82.3195153"/>
+ <node id="8365789682" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8172508" lon="-82.3195454"/>
+ <node id="8365789683" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8172561" lon="-82.3195469"/>
+ <node id="8365789684" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8172630" lon="-82.3195439"/>
+ <node id="8365789685" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8173636" lon="-82.3193718"/>
+ <node id="8365789686" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8174998" lon="-82.3193399"/>
+ <node id="8365789687" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175160" lon="-82.3193385"/>
+ <node id="8365789688" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175322" lon="-82.3193400"/>
+ <node id="8365789689" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175481" lon="-82.3193443"/>
+ <node id="8365789690" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175633" lon="-82.3193512"/>
+ <node id="8365804005" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161925" lon="-82.3216885"/>
+ <node id="8365804006" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163442" lon="-82.3215778"/>
+ <node id="8365804007" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163536" lon="-82.3215921"/>
+ <node id="8365804008" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163681" lon="-82.3215642"/>
+ <node id="8365804009" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163714" lon="-82.3215824"/>
+ <node id="8365804010" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163629" lon="-82.3215904"/>
+ <node id="8365804011" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163287" lon="-82.3215425"/>
+ <node id="8365804012" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8164585" lon="-82.3214849"/>
+ <node id="8365804013" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165343" lon="-82.3214968"/>
+ <node id="8365804014" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165404" lon="-82.3215134"/>
+ <node id="8365804015" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165615" lon="-82.3214923"/>
+ <node id="8365804016" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165606" lon="-82.3215082"/>
+ <node id="8365804743" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8176739" lon="-82.3195240"/>
+ <node id="8365804744" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8177056" lon="-82.3195466"/>
+ <node id="8365804745" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8177119" lon="-82.3195465"/>
+ <node id="8365804746" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8177159" lon="-82.3195444"/>
+ <node id="8365804747" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8177212" lon="-82.3195361"/>
+ <node id="8365804748" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8177212" lon="-82.3195256"/>
+ <node id="8365804749" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8177159" lon="-82.3195174"/>
+ <node id="8365804750" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8176275" lon="-82.3194707"/>
+ <node id="8365804751" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8176220" lon="-82.3194694"/>
+ <node id="8365804752" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8176167" lon="-82.3194715"/>
+ <node id="8365804753" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8176129" lon="-82.3194763"/>
+ <node id="8365804754" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8176116" lon="-82.3194806"/>
+ <node id="8365804755" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8176132" lon="-82.3194904"/>
+ <node id="8365804756" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8176472" lon="-82.3195215"/>
+ <node id="8365804757" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175999" lon="-82.3196018"/>
+ <node id="8365804758" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175232" lon="-82.3197401"/>
+ <node id="8365804759" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8174827" lon="-82.3198044"/>
+ <node id="8365804760" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8174363" lon="-82.3198741"/>
+ <node id="8365804761" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8173506" lon="-82.3199865"/>
+ <node id="8365804762" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8172808" lon="-82.3200649"/>
+ <node id="8365804763" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8172491" lon="-82.3200986"/>
+ <node id="8365804764" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8171739" lon="-82.3201657"/>
+ <node id="8365804765" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8171365" lon="-82.3201968"/>
+ <node id="8365804766" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8170908" lon="-82.3202315"/>
+ <node id="8365804767" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8170520" lon="-82.3202584"/>
+ <node id="8365804768" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8169569" lon="-82.3203190"/>
+ <node id="8365804769" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8168868" lon="-82.3203562"/>
+ <node id="8365804770" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8168695" lon="-82.3203072"/>
+ <node id="8365804771" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8168654" lon="-82.3203042"/>
+ <node id="8365804772" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8168599" lon="-82.3203050"/>
+ <node id="8365804773" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8168253" lon="-82.3203227"/>
+ <node id="8365804774" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8168177" lon="-82.3203293"/>
+ <node id="8365804775" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8168104" lon="-82.3203442"/>
+ <node id="8365804776" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8168099" lon="-82.3203587"/>
+ <node id="8365804777" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8168190" lon="-82.3203747"/>
+ <node id="8365804778" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8168329" lon="-82.3203874"/>
+ <node id="8365804779" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8169071" lon="-82.3204223"/>
+ <node id="8365804780" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8169300" lon="-82.3204264"/>
+ <node id="8365804781" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8169448" lon="-82.3204237"/>
+ <node id="8365804782" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8169610" lon="-82.3204181"/>
+ <node id="8365804783" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8169873" lon="-82.3204019"/>
+ <node id="8365804784" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8170102" lon="-82.3203843"/>
+ <node id="8365804785" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8170099" lon="-82.3203781"/>
+ <node id="8365804786" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8170066" lon="-82.3203680"/>
+ <node id="8365804787" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8169908" lon="-82.3203320"/>
+ <node id="8365804788" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8170344" lon="-82.3203052"/>
+ <node id="8365804789" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8170811" lon="-82.3202726"/>
+ <node id="8365804790" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8171278" lon="-82.3202383"/>
+ <node id="8365804791" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8171642" lon="-82.3202089"/>
+ <node id="8365804792" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8172613" lon="-82.3201200"/>
+ <node id="8365804793" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8173099" lon="-82.3200695"/>
+ <node id="8365804794" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8173516" lon="-82.3200231"/>
+ <node id="8365804795" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8174156" lon="-82.3199462"/>
+ <node id="8365804796" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8174962" lon="-82.3198309"/>
+ <node id="8365804797" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175497" lon="-82.3197405"/>
+ <node id="8365804798" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8173687" lon="-82.3202750"/>
+ <node id="8365804799" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8173344" lon="-82.3203082"/>
+ <node id="8365804800" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8172928" lon="-82.3203446"/>
+ <node id="8365804801" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8172124" lon="-82.3204113"/>
+ <node id="8365804802" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8171217" lon="-82.3204753"/>
+ <node id="8365804803" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8171043" lon="-82.3204333"/>
+ <node id="8365804804" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8171006" lon="-82.3204275"/>
+ <node id="8365804805" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8170954" lon="-82.3204261"/>
+ <node id="8365804806" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8170910" lon="-82.3204273"/>
+ <node id="8365804807" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8170758" lon="-82.3204350"/>
+ <node id="8365804808" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8170657" lon="-82.3204452"/>
+ <node id="8365804809" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8170604" lon="-82.3204556"/>
+ <node id="8365804810" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8170647" lon="-82.3204760"/>
+ <node id="8365804811" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8170708" lon="-82.3204849"/>
+ <node id="8365804812" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8170882" lon="-82.3204939"/>
+ <node id="8365804813" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8171941" lon="-82.3205184"/>
+ <node id="8365804814" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8172057" lon="-82.3205182"/>
+ <node id="8365804815" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8172161" lon="-82.3205125"/>
+ <node id="8365804816" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8172286" lon="-82.3205011"/>
+ <node id="8365804817" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8172370" lon="-82.3204900"/>
+ <node id="8365804818" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8172398" lon="-82.3204825"/>
+ <node id="8365804819" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8172395" lon="-82.3204725"/>
+ <node id="8365804820" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8172339" lon="-82.3204583"/>
+ <node id="8365804821" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8172210" lon="-82.3204389"/>
+ <node id="8365804822" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8172931" lon="-82.3203800"/>
+ <node id="8365804823" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8173624" lon="-82.3203174"/>
+ <node id="8365804824" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8174412" lon="-82.3202399"/>
+ <node id="8365804825" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8174913" lon="-82.3201836"/>
+ <node id="8365804826" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175166" lon="-82.3202190"/>
+ <node id="8365804827" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175245" lon="-82.3202233"/>
+ <node id="8365804828" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175310" lon="-82.3202221"/>
+ <node id="8365804829" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175380" lon="-82.3202148"/>
+ <node id="8365804830" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175523" lon="-82.3201950"/>
+ <node id="8365804831" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175562" lon="-82.3201834"/>
+ <node id="8365804832" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175573" lon="-82.3201713"/>
+ <node id="8365804833" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175520" lon="-82.3201525"/>
+ <node id="8365804834" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175470" lon="-82.3201420"/>
+ <node id="8365804835" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8174923" lon="-82.3200799"/>
+ <node id="8365804836" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8174842" lon="-82.3200740"/>
+ <node id="8365804837" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8174797" lon="-82.3200743"/>
+ <node id="8365804838" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8174735" lon="-82.3200796"/>
+ <node id="8365804839" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8174717" lon="-82.3200855"/>
+ <node id="8365804840" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8174730" lon="-82.3200934"/>
+ <node id="8365804841" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8175035" lon="-82.3201276"/>
+ <node id="8365804842" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8174764" lon="-82.3201630"/>
+ <node id="8365804843" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8174399" lon="-82.3202024"/>
+ <node id="8365805046" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158642" lon="-82.3210838"/>
+ <node id="8365805047" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8159396" lon="-82.3210924"/>
+ <node id="8365805048" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8160253" lon="-82.3211352"/>
+ <node id="8365805049" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8160960" lon="-82.3211335"/>
+ <node id="8365805050" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161199" lon="-82.3211249"/>
+ <node id="8365805051" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8162857" lon="-82.3210342"/>
+ <node id="8365805052" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8162946" lon="-82.3210451"/>
+ <node id="8365805053" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163124" lon="-82.3210251"/>
+ <node id="8365805054" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163109" lon="-82.3210376"/>
+ <node id="8365805055" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163039" lon="-82.3210479"/>
+ <node id="8365805056" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8162758" lon="-82.3209943"/>
+ <node id="8365805057" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163006" lon="-82.3209835"/>
+ <node id="8365805058" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8164631" lon="-82.3209914"/>
+ <node id="8365805059" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165044" lon="-82.3210662"/>
+ <node id="8365805060" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163049" lon="-82.3211443"/>
+ <node id="8365805061" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163086" lon="-82.3211312"/>
+ <node id="8365805062" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163344" lon="-82.3211397"/>
+ <node id="8365805063" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163259" lon="-82.3211278"/>
+ <node id="8365805064" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163133" lon="-82.3211261"/>
+ <node id="8365805065" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163428" lon="-82.3211757"/>
+ <node id="8365805066" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163161" lon="-82.3211860"/>
+ <node id="8365805067" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161414" lon="-82.3212082"/>
+ <node id="8365805068" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8160674" lon="-82.3212190"/>
+ <node id="8365805069" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158838" lon="-82.3212413"/>
+ <node id="8365805070" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158895" lon="-82.3212276"/>
+ <node id="8365805071" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8159138" lon="-82.3212413"/>
+ <node id="8365805072" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8159082" lon="-82.3212322"/>
+ <node id="8365805073" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158998" lon="-82.3212259"/>
+ <node id="8365805074" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8159101" lon="-82.3212903"/>
+ <node id="8365805075" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158183" lon="-82.3212732"/>
+ <node id="8365805076" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8157405" lon="-82.3213776"/>
+ <node id="8365805077" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158028" lon="-82.3213930"/>
+ <node id="8365805078" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158492" lon="-82.3214415"/>
+ <node id="8365805079" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158515" lon="-82.3214592"/>
+ <node id="8365805080" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158740" lon="-82.3214455"/>
+ <node id="8365805081" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158698" lon="-82.3214598"/>
+ <node id="8365805082" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158595" lon="-82.3214643"/>
+ <node id="8365805083" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158501" lon="-82.3214033"/>
+ <node id="8365805084" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8159681" lon="-82.3214050"/>
+ <node id="8365805085" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8160833" lon="-82.3214210"/>
+ <node id="8365805086" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161709" lon="-82.3214084"/>
+ <node id="8365805087" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161798" lon="-82.3213976"/>
+ <node id="8365805088" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8164112" lon="-82.3212687"/>
+ <node id="8365805089" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8164191" lon="-82.3212795"/>
+ <node id="8365805090" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8164346" lon="-82.3212561"/>
+ <node id="8365805091" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8164336" lon="-82.3212692"/>
+ <node id="8365805092" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8164280" lon="-82.3212795"/>
+ <node id="8365805093" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163990" lon="-82.3212253"/>
+ <node id="8365805094" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8166837" lon="-82.3212128"/>
+ <node id="8365805095" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8166950" lon="-82.3212208"/>
+ <node id="8365805096" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165414" lon="-82.3213474"/>
+ <node id="8365805097" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165404" lon="-82.3213308"/>
+ <node id="8365805098" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165662" lon="-82.3213343"/>
+ <node id="8365805099" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165587" lon="-82.3213257"/>
+ <node id="8365805100" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165493" lon="-82.3213234"/>
+ <node id="8365805101" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165727" lon="-82.3213776"/>
+ <node id="8365805102" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165484" lon="-82.3213856"/>
+ <node id="8365805103" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163442" lon="-82.3214021"/>
+ <node id="8365805104" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163493" lon="-82.3214307"/>
+ <node id="8365805105" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163714" lon="-82.3214056"/>
+ <node id="8365805106" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163615" lon="-82.3213953"/>
+ <node id="8365805107" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163526" lon="-82.3213947"/>
+ <node id="8365805108" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163831" lon="-82.3214449"/>
+ <node id="8365805109" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163592" lon="-82.3214552"/>
+ <node id="8365805110" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161808" lon="-82.3214980"/>
+ <node id="8365805111" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161096" lon="-82.3215145"/>
+ <node id="8365805112" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8160271" lon="-82.3215927"/>
+ <node id="8365805113" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158529" lon="-82.3215579"/>
+ <node id="8365805114" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158571" lon="-82.3215453"/>
+ <node id="8365805115" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158810" lon="-82.3215556"/>
+ <node id="8365805116" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158754" lon="-82.3215470"/>
+ <node id="8365805117" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158665" lon="-82.3215408"/>
+ <node id="8365805118" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158773" lon="-82.3216029"/>
+ <node id="8365805119" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8157611" lon="-82.3215887"/>
+ <node id="8365805120" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158019" lon="-82.3217860"/>
+ <node id="8365805121" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158070" lon="-82.3218020"/>
+ <node id="8365805122" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158300" lon="-82.3217935"/>
+ <node id="8365805123" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158244" lon="-82.3218026"/>
+ <node id="8365805124" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158141" lon="-82.3218072"/>
+ <node id="8365805125" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158056" lon="-82.3217461"/>
+ <node id="8365805126" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8159190" lon="-82.3217444"/>
+ <node id="8365805127" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8159906" lon="-82.3217353"/>
+ <node id="8365805128" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8160894" lon="-82.3217467"/>
+ <node id="8365805129" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:51Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161929" lon="-82.3217028"/>
+ <node id="8365805217" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165517" lon="-82.3215157"/>
+ <node id="8365805218" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165535" lon="-82.3214535"/>
+ <node id="8365805219" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8167320" lon="-82.3214649"/>
+ <node id="8365805220" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8167277" lon="-82.3215636"/>
+ <node id="8365805221" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165259" lon="-82.3216098"/>
+ <node id="8365805222" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165460" lon="-82.3216029"/>
+ <node id="8365805223" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165526" lon="-82.3216201"/>
+ <node id="8365805224" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165357" lon="-82.3216024"/>
+ <node id="8365805225" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165587" lon="-82.3216560"/>
+ <node id="8365805226" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163316" lon="-82.3217022"/>
+ <node id="8365805227" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163348" lon="-82.3217210"/>
+ <node id="8365805228" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163573" lon="-82.3217005"/>
+ <node id="8365805229" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163479" lon="-82.3216914"/>
+ <node id="8365805230" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163376" lon="-82.3216919"/>
+ <node id="8365805231" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163714" lon="-82.3217370"/>
+ <node id="8365805232" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161793" lon="-82.3218169"/>
+ <node id="8365805233" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8160773" lon="-82.3218471"/>
+ <node id="8365805234" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158674" lon="-82.3219007"/>
+ <node id="8365805235" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158726" lon="-82.3218921"/>
+ <node id="8365805236" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158960" lon="-82.3219024"/>
+ <node id="8365805237" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158913" lon="-82.3218921"/>
+ <node id="8365805238" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158810" lon="-82.3218876"/>
+ <node id="8365805239" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158984" lon="-82.3219481"/>
+ <node id="8365805240" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158089" lon="-82.3219486"/>
+ <node id="8365805241" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8156731" lon="-82.3218716"/>
+ <node id="8365805242" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8156801" lon="-82.3218619"/>
+ <node id="8365805243" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8156979" lon="-82.3218836"/>
+ <node id="8365805244" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8156965" lon="-82.3218693"/>
+ <node id="8365805245" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8156900" lon="-82.3218608"/>
+ <node id="8365805246" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8156651" lon="-82.3219155"/>
+ <node id="8365805247" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8155982" lon="-82.3218899"/>
+ <node id="8365805248" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8155593" lon="-82.3222030"/>
+ <node id="8365805249" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8155790" lon="-82.3222087"/>
+ <node id="8365805250" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8155776" lon="-82.3222259"/>
+ <node id="8365805251" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8155705" lon="-82.3222019"/>
+ <node id="8365805252" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8155434" lon="-82.3222544"/>
+ <node id="8365805253" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8157780" lon="-82.3222447"/>
+ <node id="8365805254" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8157991" lon="-82.3222407"/>
+ <node id="8365805255" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158000" lon="-82.3222538"/>
+ <node id="8365805256" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8157883" lon="-82.3222373"/>
+ <node id="8365805257" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8157757" lon="-82.3222972"/>
+ <node id="8365805258" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158033" lon="-82.3222966"/>
+ <node id="8365805259" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158881" lon="-82.3222915"/>
+ <node id="8365805260" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8159752" lon="-82.3222196"/>
+ <node id="8365805261" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161391" lon="-82.3221511"/>
+ <node id="8365805262" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8164514" lon="-82.3219315"/>
+ <node id="8365805263" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8164660" lon="-82.3219195"/>
+ <node id="8365805264" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8164519" lon="-82.3219423"/>
+ <node id="8365805265" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8164758" lon="-82.3219264"/>
+ <node id="8365805266" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8164561" lon="-82.3219218"/>
+ <node id="8365805267" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8164664" lon="-82.3219823"/>
+ <node id="8365805268" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165952" lon="-82.3219178"/>
+ <node id="8365805269" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165095" lon="-82.3217992"/>
+ <node id="8365805270" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165334" lon="-82.3217878"/>
+ <node id="8365805271" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165240" lon="-82.3217986"/>
+ <node id="8365805272" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8165208" lon="-82.3217387"/>
+ <node id="8365805273" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163325" lon="-82.3219064"/>
+ <node id="8365805274" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163526" lon="-82.3218939"/>
+ <node id="8365805275" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163465" lon="-82.3219070"/>
+ <node id="8365805276" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8163306" lon="-82.3218448"/>
+ <node id="8365805277" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8161733" lon="-82.3220194"/>
+ <node id="8365805278" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8160501" lon="-82.3221066"/>
+ <node id="8365805279" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158356" lon="-82.3221511"/>
+ <node id="8365805280" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158586" lon="-82.3221477"/>
+ <node id="8365805281" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158497" lon="-82.3221574"/>
+ <node id="8365805282" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8158586" lon="-82.3220947"/>
+ <node id="8365805283" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8156052" lon="-82.3221237"/>
+ <node id="8365805284" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8156258" lon="-82.3221312"/>
+ <node id="8365805285" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8156314" lon="-82.3221158"/>
+ <node id="8365805286" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8156370" lon="-82.3220781"/>
+ <node id="8365805287" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857" lat="34.8156155" lon="-82.3221306"/>
+ <node id="9112235281" visible="true" version="1" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163" lat="34.8161213" lon="-82.3213149"/>
+ <node id="9112235282" visible="true" version="1" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163" lat="34.8172855" lon="-82.3218956"/>
+ <node id="10672141875" visible="true" version="1" changeset="132656181" timestamp="2023-02-17T03:39:34Z" user="shinylman" uid="17102828" lat="34.8145303" lon="-82.3229579"/>
+ <node id="10672141877" visible="true" version="1" changeset="132656181" timestamp="2023-02-17T03:39:34Z" user="shinylman" uid="17102828" lat="34.8153154" lon="-82.3217134"/>
+ <node id="10672141878" visible="true" version="1" changeset="132656181" timestamp="2023-02-17T03:39:34Z" user="shinylman" uid="17102828" lat="34.8155280" lon="-82.3203453"/>
+ <node id="10672141879" visible="true" version="1" changeset="132656181" timestamp="2023-02-17T03:39:34Z" user="shinylman" uid="17102828" lat="34.8154292" lon="-82.3201046"/>
+ <node id="10672141880" visible="true" version="1" changeset="132656181" timestamp="2023-02-17T03:39:34Z" user="shinylman" uid="17102828" lat="34.8153653" lon="-82.3199878"/>
+ <node id="10672141881" visible="true" version="1" changeset="132656181" timestamp="2023-02-17T03:39:34Z" user="shinylman" uid="17102828" lat="34.8152316" lon="-82.3199489"/>
+ <node id="10672141882" visible="true" version="1" changeset="132656181" timestamp="2023-02-17T03:39:34Z" user="shinylman" uid="17102828" lat="34.8148684" lon="-82.3200834"/>
+ <node id="10672141883" visible="true" version="1" changeset="132656181" timestamp="2023-02-17T03:39:34Z" user="shinylman" uid="17102828" lat="34.8145982" lon="-82.3203382"/>
+ <node id="10672141884" visible="true" version="1" changeset="132656181" timestamp="2023-02-17T03:39:34Z" user="shinylman" uid="17102828" lat="34.8143832" lon="-82.3206992"/>
+ <node id="10672141885" visible="true" version="1" changeset="132656181" timestamp="2023-02-17T03:39:34Z" user="shinylman" uid="17102828" lat="34.8143076" lon="-82.3210531"/>
+ <node id="10672141886" visible="true" version="1" changeset="132656181" timestamp="2023-02-17T03:39:34Z" user="shinylman" uid="17102828" lat="34.8142001" lon="-82.3215486"/>
+ <node id="10672141887" visible="true" version="1" changeset="132656181" timestamp="2023-02-17T03:39:34Z" user="shinylman" uid="17102828" lat="34.8141943" lon="-82.3217149"/>
+ <node id="10672141888" visible="true" version="1" changeset="132656181" timestamp="2023-02-17T03:39:34Z" user="shinylman" uid="17102828" lat="34.8147638" lon="-82.3217539"/>
+ <node id="10672141889" visible="true" version="1" changeset="132656181" timestamp="2023-02-17T03:39:34Z" user="shinylman" uid="17102828" lat="34.8150224" lon="-82.3217963"/>
+ <node id="11735348873" visible="true" version="1" changeset="148710503" timestamp="2024-03-15T22:18:08Z" user="daaaavid" uid="3575106" lat="34.8161986" lon="-82.3224610">
+  <tag k="amenity" v="bicycle_parking"/>
+  <tag k="bicycle_parking" v="stands"/>
+  <tag k="capacity" v="12"/>
+  <tag k="covered" v="no"/>
+  <tag k="fee" v="no"/>
+  <tag k="operator" v="Greenville Technical College"/>
+ </node>
+ <node id="11918696833" visible="true" version="1" changeset="151555209" timestamp="2024-05-19T23:16:37Z" user="MikeN" uid="135163" lat="34.8156909" lon="-82.3204564"/>
+ <node id="11918696834" visible="true" version="1" changeset="151555209" timestamp="2024-05-19T23:16:37Z" user="MikeN" uid="135163" lat="34.8158806" lon="-82.3205938"/>
+ <node id="11984482999" visible="true" version="1" changeset="152742388" timestamp="2024-06-16T01:05:36Z" user="itsamap!" uid="3854496" lat="34.8160398" lon="-82.3224250"/>
+ <node id="11984483000" visible="true" version="1" changeset="152742388" timestamp="2024-06-16T01:05:36Z" user="itsamap!" uid="3854496" lat="34.8161430" lon="-82.3223358"/>
+ <node id="11984483001" visible="true" version="1" changeset="152742388" timestamp="2024-06-16T01:05:36Z" user="itsamap!" uid="3854496" lat="34.8163519" lon="-82.3221420"/>
+ <node id="11984483002" visible="true" version="1" changeset="152742388" timestamp="2024-06-16T01:05:36Z" user="itsamap!" uid="3854496" lat="34.8163708" lon="-82.3220779"/>
+ <node id="11984483003" visible="true" version="1" changeset="152742388" timestamp="2024-06-16T01:05:36Z" user="itsamap!" uid="3854496" lat="34.8163913" lon="-82.3220548"/>
+ <node id="11984483004" visible="true" version="1" changeset="152742388" timestamp="2024-06-16T01:05:36Z" user="itsamap!" uid="3854496" lat="34.8164864" lon="-82.3219874"/>
+ <node id="11984483005" visible="true" version="1" changeset="152742388" timestamp="2024-06-16T01:05:36Z" user="itsamap!" uid="3854496" lat="34.8166001" lon="-82.3219369"/>
+ <node id="11984483006" visible="true" version="1" changeset="152742388" timestamp="2024-06-16T01:05:36Z" user="itsamap!" uid="3854496" lat="34.8166774" lon="-82.3219203"/>
+ <node id="11984483007" visible="true" version="1" changeset="152742388" timestamp="2024-06-16T01:05:36Z" user="itsamap!" uid="3854496" lat="34.8167660" lon="-82.3219238"/>
+ <node id="11984483008" visible="true" version="1" changeset="152742388" timestamp="2024-06-16T01:05:36Z" user="itsamap!" uid="3854496" lat="34.8168704" lon="-82.3219308"/>
+ <node id="11984483009" visible="true" version="2" changeset="156610747" timestamp="2024-09-14T12:41:28Z" user="itsamap!" uid="3854496" lat="34.8168129" lon="-82.3219269">
+  <tag k="crossing" v="unmarked"/>
+  <tag k="crossing:markings" v="no"/>
+  <tag k="highway" v="crossing"/>
+ </node>
+ <node id="11984483010" visible="true" version="1" changeset="152742388" timestamp="2024-06-16T01:05:36Z" user="itsamap!" uid="3854496" lat="34.8169877" lon="-82.3219639"/>
+ <node id="12176690821" visible="true" version="1" changeset="156610747" timestamp="2024-09-14T12:41:28Z" user="itsamap!" uid="3854496" lat="34.8160561" lon="-82.3221910"/>
+ <node id="12176690822" visible="true" version="1" changeset="156610747" timestamp="2024-09-14T12:41:28Z" user="itsamap!" uid="3854496" lat="34.8161245" lon="-82.3218422"/>
+ <node id="12176690823" visible="true" version="1" changeset="156610747" timestamp="2024-09-14T12:41:28Z" user="itsamap!" uid="3854496" lat="34.8161331" lon="-82.3217349"/>
+ <way id="76146190" visible="true" version="3" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163">
+  <nd ref="898254295"/>
+  <nd ref="898254570"/>
+  <nd ref="898253827"/>
+  <nd ref="898254077"/>
+  <nd ref="898255151"/>
+  <nd ref="898255570"/>
+  <tag k="highway" v="service"/>
+  <tag k="lanes" v="2"/>
+  <tag k="oneway" v="no"/>
+  <tag k="service" v="parking_aisle"/>
+  <tag k="smoothness" v="good"/>
+  <tag k="surface" v="asphalt"/>
+ </way>
+ <way id="76146196" visible="true" version="1" changeset="5693493" timestamp="2010-09-05T23:29:05Z" user="MikeN" uid="135163">
+  <nd ref="898254127"/>
+  <nd ref="898255149"/>
+  <nd ref="898255327"/>
+  <nd ref="898255789"/>
+  <nd ref="898254566"/>
+  <nd ref="898254926"/>
+  <nd ref="898254076"/>
+  <nd ref="898254286"/>
+  <nd ref="898255560"/>
+  <nd ref="898253824"/>
+  <nd ref="898254728"/>
+  <nd ref="898254127"/>
+  <tag k="leisure" v="garden"/>
+ </way>
+ <way id="76146200" visible="true" version="3" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163">
+  <nd ref="898254433"/>
+  <nd ref="898254734"/>
+  <nd ref="898253950"/>
+  <nd ref="898255570"/>
+  <nd ref="898254152"/>
+  <nd ref="898255372"/>
+  <nd ref="898254602"/>
+  <nd ref="898255818"/>
+  <nd ref="898255008"/>
+  <nd ref="898254591"/>
+  <tag k="highway" v="service"/>
+  <tag k="lanes" v="2"/>
+  <tag k="oneway" v="no"/>
+  <tag k="service" v="parking_aisle"/>
+  <tag k="smoothness" v="good"/>
+  <tag k="surface" v="asphalt"/>
+ </way>
+ <way id="76146207" visible="true" version="4" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163">
+  <nd ref="898254136"/>
+  <nd ref="8165064094"/>
+  <nd ref="898254429"/>
+  <nd ref="898255815"/>
+  <nd ref="898253948"/>
+  <nd ref="898254966"/>
+  <nd ref="898255368"/>
+  <nd ref="898255178"/>
+  <nd ref="898255791"/>
+  <nd ref="898253938"/>
+  <nd ref="898254967"/>
+  <nd ref="898254433"/>
+  <nd ref="898254931"/>
+  <nd ref="898254295"/>
+  <nd ref="898255333"/>
+  <tag k="highway" v="service"/>
+  <tag k="lanes" v="2"/>
+  <tag k="oneway" v="no"/>
+  <tag k="smoothness" v="good"/>
+  <tag k="surface" v="asphalt"/>
+ </way>
+ <way id="76146229" visible="true" version="4" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163">
+  <nd ref="898255460"/>
+  <nd ref="898254136"/>
+  <nd ref="898254540"/>
+  <nd ref="898254872"/>
+  <nd ref="898254057"/>
+  <nd ref="898254259"/>
+  <nd ref="898255475"/>
+  <nd ref="898253809"/>
+  <nd ref="898254692"/>
+  <nd ref="898255078"/>
+  <nd ref="898254116"/>
+  <nd ref="898254400"/>
+  <nd ref="898255782"/>
+  <nd ref="898253922"/>
+  <nd ref="898254914"/>
+  <nd ref="9112235282"/>
+  <nd ref="898255315"/>
+  <tag k="highway" v="service"/>
+  <tag k="surface" v="asphalt"/>
+ </way>
+ <way id="298332486" visible="true" version="3" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163">
+  <nd ref="898255460"/>
+  <nd ref="898254391"/>
+  <nd ref="898254686"/>
+  <nd ref="898253917"/>
+  <nd ref="898254113"/>
+  <nd ref="8162167224"/>
+  <nd ref="898254516"/>
+  <tag k="highway" v="service"/>
+  <tag k="oneway" v="yes"/>
+ </way>
+ <way id="311486865" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857">
+  <nd ref="3171499093"/>
+  <nd ref="8365789630"/>
+  <nd ref="3171499092"/>
+  <nd ref="8365789690"/>
+  <nd ref="8365789689"/>
+  <nd ref="8365789688"/>
+  <nd ref="8365789687"/>
+  <nd ref="8365789686"/>
+  <nd ref="3171499089"/>
+  <nd ref="8365789685"/>
+  <nd ref="3171499086"/>
+  <nd ref="8365789684"/>
+  <nd ref="8365789683"/>
+  <nd ref="8365789682"/>
+  <nd ref="8365789681"/>
+  <nd ref="8365789680"/>
+  <nd ref="8365789679"/>
+  <nd ref="3171499083"/>
+  <nd ref="8365789678"/>
+  <nd ref="8365789677"/>
+  <nd ref="3171499082"/>
+  <nd ref="8365789676"/>
+  <nd ref="8365789675"/>
+  <nd ref="8365789674"/>
+  <nd ref="8365789673"/>
+  <nd ref="8365789672"/>
+  <nd ref="8365789671"/>
+  <nd ref="3171499080"/>
+  <nd ref="3171499079"/>
+  <nd ref="8365789670"/>
+  <nd ref="8365789669"/>
+  <nd ref="8365789668"/>
+  <nd ref="8365789667"/>
+  <nd ref="3171499081"/>
+  <nd ref="8365789666"/>
+  <nd ref="8365789665"/>
+  <nd ref="8365789664"/>
+  <nd ref="8365789663"/>
+  <nd ref="3171499085"/>
+  <nd ref="8365789662"/>
+  <nd ref="8365789661"/>
+  <nd ref="8365789660"/>
+  <nd ref="8365789659"/>
+  <nd ref="8365789658"/>
+  <nd ref="8365789657"/>
+  <nd ref="3171499090"/>
+  <nd ref="8365789656"/>
+  <nd ref="8365789655"/>
+  <nd ref="8365789654"/>
+  <nd ref="8365789653"/>
+  <nd ref="8365789652"/>
+  <nd ref="8365789651"/>
+  <nd ref="8365789650"/>
+  <nd ref="8365789649"/>
+  <nd ref="8365789648"/>
+  <nd ref="8365789647"/>
+  <nd ref="8365789646"/>
+  <nd ref="8365789645"/>
+  <nd ref="3171499091"/>
+  <nd ref="8365789644"/>
+  <nd ref="8365789643"/>
+  <nd ref="8365789642"/>
+  <nd ref="8365789641"/>
+  <nd ref="8365789640"/>
+  <nd ref="8365789639"/>
+  <nd ref="8365789638"/>
+  <nd ref="8365789637"/>
+  <nd ref="8365789636"/>
+  <nd ref="8365789635"/>
+  <nd ref="8365789634"/>
+  <nd ref="8365789633"/>
+  <nd ref="8365789632"/>
+  <nd ref="8365789631"/>
+  <nd ref="3171499093"/>
+  <tag k="amenity" v="parking"/>
+  <tag k="parking" v="surface"/>
+  <tag k="surface" v="asphalt"/>
+ </way>
+ <way id="311486872" visible="true" version="4" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163">
+  <nd ref="898254268"/>
+  <nd ref="3171499088"/>
+  <nd ref="898254543"/>
+  <nd ref="3171499087"/>
+  <nd ref="898253813"/>
+  <nd ref="898254063"/>
+  <nd ref="898255103"/>
+  <nd ref="898255517"/>
+  <nd ref="898254415"/>
+  <nd ref="8165066630"/>
+  <nd ref="8165066631"/>
+  <nd ref="8165066632"/>
+  <nd ref="8165066633"/>
+  <nd ref="5130858965"/>
+  <nd ref="898254715"/>
+  <nd ref="898253928"/>
+  <nd ref="3171499084"/>
+  <nd ref="8165066629"/>
+  <nd ref="898255315"/>
+  <nd ref="898254268"/>
+  <tag k="highway" v="service"/>
+  <tag k="surface" v="asphalt"/>
+ </way>
+ <way id="406524196" visible="true" version="4" changeset="132656181" timestamp="2023-02-17T03:39:34Z" user="shinylman" uid="17102828">
+  <nd ref="3155518307"/>
+  <nd ref="4085812838"/>
+  <nd ref="4085812836"/>
+  <nd ref="4085812837"/>
+  <nd ref="4085812835"/>
+  <nd ref="4085812834"/>
+  <nd ref="4085812833"/>
+ </way>
+ <way id="527845802" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857">
+  <nd ref="5130858653"/>
+  <nd ref="5130858652"/>
+  <nd ref="8365805268"/>
+  <nd ref="5130858651"/>
+  <nd ref="8365805265"/>
+  <nd ref="8365805263"/>
+  <nd ref="8365805266"/>
+  <nd ref="8365805262"/>
+  <nd ref="8365805264"/>
+  <nd ref="8365805267"/>
+  <nd ref="5130858650"/>
+  <nd ref="5130858649"/>
+  <nd ref="8365805261"/>
+  <nd ref="5130858648"/>
+  <nd ref="8365805260"/>
+  <nd ref="5130858647"/>
+  <nd ref="8365805259"/>
+  <nd ref="8365805258"/>
+  <nd ref="8365805255"/>
+  <nd ref="8365805254"/>
+  <nd ref="8365805256"/>
+  <nd ref="8365805253"/>
+  <nd ref="8365805257"/>
+  <nd ref="5130858646"/>
+  <nd ref="8365805250"/>
+  <nd ref="8365805249"/>
+  <nd ref="8365805251"/>
+  <nd ref="8365805248"/>
+  <nd ref="8365805252"/>
+  <nd ref="5130858645"/>
+  <nd ref="5130858644"/>
+  <nd ref="5130858643"/>
+  <nd ref="8365805283"/>
+  <nd ref="8365805287"/>
+  <nd ref="8365805284"/>
+  <nd ref="8365805285"/>
+  <nd ref="8365805286"/>
+  <nd ref="5130858642"/>
+  <nd ref="8365805279"/>
+  <nd ref="8365805281"/>
+  <nd ref="8365805280"/>
+  <nd ref="8365805282"/>
+  <nd ref="5130858641"/>
+  <nd ref="5130858640"/>
+  <nd ref="8365805278"/>
+  <nd ref="5130858639"/>
+  <nd ref="8365805277"/>
+  <nd ref="5130858638"/>
+  <nd ref="5130858637"/>
+  <nd ref="8365805273"/>
+  <nd ref="8365805275"/>
+  <nd ref="8365805274"/>
+  <nd ref="8365805276"/>
+  <nd ref="5130858636"/>
+  <nd ref="8365805269"/>
+  <nd ref="8365805271"/>
+  <nd ref="8365805270"/>
+  <nd ref="8365805272"/>
+  <nd ref="5130858653"/>
+  <tag k="amenity" v="parking"/>
+  <tag k="parking" v="surface"/>
+ </way>
+ <way id="527845804" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857">
+  <nd ref="5130858673"/>
+  <nd ref="8365805219"/>
+  <nd ref="8365805220"/>
+  <nd ref="5130858672"/>
+  <nd ref="8365805225"/>
+  <nd ref="8365805223"/>
+  <nd ref="8365805222"/>
+  <nd ref="8365805224"/>
+  <nd ref="8365805221"/>
+  <nd ref="5130858671"/>
+  <nd ref="8365805231"/>
+  <nd ref="8365805228"/>
+  <nd ref="8365805229"/>
+  <nd ref="8365805230"/>
+  <nd ref="8365805226"/>
+  <nd ref="8365805227"/>
+  <nd ref="5130858670"/>
+  <nd ref="5130858669"/>
+  <nd ref="8365805232"/>
+  <nd ref="5130858668"/>
+  <nd ref="8365805233"/>
+  <nd ref="5130858667"/>
+  <nd ref="5130858666"/>
+  <nd ref="8365805239"/>
+  <nd ref="8365805236"/>
+  <nd ref="8365805237"/>
+  <nd ref="8365805238"/>
+  <nd ref="8365805235"/>
+  <nd ref="8365805234"/>
+  <nd ref="5130858665"/>
+  <nd ref="8365805240"/>
+  <nd ref="5130858664"/>
+  <nd ref="8365805243"/>
+  <nd ref="8365805244"/>
+  <nd ref="8365805245"/>
+  <nd ref="8365805242"/>
+  <nd ref="8365805241"/>
+  <nd ref="8365805246"/>
+  <nd ref="8365805247"/>
+  <nd ref="5130858663"/>
+  <nd ref="5130858662"/>
+  <nd ref="5130858661"/>
+  <nd ref="8365805125"/>
+  <nd ref="8365805120"/>
+  <nd ref="8365805121"/>
+  <nd ref="8365805124"/>
+  <nd ref="8365805123"/>
+  <nd ref="8365805122"/>
+  <nd ref="5130858660"/>
+  <nd ref="8365805126"/>
+  <nd ref="8365805127"/>
+  <nd ref="5130858659"/>
+  <nd ref="8365805128"/>
+  <nd ref="5130858658"/>
+  <nd ref="5130858657"/>
+  <nd ref="8365805129"/>
+  <nd ref="8365804005"/>
+  <nd ref="5130858656"/>
+  <nd ref="8365804011"/>
+  <nd ref="8365804006"/>
+  <nd ref="8365804007"/>
+  <nd ref="8365804010"/>
+  <nd ref="8365804009"/>
+  <nd ref="8365804008"/>
+  <nd ref="5130858655"/>
+  <nd ref="8365804012"/>
+  <nd ref="5130858654"/>
+  <nd ref="8365804013"/>
+  <nd ref="8365804014"/>
+  <nd ref="8365805217"/>
+  <nd ref="8365804016"/>
+  <nd ref="8365804015"/>
+  <nd ref="8365805218"/>
+  <nd ref="5130858673"/>
+  <tag k="amenity" v="parking"/>
+  <tag k="parking" v="surface"/>
+ </way>
+ <way id="527845806" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857">
+  <nd ref="5130858693"/>
+  <nd ref="5130858692"/>
+  <nd ref="8365805094"/>
+  <nd ref="8365805095"/>
+  <nd ref="5130858691"/>
+  <nd ref="5130858690"/>
+  <nd ref="8365805101"/>
+  <nd ref="8365805098"/>
+  <nd ref="8365805099"/>
+  <nd ref="8365805100"/>
+  <nd ref="8365805097"/>
+  <nd ref="8365805096"/>
+  <nd ref="8365805102"/>
+  <nd ref="5130858689"/>
+  <nd ref="8365805108"/>
+  <nd ref="8365805105"/>
+  <nd ref="8365805106"/>
+  <nd ref="8365805107"/>
+  <nd ref="8365805103"/>
+  <nd ref="8365805104"/>
+  <nd ref="8365805109"/>
+  <nd ref="5130858688"/>
+  <nd ref="5130858687"/>
+  <nd ref="8365805110"/>
+  <nd ref="5130858675"/>
+  <nd ref="8365805111"/>
+  <nd ref="5130858674"/>
+  <nd ref="5130858686"/>
+  <nd ref="8365805112"/>
+  <nd ref="8365805118"/>
+  <nd ref="8365805115"/>
+  <nd ref="8365805116"/>
+  <nd ref="8365805117"/>
+  <nd ref="8365805114"/>
+  <nd ref="8365805113"/>
+  <nd ref="5130858685"/>
+  <nd ref="8365805119"/>
+  <nd ref="5130858684"/>
+  <nd ref="5130858683"/>
+  <nd ref="8365805076"/>
+  <nd ref="8365805077"/>
+  <nd ref="8365805083"/>
+  <nd ref="8365805078"/>
+  <nd ref="8365805079"/>
+  <nd ref="8365805082"/>
+  <nd ref="8365805081"/>
+  <nd ref="8365805080"/>
+  <nd ref="5130858682"/>
+  <nd ref="8365805084"/>
+  <nd ref="5130858681"/>
+  <nd ref="8365805085"/>
+  <nd ref="5130858680"/>
+  <nd ref="8365805086"/>
+  <nd ref="8365805087"/>
+  <nd ref="5130858679"/>
+  <nd ref="5130858678"/>
+  <nd ref="8365805093"/>
+  <nd ref="8365805088"/>
+  <nd ref="8365805089"/>
+  <nd ref="8365805092"/>
+  <nd ref="8365805091"/>
+  <nd ref="8365805090"/>
+  <nd ref="5130858677"/>
+  <nd ref="5130858676"/>
+  <nd ref="5130858693"/>
+  <tag k="amenity" v="parking"/>
+  <tag k="parking" v="surface"/>
+ </way>
+ <way id="527845809" visible="true" version="2" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857">
+  <nd ref="5130858706"/>
+  <nd ref="8365805065"/>
+  <nd ref="8365805062"/>
+  <nd ref="8365805063"/>
+  <nd ref="8365805064"/>
+  <nd ref="8365805061"/>
+  <nd ref="8365805060"/>
+  <nd ref="8365805066"/>
+  <nd ref="5130858705"/>
+  <nd ref="8365805067"/>
+  <nd ref="5130858704"/>
+  <nd ref="8365805068"/>
+  <nd ref="5130858703"/>
+  <nd ref="5130858702"/>
+  <nd ref="8365805074"/>
+  <nd ref="8365805071"/>
+  <nd ref="8365805072"/>
+  <nd ref="8365805073"/>
+  <nd ref="8365805070"/>
+  <nd ref="8365805069"/>
+  <nd ref="5130858701"/>
+  <nd ref="8365805075"/>
+  <nd ref="5130858700"/>
+  <nd ref="5130858699"/>
+  <nd ref="8365805046"/>
+  <nd ref="8365805047"/>
+  <nd ref="5130858698"/>
+  <nd ref="8365805048"/>
+  <nd ref="5130858697"/>
+  <nd ref="8365805049"/>
+  <nd ref="8365805050"/>
+  <nd ref="5130858696"/>
+  <nd ref="5130858695"/>
+  <nd ref="8365805056"/>
+  <nd ref="8365805051"/>
+  <nd ref="8365805052"/>
+  <nd ref="8365805055"/>
+  <nd ref="8365805054"/>
+  <nd ref="8365805053"/>
+  <nd ref="8365805057"/>
+  <nd ref="5130858694"/>
+  <nd ref="8365805058"/>
+  <nd ref="8365805059"/>
+  <nd ref="5130858706"/>
+  <tag k="amenity" v="parking"/>
+  <tag k="parking" v="surface"/>
+ </way>
+ <way id="527845812" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:07Z" user="MikeN" uid="135163">
+  <nd ref="5130858707"/>
+  <nd ref="5130858716"/>
+  <tag k="highway" v="steps"/>
+ </way>
+ <way id="527845814" visible="true" version="4" changeset="156610747" timestamp="2024-09-14T12:41:28Z" user="itsamap!" uid="3854496">
+  <nd ref="11984482999"/>
+  <nd ref="5130858718"/>
+  <nd ref="5130858717"/>
+  <nd ref="12176690821"/>
+  <tag k="highway" v="footway"/>
+ </way>
+ <way id="527845816" visible="true" version="6" changeset="156610747" timestamp="2024-09-14T12:41:28Z" user="itsamap!" uid="3854496">
+  <nd ref="12176690823"/>
+  <nd ref="5130858715"/>
+  <nd ref="5130858941"/>
+  <nd ref="9112235281"/>
+  <nd ref="5130858947"/>
+  <nd ref="5130858714"/>
+  <nd ref="5130858713"/>
+  <nd ref="5130858712"/>
+  <nd ref="11918696834"/>
+  <tag k="footway" v="sidewalk"/>
+  <tag k="highway" v="footway"/>
+ </way>
+ <way id="527845818" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:08Z" user="MikeN" uid="135163">
+  <nd ref="5130858929"/>
+  <nd ref="5130858928"/>
+  <nd ref="5130858927"/>
+  <nd ref="5130858926"/>
+  <nd ref="5130858925"/>
+  <nd ref="5130858924"/>
+  <nd ref="5130858923"/>
+  <nd ref="5130858922"/>
+  <nd ref="5130858921"/>
+  <nd ref="5130858720"/>
+  <tag k="highway" v="service"/>
+  <tag k="service" v="parking_aisle"/>
+ </way>
+ <way id="527845821" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:08Z" user="MikeN" uid="135163">
+  <nd ref="5130858953"/>
+  <nd ref="5130858937"/>
+  <nd ref="5130858936"/>
+  <nd ref="5130858935"/>
+  <nd ref="5130858934"/>
+  <nd ref="5130858933"/>
+  <nd ref="5130858932"/>
+  <nd ref="5130858931"/>
+  <nd ref="5130858930"/>
+  <tag k="highway" v="service"/>
+  <tag k="service" v="parking_aisle"/>
+ </way>
+ <way id="527845823" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:08Z" user="MikeN" uid="135163">
+  <nd ref="5130858961"/>
+  <nd ref="5130858944"/>
+  <nd ref="5130858943"/>
+  <nd ref="5130858942"/>
+  <nd ref="5130858941"/>
+  <nd ref="5130858940"/>
+  <nd ref="5130858939"/>
+  <nd ref="5130858938"/>
+  <nd ref="5130858951"/>
+  <tag k="highway" v="service"/>
+  <tag k="service" v="parking_aisle"/>
+ </way>
+ <way id="527845825" visible="true" version="1" changeset="52385325" timestamp="2017-09-26T13:45:08Z" user="MikeN" uid="135163">
+  <nd ref="5130858948"/>
+  <nd ref="5130858947"/>
+  <nd ref="5130858946"/>
+  <nd ref="5130858945"/>
+  <tag k="highway" v="service"/>
+  <tag k="service" v="parking_aisle"/>
+ </way>
+ <way id="527845827" visible="true" version="2" changeset="152742388" timestamp="2024-06-16T01:05:36Z" user="itsamap!" uid="3854496">
+  <nd ref="5130858954"/>
+  <nd ref="11984483009"/>
+  <nd ref="5130858929"/>
+  <nd ref="5130858953"/>
+  <nd ref="5130858952"/>
+  <nd ref="5130858951"/>
+  <nd ref="5130858950"/>
+  <nd ref="5130858949"/>
+  <nd ref="5130858948"/>
+  <tag k="highway" v="service"/>
+  <tag k="service" v="driveway"/>
+ </way>
+ <way id="527845831" visible="true" version="3" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163">
+  <nd ref="5130858964"/>
+  <nd ref="5130858963"/>
+  <nd ref="8161213972"/>
+  <nd ref="5130858974"/>
+  <nd ref="5130858962"/>
+  <nd ref="5130858720"/>
+  <nd ref="5130858930"/>
+  <nd ref="5130858961"/>
+  <nd ref="5130858960"/>
+  <nd ref="5130858945"/>
+  <nd ref="5130858959"/>
+  <nd ref="5130858958"/>
+  <nd ref="5130858957"/>
+  <nd ref="5130858711"/>
+  <nd ref="898254136"/>
+  <tag k="highway" v="service"/>
+  <tag k="surface" v="asphalt"/>
+ </way>
+ <way id="527845835" visible="true" version="2" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163">
+  <nd ref="5130858999"/>
+  <nd ref="5130858998"/>
+  <nd ref="5130858997"/>
+  <nd ref="5130858719"/>
+  <nd ref="5130858996"/>
+  <nd ref="5130858995"/>
+  <nd ref="5130858994"/>
+  <nd ref="5130858993"/>
+  <nd ref="5130858992"/>
+  <nd ref="5130858991"/>
+  <nd ref="5130858990"/>
+  <nd ref="5130858989"/>
+  <nd ref="5130858988"/>
+  <nd ref="5130858987"/>
+  <nd ref="5130858986"/>
+  <nd ref="5130858985"/>
+  <nd ref="5130858984"/>
+  <nd ref="5130858983"/>
+  <nd ref="5130858982"/>
+  <nd ref="5130858981"/>
+  <nd ref="5130858980"/>
+  <nd ref="5130858999"/>
+  <tag k="addr:city" v="Greenville"/>
+  <tag k="addr:housenumber" v="575"/>
+  <tag k="addr:postcode" v="29607"/>
+  <tag k="addr:state" v="SC"/>
+  <tag k="addr:street" v="Millennium Boulevard"/>
+  <tag k="building" v="school"/>
+ </way>
+ <way id="857359269" visible="true" version="4" changeset="129140293" timestamp="2022-11-19T22:43:15Z" user="KB-01" uid="9509339">
+  <nd ref="7993541961"/>
+  <nd ref="7993541963"/>
+  <nd ref="7993541962"/>
+  <nd ref="5130858977"/>
+  <nd ref="5130858976"/>
+  <nd ref="5130858975"/>
+  <nd ref="5130858974"/>
+  <nd ref="5130858973"/>
+  <nd ref="5130858972"/>
+  <nd ref="5130858971"/>
+  <nd ref="5130858970"/>
+  <nd ref="5130858969"/>
+  <nd ref="5130858968"/>
+  <nd ref="5130858967"/>
+  <nd ref="5130858954"/>
+  <nd ref="5130858966"/>
+  <nd ref="8165064113"/>
+  <nd ref="5130858965"/>
+  <tag k="highway" v="service"/>
+  <tag k="surface" v="asphalt"/>
+ </way>
+ <way id="877138163" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496">
+  <nd ref="8161213953"/>
+  <nd ref="8161213954"/>
+  <nd ref="8161213981"/>
+  <nd ref="8161213955"/>
+  <nd ref="8161213956"/>
+  <nd ref="8161213957"/>
+  <nd ref="8161213958"/>
+  <nd ref="8161213959"/>
+  <nd ref="8161213984"/>
+  <nd ref="8161213960"/>
+  <nd ref="8161213961"/>
+  <nd ref="8161213962"/>
+  <nd ref="8161213963"/>
+  <nd ref="8161213964"/>
+  <nd ref="8161213965"/>
+  <nd ref="8161213966"/>
+  <nd ref="8161213967"/>
+  <nd ref="8161213968"/>
+  <nd ref="8161213969"/>
+  <nd ref="8161213970"/>
+  <tag k="footway" v="sidewalk"/>
+  <tag k="highway" v="footway"/>
+ </way>
+ <way id="877138164" visible="true" version="2" changeset="151555209" timestamp="2024-05-19T23:16:37Z" user="MikeN" uid="135163">
+  <nd ref="8161213970"/>
+  <nd ref="8161213972"/>
+  <nd ref="8161213971"/>
+  <tag k="crossing" v="marked"/>
+  <tag k="crossing:markings" v="ladder"/>
+  <tag k="footway" v="crossing"/>
+  <tag k="highway" v="footway"/>
+ </way>
+ <way id="877138165" visible="true" version="1" changeset="94725878" timestamp="2020-11-24T19:22:41Z" user="itsamap!" uid="3854496">
+  <nd ref="8161213971"/>
+  <nd ref="8161213973"/>
+  <nd ref="8161213974"/>
+  <nd ref="8161213975"/>
+  <nd ref="8161213976"/>
+  <nd ref="8161213977"/>
+  <nd ref="8161213978"/>
+  <nd ref="8161213979"/>
+  <tag k="footway" v="sidewalk"/>
+  <tag k="highway" v="footway"/>
+ </way>
+ <way id="877564540" visible="true" version="3" changeset="156648021" timestamp="2024-09-15T13:37:13Z" user="itsamap!" uid="3854496">
+  <nd ref="8162167225"/>
+  <nd ref="8165064094"/>
+  <nd ref="8165064093"/>
+  <tag k="crossing" v="marked"/>
+  <tag k="crossing:markings" v="lines"/>
+  <tag k="footway" v="crossing"/>
+  <tag k="highway" v="footway"/>
+ </way>
+ <way id="877564541" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496">
+  <nd ref="8165064093"/>
+  <nd ref="8165064095"/>
+  <nd ref="8165064096"/>
+  <nd ref="8165064097"/>
+  <nd ref="8165064098"/>
+  <nd ref="8165064099"/>
+  <nd ref="8165064100"/>
+  <nd ref="8165064101"/>
+  <nd ref="8165064102"/>
+  <nd ref="8165064103"/>
+  <nd ref="8165064104"/>
+  <nd ref="8165064105"/>
+  <nd ref="8165064106"/>
+  <nd ref="8165064107"/>
+  <nd ref="8165064108"/>
+  <nd ref="8165064109"/>
+  <nd ref="8165064110"/>
+  <nd ref="8165064111"/>
+  <tag k="footway" v="sidewalk"/>
+  <tag k="highway" v="footway"/>
+ </way>
+ <way id="877564542" visible="true" version="2" changeset="151548901" timestamp="2024-05-19T19:27:08Z" user="MikeN" uid="135163">
+  <nd ref="8165064111"/>
+  <nd ref="8165064113"/>
+  <nd ref="8165064112"/>
+  <tag k="crossing" v="unmarked"/>
+  <tag k="crossing:markings" v="no"/>
+  <tag k="footway" v="crossing"/>
+  <tag k="highway" v="footway"/>
+ </way>
+ <way id="877564543" visible="true" version="1" changeset="94786535" timestamp="2020-11-25T16:00:59Z" user="itsamap!" uid="3854496">
+  <nd ref="8165064112"/>
+  <nd ref="8165064114"/>
+  <nd ref="8165064115"/>
+  <nd ref="8165064116"/>
+  <nd ref="8165066617"/>
+  <nd ref="8165066618"/>
+  <nd ref="8165066619"/>
+  <nd ref="8165066620"/>
+  <nd ref="8165066621"/>
+  <nd ref="8165066622"/>
+  <nd ref="8165066623"/>
+  <nd ref="8165066624"/>
+  <nd ref="8165066625"/>
+  <nd ref="8165066626"/>
+  <nd ref="8165066627"/>
+  <nd ref="8165066628"/>
+  <nd ref="5130858712"/>
+  <tag k="footway" v="sidewalk"/>
+  <tag k="highway" v="footway"/>
+ </way>
+ <way id="900558408" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857">
+  <nd ref="8365804797"/>
+  <nd ref="8365804796"/>
+  <nd ref="8365804795"/>
+  <nd ref="8365804794"/>
+  <nd ref="8365804793"/>
+  <nd ref="8365804792"/>
+  <nd ref="8365804791"/>
+  <nd ref="8365804790"/>
+  <nd ref="8365804789"/>
+  <nd ref="8365804788"/>
+  <nd ref="8365804787"/>
+  <nd ref="8365804786"/>
+  <nd ref="8365804785"/>
+  <nd ref="8365804784"/>
+  <nd ref="8365804783"/>
+  <nd ref="8365804782"/>
+  <nd ref="8365804781"/>
+  <nd ref="8365804780"/>
+  <nd ref="8365804779"/>
+  <nd ref="8365804778"/>
+  <nd ref="8365804777"/>
+  <nd ref="8365804776"/>
+  <nd ref="8365804775"/>
+  <nd ref="8365804774"/>
+  <nd ref="8365804773"/>
+  <nd ref="8365804772"/>
+  <nd ref="8365804771"/>
+  <nd ref="8365804770"/>
+  <nd ref="8365804769"/>
+  <nd ref="8365804768"/>
+  <nd ref="8365804767"/>
+  <nd ref="8365804766"/>
+  <nd ref="8365804765"/>
+  <nd ref="8365804764"/>
+  <nd ref="8365804763"/>
+  <nd ref="8365804762"/>
+  <nd ref="8365804761"/>
+  <nd ref="8365804760"/>
+  <nd ref="8365804759"/>
+  <nd ref="8365804758"/>
+  <nd ref="8365804757"/>
+  <nd ref="8365804756"/>
+  <nd ref="8365804755"/>
+  <nd ref="8365804754"/>
+  <nd ref="8365804753"/>
+  <nd ref="8365804752"/>
+  <nd ref="8365804751"/>
+  <nd ref="8365804750"/>
+  <nd ref="8365804749"/>
+  <nd ref="8365804748"/>
+  <nd ref="8365804747"/>
+  <nd ref="8365804746"/>
+  <nd ref="8365804745"/>
+  <nd ref="8365804744"/>
+  <nd ref="8365804743"/>
+  <nd ref="8365804797"/>
+  <tag k="leisure" v="garden"/>
+ </way>
+ <way id="900558409" visible="true" version="1" changeset="98189005" timestamp="2021-01-27T00:46:52Z" user="GreenvilleSCCityImport1" uid="12433857">
+  <nd ref="8365804843"/>
+  <nd ref="8365804842"/>
+  <nd ref="8365804841"/>
+  <nd ref="8365804840"/>
+  <nd ref="8365804839"/>
+  <nd ref="8365804838"/>
+  <nd ref="8365804837"/>
+  <nd ref="8365804836"/>
+  <nd ref="8365804835"/>
+  <nd ref="8365804834"/>
+  <nd ref="8365804833"/>
+  <nd ref="8365804832"/>
+  <nd ref="8365804831"/>
+  <nd ref="8365804830"/>
+  <nd ref="8365804829"/>
+  <nd ref="8365804828"/>
+  <nd ref="8365804827"/>
+  <nd ref="8365804826"/>
+  <nd ref="8365804825"/>
+  <nd ref="8365804824"/>
+  <nd ref="8365804823"/>
+  <nd ref="8365804822"/>
+  <nd ref="8365804821"/>
+  <nd ref="8365804820"/>
+  <nd ref="8365804819"/>
+  <nd ref="8365804818"/>
+  <nd ref="8365804817"/>
+  <nd ref="8365804816"/>
+  <nd ref="8365804815"/>
+  <nd ref="8365804814"/>
+  <nd ref="8365804813"/>
+  <nd ref="8365804812"/>
+  <nd ref="8365804811"/>
+  <nd ref="8365804810"/>
+  <nd ref="8365804809"/>
+  <nd ref="8365804808"/>
+  <nd ref="8365804807"/>
+  <nd ref="8365804806"/>
+  <nd ref="8365804805"/>
+  <nd ref="8365804804"/>
+  <nd ref="8365804803"/>
+  <nd ref="8365804802"/>
+  <nd ref="8365804801"/>
+  <nd ref="8365804800"/>
+  <nd ref="8365804799"/>
+  <nd ref="8365804798"/>
+  <nd ref="8365804843"/>
+  <tag k="leisure" v="garden"/>
+ </way>
+ <way id="985671417" visible="true" version="1" changeset="111519408" timestamp="2021-09-22T02:28:22Z" user="MikeN" uid="135163">
+  <nd ref="898254516"/>
+  <nd ref="8162167223"/>
+  <nd ref="898253806"/>
+  <nd ref="898254030"/>
+  <nd ref="898255043"/>
+  <nd ref="898255460"/>
+  <tag k="highway" v="service"/>
+  <tag k="oneway" v="yes"/>
+ </way>
+ <way id="1146860967" visible="true" version="1" changeset="132656181" timestamp="2023-02-17T03:39:34Z" user="shinylman" uid="17102828">
+  <nd ref="4085812833"/>
+  <nd ref="10672141878"/>
+  <nd ref="10672141879"/>
+  <nd ref="10672141880"/>
+  <nd ref="10672141881"/>
+  <nd ref="10672141882"/>
+  <nd ref="10672141883"/>
+  <nd ref="10672141884"/>
+  <nd ref="10672141885"/>
+  <nd ref="10672141886"/>
+  <nd ref="10672141887"/>
+  <nd ref="10672141888"/>
+  <nd ref="10672141889"/>
+  <nd ref="4085812830"/>
+ </way>
+ <way id="1146860968" visible="true" version="1" changeset="132656181" timestamp="2023-02-17T03:39:34Z" user="shinylman" uid="17102828">
+  <nd ref="4085812830"/>
+  <nd ref="5130858979"/>
+  <nd ref="4085812828"/>
+  <nd ref="4085812829"/>
+  <nd ref="3155518319"/>
+  <nd ref="10672141875"/>
+  <nd ref="3155518318"/>
+  <nd ref="4085812831"/>
+  <nd ref="3155518317"/>
+  <nd ref="3155518307"/>
+ </way>
+ <way id="1146860969" visible="true" version="1" changeset="132656181" timestamp="2023-02-17T03:39:34Z" user="shinylman" uid="17102828">
+  <nd ref="4085812833"/>
+  <nd ref="4085812832"/>
+  <nd ref="10672141877"/>
+  <nd ref="4085812830"/>
+ </way>
+ <way id="1284738327" visible="true" version="1" changeset="151555209" timestamp="2024-05-19T23:16:37Z" user="MikeN" uid="135163">
+  <nd ref="11918696833"/>
+  <nd ref="5130858710"/>
+  <nd ref="5130858709"/>
+  <nd ref="5130858708"/>
+  <nd ref="8161214007"/>
+  <nd ref="8162167221"/>
+  <nd ref="8161214006"/>
+  <tag k="footway" v="sidewalk"/>
+  <tag k="highway" v="footway"/>
+ </way>
+ <way id="1284738328" visible="true" version="2" changeset="156648021" timestamp="2024-09-15T13:37:13Z" user="itsamap!" uid="3854496">
+  <nd ref="11918696834"/>
+  <nd ref="5130858711"/>
+  <nd ref="11918696833"/>
+  <tag k="crossing" v="marked"/>
+  <tag k="crossing:markings" v="lines"/>
+  <tag k="footway" v="crossing"/>
+  <tag k="highway" v="footway"/>
+ </way>
+ <way id="1292753721" visible="true" version="1" changeset="152742388" timestamp="2024-06-16T01:05:36Z" user="itsamap!" uid="3854496">
+  <nd ref="11984482999"/>
+  <nd ref="11984483000"/>
+  <nd ref="11984483001"/>
+  <nd ref="11984483002"/>
+  <nd ref="11984483003"/>
+  <nd ref="11984483004"/>
+  <nd ref="11984483005"/>
+  <nd ref="11984483006"/>
+  <nd ref="11984483007"/>
+  <tag k="footway" v="sidewalk"/>
+  <tag k="highway" v="footway"/>
+ </way>
+ <way id="1292753722" visible="true" version="1" changeset="152742388" timestamp="2024-06-16T01:05:36Z" user="itsamap!" uid="3854496">
+  <nd ref="11984483007"/>
+  <nd ref="11984483009"/>
+  <nd ref="11984483008"/>
+  <tag k="crossing" v="unmarked"/>
+  <tag k="crossing:markings" v="no"/>
+  <tag k="footway" v="crossing"/>
+  <tag k="highway" v="footway"/>
+ </way>
+ <way id="1292753723" visible="true" version="1" changeset="152742388" timestamp="2024-06-16T01:05:36Z" user="itsamap!" uid="3854496">
+  <nd ref="11984483008"/>
+  <nd ref="11984483010"/>
+  <nd ref="8165064112"/>
+  <tag k="footway" v="sidewalk"/>
+  <tag k="highway" v="footway"/>
+ </way>
+ <way id="1315510275" visible="true" version="1" changeset="156610747" timestamp="2024-09-14T12:41:28Z" user="itsamap!" uid="3854496">
+  <nd ref="5130858719"/>
+  <nd ref="8161213979"/>
+  <tag k="highway" v="footway"/>
+ </way>
+ <way id="1315510276" visible="true" version="1" changeset="156610747" timestamp="2024-09-14T12:41:28Z" user="itsamap!" uid="3854496">
+  <nd ref="8161213979"/>
+  <nd ref="5130858970"/>
+  <nd ref="11984482999"/>
+  <tag k="crossing" v="unmarked"/>
+  <tag k="crossing:markings" v="no"/>
+  <tag k="footway" v="crossing"/>
+  <tag k="highway" v="footway"/>
+ </way>
+ <way id="1315510277" visible="true" version="1" changeset="156610747" timestamp="2024-09-14T12:41:28Z" user="itsamap!" uid="3854496">
+  <nd ref="12176690821"/>
+  <nd ref="5130858924"/>
+  <nd ref="5130858707"/>
+  <tag k="highway" v="footway"/>
+ </way>
+ <way id="1315510278" visible="true" version="1" changeset="156610747" timestamp="2024-09-14T12:41:28Z" user="itsamap!" uid="3854496">
+  <nd ref="5130858716"/>
+  <nd ref="12176690822"/>
+  <tag k="footway" v="sidewalk"/>
+  <tag k="highway" v="footway"/>
+ </way>
+ <way id="1315510279" visible="true" version="1" changeset="156610747" timestamp="2024-09-14T12:41:28Z" user="itsamap!" uid="3854496">
+  <nd ref="12176690822"/>
+  <nd ref="5130858934"/>
+  <nd ref="12176690823"/>
+  <tag k="crossing" v="unmarked"/>
+  <tag k="crossing:markings" v="no"/>
+  <tag k="footway" v="crossing"/>
+  <tag k="highway" v="footway"/>
+ </way>
+ <relation id="15486759" visible="true" version="2" changeset="143760634" timestamp="2023-11-08T02:47:51Z" user="b-jazz-bot" uid="9451067">
+  <member type="way" ref="406524196" role="outer"/>
+  <member type="way" ref="1146860969" role="outer"/>
+  <member type="way" ref="1146860968" role="outer"/>
+  <tag k="amenity" v="college"/>
+  <tag k="name" v="Center for Manufacturing Innovation"/>
+  <tag k="type" v="multipolygon"/>
+  <tag k="website" v="https://www.gvltec.edu/indexcmi.aspx"/>
+ </relation>
+ <relation id="15486760" visible="true" version="1" changeset="132656181" timestamp="2023-02-17T03:39:34Z" user="shinylman" uid="17102828">
+  <member type="way" ref="1146860969" role="outer"/>
+  <member type="way" ref="1146860967" role="outer"/>
+  <tag k="natural" v="wood"/>
+  <tag k="type" v="multipolygon"/>
+ </relation>
+</osm>

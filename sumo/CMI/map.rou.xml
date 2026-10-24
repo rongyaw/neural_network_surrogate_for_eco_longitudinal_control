@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-03-07 10:31:19.902368 by randomTrips.py UNKNOWN
+<configuration>
+    <net-file value="map.net.xml"/>
+    <output-trip-file value="map.rou.xml"/>
+    <fringe-factor value="20.0"/>
+    <end value="-10.0"/>
+</configuration>
+-->
+
+<routes>
+    <!-- Define vehicle types -->
+    <vType id="electricCar" vClass="passenger" length="4.7" maxSpeed="30">
+        <param key="device.battery.capacity" value="80" /> <!-- kWh -->
+        <param key="device.battery.actualBatteryCapacity" value="80" /> <!-- start full -->
+        <param key="device.battery.powerConsumption" value="0.2" /> <!-- Wh per meter -->
+    </vType>
+
+    <!-- Define routes -->
+    <route id="route1" edges="76146229#1"/>
+    <route id="route2" edges="-76146229#1"/>
+
+    <!-- Assign vehicles to routes -->
+    <!-- <vehicle id="veh0" type="car" route="route2" depart="0" departPos="30"/>
+    <vehicle id="veh1" type="car" route="route2" depart="0" departPos="21"/> -->
+    <!-- <vehicle id="veh0" type="car" route="route2" depart="0" departPos="15"/>
+    <vehicle id="veh1" type="car" route="route2" depart="0"/> -->
+    <!-- <vehicle id="veh4" type="car" route="route1" depart="3"/>
+    <vehicle id="veh2" type="car" route="route2" depart="5"/>
+    <vehicle id="veh3" type="car" route="route2" depart="8"/> -->
+</routes>

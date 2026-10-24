@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-03-07 11:41:07 by Eclipse SUMO GUI Version 1.22.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="sumo/on_ramp/onramp.net.xml"/>
+        <route-files value="sumo/on_ramp/onramp.rou.xml"/>
+        <additional-files value="sumo/on_ramp/detectors.add.xml"/>
+    </input>
+
+    <time>
+        <begin value="0"/>
+        <end value="480"/>
+        <step-length value="0.1"/>
+    </time>
+
+    <traci_server>
+        <remote-port value="58437"/>
+    </traci_server>
+
+    <gui_only>
+        <start value="t"/>
+    </gui_only>
+
+</sumoConfiguration>
+-->
+
+<detector xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/det_e1_file.xsd">
+    <interval begin="0.00" end="50.00" id="merge_1" nVehContrib="10" flow="720.00" occupancy="3.96" speed="21.81" harmonicMeanSpeed="21.74" length="4.30" nVehEntered="10"/>
+    <interval begin="50.00" end="100.00" id="merge_1" nVehContrib="18" flow="1296.00" occupancy="10.98" speed="15.71" harmonicMeanSpeed="14.10" length="4.30" nVehEntered="18"/>
+    <interval begin="100.00" end="150.00" id="merge_1" nVehContrib="13" flow="936.00" occupancy="12.83" speed="9.05" harmonicMeanSpeed="8.81" length="4.30" nVehEntered="14"/>
+    <interval begin="150.00" end="200.00" id="merge_1" nVehContrib="13" flow="936.00" occupancy="17.01" speed="6.74" harmonicMeanSpeed="6.52" length="4.30" nVehEntered="12"/>
+    <interval begin="200.00" end="250.00" id="merge_1" nVehContrib="6" flow="432.00" occupancy="50.07" speed="6.03" harmonicMeanSpeed="5.02" length="4.30" nVehEntered="7"/>
+    <interval begin="250.00" end="300.00" id="merge_1" nVehContrib="0" flow="0.00" occupancy="100.00" speed="-1.00" harmonicMeanSpeed="-1.00" length="-1.00" nVehEntered="0"/>
+    <interval begin="300.00" end="350.00" id="merge_1" nVehContrib="2" flow="144.00" occupancy="84.44" speed="0.37" harmonicMeanSpeed="0.08" length="4.30" nVehEntered="1"/>
+    <interval begin="350.00" end="400.00" id="merge_1" nVehContrib="3" flow="216.00" occupancy="82.28" speed="1.77" harmonicMeanSpeed="0.32" length="4.30" nVehEntered="4"/>
+    <interval begin="400.00" end="450.00" id="merge_1" nVehContrib="23" flow="1656.00" occupancy="19.45" speed="10.59" harmonicMeanSpeed="9.64" length="4.30" nVehEntered="22"/>
+    <interval begin="450.00" end="500.00" id="merge_1" nVehContrib="26" flow="1872.00" occupancy="14.28" speed="15.68" harmonicMeanSpeed="15.66" length="4.30" nVehEntered="26"/>
+    <interval begin="500.00" end="550.00" id="merge_1" nVehContrib="26" flow="1872.00" occupancy="13.39" speed="16.70" harmonicMeanSpeed="16.70" length="4.30" nVehEntered="26"/>
+    <interval begin="550.00" end="600.00" id="merge_1" nVehContrib="26" flow="1872.00" occupancy="13.28" speed="16.84" harmonicMeanSpeed="16.84" length="4.30" nVehEntered="26"/>
+    <interval begin="600.00" end="650.00" id="merge_1" nVehContrib="25" flow="1800.00" occupancy="12.99" speed="16.56" harmonicMeanSpeed="16.56" length="4.30" nVehEntered="25"/>
+    <interval begin="650.00" end="700.00" id="merge_1" nVehContrib="6" flow="432.00" occupancy="3.13" speed="16.48" harmonicMeanSpeed="16.48" length="4.30" nVehEntered="6"/>
+    <interval begin="700.00" end="750.00" id="merge_1" nVehContrib="0" flow="0.00" occupancy="0.00" speed="-1.00" harmonicMeanSpeed="-1.00" length="-1.00" nVehEntered="0"/>
+    <interval begin="750.00" end="800.00" id="merge_1" nVehContrib="0" flow="0.00" occupancy="0.00" speed="-1.00" harmonicMeanSpeed="-1.00" length="-1.00" nVehEntered="0"/>
+    <interval begin="800.00" end="850.00" id="merge_1" nVehContrib="0" flow="0.00" occupancy="0.00" speed="-1.00" harmonicMeanSpeed="-1.00" length="-1.00" nVehEntered="0"/>
+    <interval begin="850.00" end="900.00" id="merge_1" nVehContrib="0" flow="0.00" occupancy="0.00" speed="-1.00" harmonicMeanSpeed="-1.00" length="-1.00" nVehEntered="0"/>
+    <interval begin="900.00" end="950.00" id="merge_1" nVehContrib="0" flow="0.00" occupancy="0.00" speed="-1.00" harmonicMeanSpeed="-1.00" length="-1.00" nVehEntered="0"/>
+    <interval begin="950.00" end="1000.00" id="merge_1" nVehContrib="0" flow="0.00" occupancy="0.00" speed="-1.00" harmonicMeanSpeed="-1.00" length="-1.00" nVehEntered="0"/>
+</detector>
