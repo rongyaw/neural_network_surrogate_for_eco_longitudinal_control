@@ -602,6 +602,7 @@ class ExplicitMPCConnectedController(_ExplicitMPCBase):
         theta = np.r_[qp_ego_state, pv_state, preview_s]
         acceleration = self._step(theta, ego_state, pv_state)
         return (acceleration, self.last_diagnostics.copy()) if return_diagnostics else acceleration
+
 class IDM():
     def __init__(self, a, b, s0, v0, T):
         self.a = a
@@ -655,7 +656,7 @@ class car_following_mpc():
         
         self.control_cost = 4000.0
         self.distance_cost = 1.0
-        self.d_gap = 10.0
+        self.d_gap = 7.0
         self._mpc_problem_key = None
 
     def set_mpc_warm_start(self, opti, s, u, e_1, e_2):
@@ -694,9 +695,9 @@ class car_following_mpc():
         # Check the length of the reference signals
         h = len(s_ref)
         # Assign the reference signals to the internal state
-        self.s_ref[0, :h] = s_ref
-        self.s_ref[1, :h] = v_ref
-        self.s_ref[2, :h] = a_ref
+        self.s_ref[0,:h] = s_ref
+        self.s_ref[1,:h] = v_ref
+        self.s_ref[2,:h] = a_ref
         
         # Assign MPC initial state
         self.s_0[0, 0] = ego_s
@@ -738,15 +739,16 @@ class car_following_mpc():
         
         for t in range(self.h - 1):
             # Define cost function
-            cost += q_u * u[t] ** 2 + q_g * (s_ref[0, t] - self.d_gap - s[0, t]) ** 2 + q_a * s[2, t] ** 2
+            cost += q_u * u[t] ** 2 + q_g * (s_ref[0, t] - self.d_gap- s[0, t]) ** 2 + q_a * s[2, t] ** 2
             
             # Add system state update function
             opti.subject_to(s[:, t + 1] == A @ s[:, t] + B @ u[t])
             
             # Add constriants
             opti.subject_to(s[1, t] <= v_max + e_1[t])
-            opti.subject_to(s[1, t] >= 0.0 + e_2[t])
+            opti.subject_to(s[1, t] >= 0.0 - e_2[t])
             opti.subject_to(s[0, t] <= s_ref[0, t] - self.d_gap + e_1[t])
+            cost += q_e * (e_1[t] ** 2 + e_2[t] ** 2)
             
         # Add final states' cost
         cost += q_g * (s_ref[0, self.h - 1] - self.d_gap - s[0, self.h - 1]) ** 2 + q_a * s[2, self.h - 1] ** 2
@@ -758,7 +760,7 @@ class car_following_mpc():
         opti.subject_to(s[0, self.h - 1] <= s_ref[0, self.h - 1] - self.d_gap + e_1[self.h - 1])
         
         opti.minimize(cost)
-        opti.solver('ipopt', {"expand": True, "print_time": 0}, {"print_level": 0})
+        opti.solver('fatrop', {"expand": True, "print_time": 0}, {"print_level": 0})
 
         self._mpc_opti = opti
         self._mpc_variables = (s, u, e_1, e_2)

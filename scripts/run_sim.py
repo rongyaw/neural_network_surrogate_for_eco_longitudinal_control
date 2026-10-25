@@ -412,7 +412,9 @@ if __name__=="__main__":
                 # Get leading vehicle speed
                 v_lead_id = np.argmin(np.abs([record_t - sim_t]))
                 v_tgt_lead = front_v_t[v_lead_id] #+ 2.0 * (random.random() - 0.5)
+                s_tgt_lead = front_s_t[v_lead_id]
                 sumo_sim_manager.sumo_veh[i].assignTargetSpeed(v_tgt_lead)
+                
                 [veh_1_acc_t, veh_1_spd_t, veh_1_dist_t] = sumo_sim_manager.sumo_veh[i].getVehicleStates()
                 lead_s = veh_1_dist_t
                 # Update state preview
@@ -465,10 +467,11 @@ if __name__=="__main__":
             elif USING_EXPLICIT_CONNECTED:
                 # Match the current Eco-MPC connected path: every follower
                 # receives the same driving-cycle preview through setPred().
-                pv_preview_v, pv_preview_s = driving_cycle_state_preview_searching(
+                pv_preview_v, pv_preview_s, pv_preview_a = driving_cycle_state_preview_searching(
                     sim_t=sim_t,
                     record_t=record_t,
                     front_v_t=front_v_t,
+                    front_a_t=front_a_t,
                     mpc_dt=0.5,
                     front_s_init=veh_0_dist_t)
                 explicit_acceleration, explicit_diag = explicit_control.step(
