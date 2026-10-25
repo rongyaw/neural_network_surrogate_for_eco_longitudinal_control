@@ -436,21 +436,24 @@ def TTCi_estimate(ego_v, front_v, front_s):
     ttc_i = (ego_v - front_v) / front_s
     return ttc_i
 
-def driving_cycle_state_preview_searching(sim_t, record_t, front_v_t, mpc_dt, front_s_init):
+def driving_cycle_state_preview_searching(sim_t, record_t, front_v_t, front_a_t, mpc_dt, front_s_init):
     # Find leading vehicle's driving cycle
-    cycle_vs = np.empty(32)
+    cycle_vs = np.empty(20)
     cycle_vs.fill(np.nan)
+    cycle_as = np.empty(20)
+    cycle_as.fill(np.nan)
     
-    for i in range(32):
+    for i in range(20):
         t_id = np.argmin(np.abs([record_t - (i * mpc_dt + sim_t)]))
         cycle_vs[i] = front_v_t[t_id]
+        cycle_as[i] = front_a_t[t_id]
     
     # Keep the position preview the same length as the velocity preview. The
     # generated Eco-MPC interface consumes one reference for every stage.
     cycle_ss = (scipy.integrate.cumulative_trapezoid(
         cycle_vs, dx=mpc_dt, initial=0.0) + front_s_init)
     
-    return cycle_vs, cycle_ss
+    return cycle_vs, cycle_ss, cycle_as
 
 def CBF_acceleration_bound_check(pv_vt, s_vt, pv_st, s_st, tao, alpha, L):
     a_ego_max = (pv_vt - s_vt + alpha * (pv_st - s_st - L - tao * s_vt)) / tao
@@ -459,25 +462,44 @@ def CBF_acceleration_bound_check(pv_vt, s_vt, pv_st, s_st, tao, alpha, L):
 def traffic_online_MPC_control_step(veh_0_acc_t, veh_0_spd_t, veh_0_dist_t,
                                     veh_1_acc_t, veh_1_spd_t, veh_1_dist_t,
                                     sim_t, online_MPC_control, record_t, 
-                                    front_v_t, mpc_dt, pv_object, ego_object, 
+                                    front_v_t, front_a_t, mpc_dt, pv_object, ego_object, 
                                     leading_preview=False):
     
     if leading_preview:
-        cycle_vs, cycle_ss = driving_cycle_state_preview_searching(sim_t=sim_t, record_t=record_t, front_v_t=front_v_t, mpc_dt=mpc_dt, front_s_init=veh_0_dist_t)
+        cycle_vs, cycle_ss, cycle_as = driving_cycle_state_preview_searching(sim_t=sim_t, record_t=record_t, front_v_t=front_v_t, front_a_t=front_a_t, mpc_dt=mpc_dt, front_s_init=veh_0_dist_t)
     else:
-        cycle_vs = []#pv_object.pv_v_prev
-        cycle_ss = []#pv_object.pv_s_prev
+        # Predict the future states based on the acceleration of the preceding vehicle assuming speed limit with 40 m/s and constant acceleration
+        cycle_vs = np.empty(20)
+        cycle_vs.fill(np.nan)
+        cycle_as = np.empty(20)
+        cycle_as.fill(np.nan)
+        cycle_ss = np.empty(20)
+        cycle_ss.fill(np.nan)
         
-    veh_1_pred_s, veh_1_pred_v, a_MPC = online_MPC_control.svs.setCommand_SUMO(t = sim_t, ego_s=veh_1_dist_t, ego_v=veh_1_spd_t, ego_a=veh_1_acc_t,
-                                                   pv_s=veh_0_dist_t, pv_v=veh_0_spd_t, pv_a=veh_0_acc_t, cycle_ss=cycle_ss, cycle_vs=cycle_vs, cycle_dt=mpc_dt)
+        for i in range(20):
+            if i == 0:
+                cycle_as[i] = 0.0
+                cycle_vs[i] = veh_0_spd_t
+            else:
+                cycle_as[i] = veh_0_acc_t if (veh_0_spd_t + cycle_as[i-1] * mpc_dt) < 40.0 else 0.0
+                cycle_vs[i] = min(veh_0_spd_t + cycle_as[i-1] * mpc_dt, 40.0)
+        cycle_ss = (scipy.integrate.cumulative_trapezoid(cycle_vs, dx=mpc_dt, initial=0.0) + veh_0_dist_t)
+    
+    # Assign initial states for the MPC controller
+    online_MPC_control.reference_update(s_ref=cycle_ss, v_ref=cycle_vs, a_ref=cycle_as, ego_s=veh_1_dist_t, ego_v=veh_1_spd_t, ego_a=veh_1_acc_t)
+    online_MPC_control.mpc_solver()
+    veh_1_pred_s = online_MPC_control.mpc_sol_s
+    veh_1_pred_v = online_MPC_control.mpc_sol_v
+    a_MPC = online_MPC_control.mpc_sol_a[1]
+    
     if leading_preview:
-        ego_object.update_vehicle_future_states_preview(np.array(veh_1_pred_s) - 5.0, veh_1_pred_v)
+        ego_object.update_vehicle_future_states_preview(np.array(veh_1_pred_s), veh_1_pred_v)
     
     # Check if CBF safety constraint is violated
-    a_ego_max = CBF_acceleration_bound_check(pv_vt=veh_0_spd_t, s_vt=veh_1_spd_t, pv_st=veh_0_dist_t, s_st=veh_1_dist_t, tao=1.8, alpha=2.0, L=7.0)
-    if a_MPC > a_ego_max:
-        print(f"CBF safety constraint is violated at time {sim_t}! Adjusting MPC control to ensure safety...")
-        a_MPC = np.minimum(a_MPC, a_ego_max)
+    # a_ego_max = CBF_acceleration_bound_check(pv_vt=veh_0_spd_t, s_vt=veh_1_spd_t, pv_st=veh_0_dist_t, s_st=veh_1_dist_t, tao=1.8, alpha=2.0, L=7.0)
+    # if a_MPC > a_ego_max:
+    #     print(f"CBF safety constraint is violated at time {sim_t}! Adjusting MPC control to ensure safety...")
+    #     a_MPC = np.minimum(a_MPC, a_ego_max)
     
     return [a_MPC]
 

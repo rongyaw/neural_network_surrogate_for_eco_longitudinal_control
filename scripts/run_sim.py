@@ -318,7 +318,8 @@ if __name__=="__main__":
         controller_name = 'Preview_Neural_Network'
         print('Use preview neural network to control traffic vehicles')
     elif USING_ONLINE_MPC:
-        online_MPC_control = PCC_MPC_controller(dirname=dirname)
+        # online_MPC_control = PCC_MPC_controller(dirname=dirname)
+        online_MPC_control = car_following_mpc()
         controller_name = 'Online_MPC'
         print('Use online MPC to control traffic vehicles')
     elif USING_EXPLICIT_UNCONNECTED:
@@ -346,6 +347,7 @@ if __name__=="__main__":
         
     record_t = np.array(leading_vehicle_speed_profile[:, 0])
     front_v_t = np.array(leading_vehicle_speed_profile[:, 1])
+    front_a_t = np.array(leading_vehicle_speed_profile[:, 2])
     front_s_t = np.array(leading_vehicle_speed_profile[:, 3])
     
     if sumo_sim_manager.open_gui:
@@ -414,10 +416,11 @@ if __name__=="__main__":
                 [veh_1_acc_t, veh_1_spd_t, veh_1_dist_t] = sumo_sim_manager.sumo_veh[i].getVehicleStates()
                 lead_s = veh_1_dist_t
                 # Update state preview
-                lead_prev_v, lead_prev_s = driving_cycle_state_preview_searching(
+                lead_prev_v, lead_prev_s, lead_prev_a = driving_cycle_state_preview_searching(
                     sim_t=sim_t,
                     record_t=record_t,
                     front_v_t=front_v_t,
+                    front_a_t=front_a_t,
                     mpc_dt=PREVIEW_DT,
                     front_s_init=lead_s,
                 )
@@ -425,6 +428,7 @@ if __name__=="__main__":
                 sumo_sim_manager.sumo_veh[i].update_vehicle_future_states_preview(
                     lead_prev_s[:PREVIEW_STEPS],
                     lead_prev_v[:PREVIEW_STEPS],
+                    lead_prev_a[:PREVIEW_STEPS],
                     sim_step=sumo_sim_manager.step,
                     preview_dt=PREVIEW_DT,
                     source="driving_cycle",
@@ -446,7 +450,7 @@ if __name__=="__main__":
                 acc_traffic_step_t = traffic_online_MPC_control_step(veh_0_acc_t, veh_0_spd_t, veh_0_dist_t,
                                                                      veh_1_acc_t, veh_1_spd_t, veh_1_dist_t,
                                                                      sim_t, online_MPC_control, record_t,
-                                                                     front_v_t, 0.5, pv_object=sumo_sim_manager.sumo_veh[preceding_index],
+                                                                     front_v_t, front_a_t, 0.5, pv_object=sumo_sim_manager.sumo_veh[preceding_index],
                                                                      ego_object=sumo_sim_manager.sumo_veh[i], leading_preview=True)
             elif USING_EXPLICIT_UNCONNECTED:
                 explicit_acceleration, explicit_diag = explicit_control.step(
