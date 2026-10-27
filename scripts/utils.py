@@ -3,7 +3,6 @@ import csv
 import numpy as np
 import scipy
 import traci
-from _controller import IDM
 
 class IDM():
     def __init__(self, a, b, s0, v0, T):

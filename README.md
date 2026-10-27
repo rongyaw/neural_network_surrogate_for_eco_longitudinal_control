@@ -5,6 +5,21 @@ MPC, reconstructed explicit MPC, neural-network controllers, and IDM.
 
 The main entry point is `scripts/run_sim.py`.
 
+## Controller source files
+
+Controller implementations are split by type under `scripts/controllers/`:
+
+| File | Controllers |
+| --- | --- |
+| `baseline.py` | IDM baseline |
+| `explicit_mpc.py` | Explicit MPC configuration, region model, and connected/unconnected controllers |
+| `online_mpc.py` | CasADi car-following MPC |
+| `neural.py` | Regular neural-network models and controller |
+| `preview_nn.py` | Preview neural-network model and controller |
+
+New code should import from `controllers`. `scripts/_controller.py` remains as
+a compatibility facade for older scripts.
+
 ## Requirements
 
 ### System packages
@@ -12,7 +27,6 @@ The main entry point is `scripts/run_sim.py`.
 - Python 3.8 or newer
 - SUMO and SUMO tools
 - A working TraCI installation
-- `gcc`/`libstdc++` runtime support for the included MPC shared library
 
 On Ubuntu, SUMO can be installed with:
 
@@ -38,7 +52,7 @@ Create an environment and install the packages used by the active simulation:
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
-python -m pip install numpy scipy pandas matplotlib osqp traci torch
+python -m pip install numpy scipy pandas matplotlib osqp traci torch casadi
 ```
 
 For GPU use, install the PyTorch build matching the installed CUDA version
@@ -68,12 +82,6 @@ scripts/traffic_following_control_dc_trained.pt
 scripts/preview_traffic_following_control_conv_best.pt
 ```
 
-The compiled online-MPC controller uses:
-
-```text
-scripts/libpcc_so.so
-```
-
 ## Running a simulation
 
 General command format:
@@ -92,7 +100,7 @@ Available controllers:
 
 | Controller | Description |
 | --- | --- |
-| `MPC` | Existing compiled online Eco-MPC controller |
+| `MPC` | CasADi online car-following MPC |
 | `ExplicitUnconnected` | Reconstructed explicit MPC with locally estimated constant-acceleration PV preview |
 | `ExplicitConnected` | Reconstructed explicit MPC with communicated/driving-cycle PV preview |
 | `NN` | Regular neural-network controller using `traffic_following_control_dc_trained.pt` |
@@ -102,7 +110,7 @@ Available controllers:
 Examples:
 
 ```bash
-# Existing compiled MPC
+# CasADi online MPC
 python3 scripts/run_sim.py --num_sv 5 --no_gui --print_level info Hwy MPC
 
 # Explicit MPC with locally estimated PV preview
@@ -158,12 +166,13 @@ python3 scripts/run_sim.py --disable_preview_cbf \
     --num_sv 5 --no_gui Hwy PreviewNN
 ```
 
-The existing compiled MPC path retains its current safety handling.
+The online CasADi MPC uses its optimization constraints and does not currently
+apply the neural-network CBF filter.
 
 ## Explicit-MPC notes
 
-The explicit controller is a reconstructed, paper-aligned QP and is not
-guaranteed to be binary-equivalent to the compiled `MPC` controller.
+The explicit controller is a reconstructed QP with its own implementation and
+is not guaranteed to match the CasADi `MPC` controller exactly.
 
 Current simulation settings are a 20-stage horizon, `dt=0.5`, and 10,000
 active-set discovery samples. Regions are generated on the first run and
@@ -277,9 +286,8 @@ available.
 
 ```text
 scripts/run_sim.py                  Main simulation entry point
-scripts/_controller.py              MPC, explicit MPC, NN, PreviewNN, and IDM controllers
-scripts/_agents.py                  SUMO vehicle and compiled MPC interface
-scripts/_cppwrapper.py              ctypes wrapper for libpcc_so.so
+scripts/controllers/                 Controller implementations by type
+scripts/_controller.py               Compatibility exports for older imports
 scripts/utils.py                    Driving-cycle and simulation utilities
 runtime_analysis.sh                 Batch runtime analysis
 speed_profile/                      Driving-cycle inputs

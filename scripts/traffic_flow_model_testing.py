@@ -8,8 +8,7 @@ import traci.constants as tc
 import matplotlib.pyplot as plt
 import traci.exceptions
 from utils import *
-from _controller import *
-from _constants import *
+from controllers import IDM, NN_controller
 import time
 import random
 

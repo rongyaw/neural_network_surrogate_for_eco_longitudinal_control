@@ -3,14 +3,30 @@
 import os
 import sys
 import argparse
-import traci
-import traci.constants as tc
-import matplotlib.pyplot as plt
-from utils import *
-from _controller import *
-from _constants import *
+import csv
 import time
-import random
+import traci
+import traci.constants
+import matplotlib.pyplot as plt
+import numpy as np
+
+from utils import (
+    SUMO_vehicles,
+    data_logger,
+    driving_cycle_spd_profile_reader,
+    driving_cycle_state_preview_searching,
+    engine_power_estimation,
+    traffic_online_MPC_control_step,
+)
+from controllers import (
+    ExplicitMPCConfig,
+    ExplicitMPCConnectedController,
+    ExplicitMPCUnconnectedController,
+    IDM,
+    NN_controller,
+    PreviewNN_controller,
+    car_following_mpc,
+)
 
 
 PREVIEW_STEPS = 20
@@ -412,7 +428,6 @@ if __name__=="__main__":
                 # Get leading vehicle speed
                 v_lead_id = np.argmin(np.abs([record_t - sim_t]))
                 v_tgt_lead = front_v_t[v_lead_id] #+ 2.0 * (random.random() - 0.5)
-                s_tgt_lead = front_s_t[v_lead_id]
                 sumo_sim_manager.sumo_veh[i].assignTargetSpeed(v_tgt_lead)
                 
                 [veh_1_acc_t, veh_1_spd_t, veh_1_dist_t] = sumo_sim_manager.sumo_veh[i].getVehicleStates()
@@ -610,7 +625,8 @@ if __name__=="__main__":
         # This is the comparable runtime value for every controller: one
         # complete simulation/control step, rather than one controller call.
         runtime_dt = time.perf_counter() - step_start_time
-        runtime_record.append(runtime_dt)
+        if sim_t > 0.1:  # Skip the first step, which is usually an outlier due to initialization overhead.     
+            runtime_record.append(runtime_dt)
 
         if args.print_level != "quiet":
             print('Full SUMO step runtime is: ', str(round(runtime_dt * 1000, 3)),
