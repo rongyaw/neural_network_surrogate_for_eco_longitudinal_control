@@ -25,29 +25,11 @@ class Model(nn.Module):
         x = self.out(x)
         return x
 
-class Model_4_input(nn.Module):
-    def __init__(self, in_features=4, h1=512, h2=512, h3=512, out_features=1):
-        super().__init__()
-        self.fc1 = nn.Linear(in_features, h1)
-        self.fc2 = nn.Linear(h1, h2)
-        self.out = nn.Linear(h2, out_features)
-
-    def forward(self, x):
-        x = F.sigmoid(self.fc1(x))
-        x = F.sigmoid(self.fc2(x))
-        x = F.sigmoid(self.fc3(x))
-        x = self.out(x)
-        return x
-
-
 class NN_controller():
     def __init__(self, nn_pt_file, input_num, print_level="info"):
         self.num_input = input_num
         self.print_level = print_level
-        if input_num == 3:
-            self.nn_controller = Model(h1=256, h2=256, h3=256, h4=256, h5=256)
-        if input_num == 4:
-            self.nn_controller = Model_4_input(h1=256, h2=256)
+        self.nn_controller = Model(h1=256, h2=256, h3=256, h4=256, h5=256)
         self.nn_controller.eval()
         self.nn_controller.load_state_dict(torch.load(nn_pt_file, map_location='cpu'))
         self.nn_controller.to('cuda')

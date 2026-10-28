@@ -9,7 +9,6 @@ from .explicit_mpc import (
 )
 from .neural import (
     Model,
-    Model_4_input,
     NN_controller,
 )
 from .preview_nn import (
