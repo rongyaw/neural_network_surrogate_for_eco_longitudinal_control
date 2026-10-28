@@ -124,7 +124,7 @@ class sumo_sim():
         self.step = 0
     
     def init_vehicles_large_map(self, num_vehicle):
-        self._init_platoons(num_vehicle, initial_position=1200.0, spacing=8.0,
+        self.init_platoons(num_vehicle, initial_position=1200.0, spacing=8.0,
                             max_lanes=2, second_lane_offset=3.0)
 
     def init_vehicles_CMI(self, num_vehicle):
@@ -137,7 +137,7 @@ class sumo_sim():
                 vehicle_ID="veh" + str(i), init_s=30 - 8 * i, init_lane=0,
                 route_ID="route1", lane_change_mode=0, sumo_brake=False)
 
-    def _init_platoons(self, num_vehicle, initial_position, spacing, max_lanes,
+    def init_platoons(self, num_vehicle, initial_position, spacing, max_lanes,
                        second_lane_offset):
         """Fill two lanes; the offset second-lane front vehicle follows veh0."""
         if num_vehicle < 2:
