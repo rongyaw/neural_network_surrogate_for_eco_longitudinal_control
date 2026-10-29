@@ -29,7 +29,7 @@ class NN_controller():
     def __init__(self, nn_pt_file, input_num, print_level="info"):
         self.num_input = input_num
         self.print_level = print_level
-        self.nn_controller = Model(h1=256, h2=256, h3=256, h4=256, h5=256)
+        self.nn_controller = Model(h1=512, h2=512, h3=512, h4=512, h5=512)
         self.nn_controller.eval()
         self.nn_controller.load_state_dict(torch.load(nn_pt_file, map_location='cpu'))
         self.nn_controller.to('cuda')

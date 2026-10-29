@@ -28,7 +28,7 @@ class car_following_mpc():
         self.d_gap = 7.0
         self._mpc_problem_key = None
 
-    def set_mpc_warm_start(self, opti, s, u, e_1, e_2):
+    def set_mpc_warm_start(self, opti, s, u, e_0, e_1, e_2):
         if not self.mpc_warm_start_valid:
             return
 
@@ -57,6 +57,7 @@ class car_following_mpc():
             opti.set_initial(u, control_guess)
             opti.set_initial(e_1, np.zeros(self.h))
             opti.set_initial(e_2, np.zeros(self.h))
+            opti.set_initial(e_0, np.zeros(self.h))
         except (RuntimeError, TypeError, ValueError) as err:
             self.mpc_warm_start_valid = False
         
@@ -84,6 +85,7 @@ class car_following_mpc():
         # Define optimization variables
         s = opti.variable(3, self.h)  # [s, v, a]
         u = opti.variable(self.h - 1)  # Acceleration
+        e_0 = opti.variable(self.h)
         e_1 = opti.variable(self.h)
         e_2 = opti.variable(self.h)
         s_ref = opti.parameter(3, self.h)
@@ -92,7 +94,8 @@ class car_following_mpc():
         q_a = casadi.MX(self.control_cost)
         q_u = casadi.MX(1)
         q_g = casadi.MX(1)
-        q_e1 = casadi.MX(1e5)
+        q_e0 = casadi.MX(1e4)
+        q_e1 = casadi.MX(1e6)
         q_e2 = casadi.MX(1e6)
         
         A = casadi.MX(np.array([[1, self.dt, self.dt ** 2 / 2],
@@ -117,23 +120,23 @@ class car_following_mpc():
             # Add constriants
             opti.subject_to(s[1, t] <= v_max + e_1[t])
             opti.subject_to(s[1, t] >= 0.0 - e_2[t])
-            opti.subject_to(s[0, t] <= s_ref[0, t] - self.d_gap + e_1[t])
-            cost += q_e1 * (e_1[t] ** 2) + q_e2 * (e_2[t] ** 2)
+            opti.subject_to(s[0, t] <= s_ref[0, t] - self.d_gap + e_0[t])
+            cost += q_e0 * (e_0[t] ** 2) + q_e1 * (e_1[t] ** 2) + q_e2 * (e_2[t] ** 2)
             
         # Add final states' cost
         cost += q_g * (s_ref[0, self.h - 1] - self.d_gap - s[0, self.h - 1]) ** 2 + q_a * s[2, self.h - 1] ** 2
-        cost += q_e1 * (e_1[self.h - 1] ** 2) + q_e2 * (e_2[self.h - 1] ** 2)
+        cost += q_e0 * (e_0[self.h - 1] ** 2) + q_e1 * (e_1[self.h - 1] ** 2) + q_e2 * (e_2[self.h - 1] ** 2)
         
         # Add find states' constriants
         opti.subject_to(s[1, self.h - 1] <= v_max + e_1[self.h - 1])
         opti.subject_to(s[1, self.h - 1] >= 0.0 - e_2[self.h - 1])
-        opti.subject_to(s[0, self.h - 1] <= s_ref[0, self.h - 1] - self.d_gap + e_1[self.h - 1])
+        opti.subject_to(s[0, self.h - 1] <= s_ref[0, self.h - 1] - self.d_gap + e_0[self.h - 1])
         
         opti.minimize(cost)
         opti.solver('ipopt', {"expand": True, "print_time": 0}, {"print_level": 0})
         
         self._mpc_opti = opti
-        self._mpc_variables = (s, u, e_1, e_2)
+        self._mpc_variables = (s, u, e_0, e_1, e_2)
         self._mpc_parameters = (s_ref, s_0)
 
     def mpc_solver(self):
@@ -145,14 +148,14 @@ class car_following_mpc():
             self._mpc_problem_key = problem_key
 
         opti = self._mpc_opti
-        s, u, e_1, e_2 = self._mpc_variables
+        s, u, e_0, e_1, e_2 = self._mpc_variables
         s_ref, s_0 = self._mpc_parameters
         opti.set_value(s_ref, self.s_ref)
         opti.set_value(s_0, self.s_0)
         # A reused Opti retains initial guesses. Reset them when a previous
         # failure or horizon change invalidates the trajectory warm start.
         opti.set_initial(opti.x, 0)
-        self.set_mpc_warm_start(opti, s, u, e_1, e_2)
+        self.set_mpc_warm_start(opti, s, u, e_0, e_1, e_2)
         
         try:
             sol = opti.solve()

@@ -19,9 +19,9 @@ class Model(nn.Module):
         super().__init__()
         self.fc1 = nn.Linear(in_features, h1)
         self.fc2 = nn.Linear(h1, h2)
-        self.fc3 = nn.Linear(h2, h3)
-        self.fc4 = nn.Linear(h3, h4)
-        self.fc5 = nn.Linear(h4, h5)
+        # self.fc3 = nn.Linear(h2, h3)
+        # self.fc4 = nn.Linear(h3, h4)
+        # self.fc5 = nn.Linear(h4, h5)
         self.out = nn.Linear(h5, out_features)
         self.dp = nn.Dropout(p=0.2)
         
@@ -30,12 +30,12 @@ class Model(nn.Module):
         x = self.dp(x)
         x = F.sigmoid(self.fc2(x))
         x = self.dp(x)
-        x = F.sigmoid(self.fc3(x))
-        x = self.dp(x)
-        x = F.sigmoid(self.fc4(x))
-        x = self.dp(x)
-        x = F.sigmoid(self.fc5(x))
-        x = self.dp(x)
+        # x = F.sigmoid(self.fc3(x))
+        # x = self.dp(x)
+        # x = F.sigmoid(self.fc4(x))
+        # x = self.dp(x)
+        # x = F.sigmoid(self.fc5(x))
+        # x = self.dp(x)
         x = self.out(x)
         return x
     
@@ -52,20 +52,9 @@ def data_loader(filename):
     with open(filename) as f:
         for points in csv.reader(f):
             ego_v = float(points[0])
-            pv_v = float(points[1])
-            pv_ds = float(points[2])
             pv_ds_pred = float(points[3])
             pv_dv_pred = float(points[4])
             ego_a = float(points[5])
-            
-            c_dv = 55.13
-            c_ds = 910
-            sig_dv = 25
-            sig_ds = 300
-            
-            # Add RBF function
-            phi_dv = np.exp(-(pv_dv_pred - c_dv) / (2 * sig_dv))
-            phi_ds = np.exp(-(pv_ds_pred - c_ds) / (2 * sig_ds))
             
             input_state.append([ego_v, pv_dv_pred, pv_ds_pred])
             output_control.append(ego_a)
@@ -73,13 +62,11 @@ def data_loader(filename):
 
 if __name__ == "__main__":
     # Import data and set it to tensors
-    home_dir = os.path.expanduser("~")
     dirname = os.path.dirname(__file__)
-    data_dirname = dirname + '/Testing_Raw_Data'
     
-    train_filename = data_dirname + '/train_pcc_driving_cycle.csv'
-    test_filename = data_dirname + '/test_pcc_driving_cycle.csv'
-    valid_filename = data_dirname + '/valid_pcc_driving_cycle.csv'
+    train_filename = dirname + '/train_pcc_driving_cycle.csv'
+    test_filename = dirname + '/test_pcc_driving_cycle.csv'
+    valid_filename = dirname + '/valid_pcc_driving_cycle.csv'
     
     train_x, train_y = data_loader(train_filename)
     test_x, test_y = data_loader(test_filename)
@@ -144,4 +131,4 @@ if __name__ == "__main__":
             loss_test = model.acc_loss(test_y[i], test_x[i, :])
 
     # Save the model 
-    torch.save(model.state_dict(), home_dir + '/ANL_ws/src/sumo_cra_traffic_sim/scripts/traffic_following_control.pt')
+    torch.save(model.state_dict(), dirname + '/predicted_traffic_following_control_fcn_best.pt')
