@@ -3,21 +3,21 @@
 This workspace contains SUMO-based traffic-following simulations with online
 MPC, reconstructed explicit MPC, neural-network controllers, and IDM.
 
-The main entry point is `scripts/run_sim.py`.
+The main entry point is `testing_scripts/run_sim.py`.
 
 ## Controller source files
 
-Controller implementations are split by type under `scripts/controllers/`:
+Controller implementations are split by type under `testing_scripts/controllers/`:
 
 | File | Controllers |
 | --- | --- |
 | `baseline.py` | IDM baseline |
 | `explicit_mpc.py` | Explicit MPC configuration, region model, and connected/unconnected controllers |
-| `online_mpc.py` | CasADi car-following MPC |
+| `online_mpc.py` | CasADi car-following MPC formulated as a quadratic program and solved with OSQP |
 | `neural.py` | Regular neural-network models and controller |
 | `preview_nn.py` | Preview neural-network model and controller |
 
-New code should import from `controllers`. `scripts/_controller.py` remains as
+New code should import from `controllers`. `testing_scripts/_controller.py` remains as
 a compatibility facade for older scripts.
 
 ## Requirements
@@ -42,7 +42,7 @@ The current script expects SUMO at:
 /usr/bin/sumo-gui
 ```
 
-If SUMO is installed elsewhere, update the paths in `scripts/run_sim.py`.
+If SUMO is installed elsewhere, update the paths in `testing_scripts/run_sim.py`.
 
 ### Python packages
 
@@ -58,28 +58,28 @@ python -m pip install numpy scipy pandas matplotlib osqp traci torch casadi
 For GPU use, install the PyTorch build matching the installed CUDA version
 instead of the generic `torch` package if necessary.
 
-The regular `NN` controller currently moves its model to CUDA, so it requires a
-CUDA-enabled PyTorch installation and a visible GPU. The `PreviewNN` and
+The `PredictNN` controller currently moves its model to CUDA, so it requires a
+CUDA-enabled PyTorch installation and a visible GPU. `PreviewNN` and the
 explicit-MPC controllers can use the CPU when CUDA is unavailable.
 
 The repository also contains a ROS1 `package.xml`. ROS/catkin is only needed
 for ROS package integration; it is not required for the direct
-`scripts/run_sim.py` workflow.
+`testing_scripts/run_sim.py` workflow.
 
 ## Setup
 
-From the workspace root:
+From the workspace root, activate your Python environment:
 
 ```bash
-cd /home/tonyyaoyao/ANL_ws/src/sumo_cra_traffic_sim
+cd /home/tonyyaoyao/neural_network_surrogate_for_eco_longitudinal_control
 source .venv/bin/activate
 ```
 
-The active neural-network checkpoints are:
+The neural-network checkpoints used by the simulation are:
 
 ```text
-scripts/traffic_following_control_dc_trained.pt
-scripts/preview_traffic_following_control_conv_best.pt
+training_scripts/PredictNN/predicted_traffic_following_control_fcn_best.pt
+training_scripts/PreviewNN/preview_traffic_following_control_conv_best.pt
 ```
 
 ## Running a simulation
@@ -87,7 +87,7 @@ scripts/preview_traffic_following_control_conv_best.pt
 General command format:
 
 ```bash
-python3 scripts/run_sim.py [options] PROFILE CONTROLLER
+python3 testing_scripts/run_sim.py [options] PROFILE CONTROLLER
 ```
 
 Available driving-cycle profiles:
@@ -100,36 +100,40 @@ Available controllers:
 
 | Controller | Description |
 | --- | --- |
-| `MPC` | CasADi online car-following MPC |
+| `PreviewMPC` | CasADi online MPC using previewed driving-cycle states for the lead vehicle |
+| `PredictMPC` | CasADi online MPC using predicted lead-vehicle states |
 | `ExplicitUnconnected` | Reconstructed explicit MPC with locally estimated constant-acceleration PV preview |
 | `ExplicitConnected` | Reconstructed explicit MPC with communicated/driving-cycle PV preview |
-| `NN` | Regular neural-network controller using `traffic_following_control_dc_trained.pt` |
-| `PreviewNN` | Preview neural-network controller using the local convolutional checkpoint |
+| `PredictNN` | Regular neural-network controller using the FCN checkpoint |
+| `PreviewNN` | Preview neural-network controller using the convolutional checkpoint |
 | `IDM` | Intelligent Driver Model baseline |
 
 Examples:
 
 ```bash
-# CasADi online MPC
-python3 scripts/run_sim.py --num_sv 5 --no_gui --print_level info Hwy MPC
+# CasADi MPC with driving-cycle preview
+python3 testing_scripts/run_sim.py --num_sv 5 --no_gui --print_level info Hwy PreviewMPC
+
+# CasADi MPC with predicted lead-vehicle states
+python3 testing_scripts/run_sim.py --num_sv 5 --no_gui --print_level info Hwy PredictMPC
 
 # Explicit MPC with locally estimated PV preview
-python3 scripts/run_sim.py --num_sv 5 --no_gui --print_level info Hwy ExplicitUnconnected
+python3 testing_scripts/run_sim.py --num_sv 5 --no_gui --print_level info Hwy ExplicitUnconnected
 
 # Explicit MPC with connected PV preview
-python3 scripts/run_sim.py --num_sv 5 --no_gui --print_level info Hwy ExplicitConnected
+python3 testing_scripts/run_sim.py --num_sv 5 --no_gui --print_level info Hwy ExplicitConnected
 
 # Regular neural network
-python3 scripts/run_sim.py --num_sv 5 --no_gui --print_level info Hwy NN
+python3 testing_scripts/run_sim.py --num_sv 5 --no_gui --print_level info Hwy PredictNN
 
 # Preview neural network
-python3 scripts/run_sim.py --num_sv 5 --no_gui --print_level info Hwy PreviewNN
+python3 testing_scripts/run_sim.py --num_sv 5 --no_gui --print_level info Hwy PreviewNN
 
 # IDM baseline
-python3 scripts/run_sim.py --num_sv 5 --no_gui --print_level info Hwy IDM
+python3 testing_scripts/run_sim.py --num_sv 5 --no_gui --print_level info Hwy IDM
 ```
 
-Use `python3 scripts/run_sim.py --help` for the complete option list.
+Use `python3 testing_scripts/run_sim.py --help` for the complete option list.
 
 ## Fleet initialization
 
@@ -159,27 +163,29 @@ CBF safety filtering is enabled by default for explicit MPC and PreviewNN.
 It can be disabled independently:
 
 ```bash
-python3 scripts/run_sim.py --disable_explicit_cbf \
+python3 testing_scripts/run_sim.py --disable_explicit_cbf \
     --num_sv 5 --no_gui Hwy ExplicitConnected
 
-python3 scripts/run_sim.py --disable_preview_cbf \
+python3 testing_scripts/run_sim.py --disable_preview_cbf \
     --num_sv 5 --no_gui Hwy PreviewNN
 ```
 
-The online CasADi MPC uses its optimization constraints and does not currently
-apply the neural-network CBF filter.
+The online CasADi MPC formulates its linear vehicle model, quadratic objective,
+and linear constraints as a QP, solved with OSQP through CasADi. It uses the
+optimization constraints and does not currently apply the neural-network CBF
+filter. OSQP is also used by the separate explicit-MPC implementation.
 
 ## Explicit-MPC notes
 
 The explicit controller is a reconstructed QP with its own implementation and
-is not guaranteed to match the CasADi `MPC` controller exactly.
+is not guaranteed to match the online CasADi/OSQP MPC controller exactly.
 
 Current simulation settings are a 20-stage horizon, `dt=0.5`, and 10,000
 active-set discovery samples. Regions are generated on the first run and
 cached under:
 
 ```text
-scripts/.explicit_mpc_cache/
+testing_scripts/.explicit_mpc_cache/
 ```
 
 Later runs load a matching cache instead of rebuilding the regions. The cache
@@ -196,27 +202,35 @@ fallback, CBF filtering, and limitations, see
 The runtime-analysis script runs several vehicle counts in sequence:
 
 ```bash
-./runtime_analysis.sh CONTROLLER PROFILE MAX_VEHICLES VEHICLE_STEP PRINT_LEVEL CBF_MODE
+./runtime_analysis.sh CONTROLLER PROFILE MAX_VEHICLES VEHICLE_STEP PRINT_LEVEL CBF_MODE SIM_DURATION
 ```
 
 For example:
 
 ```bash
 ./runtime_analysis.sh ExplicitConnected Hwy 100 10 quiet disabled
-./runtime_analysis.sh MPC Hwy 100 10 quiet disabled
-./runtime_analysis.sh NN Hwy 100 10 quiet disabled
 ./runtime_analysis.sh PreviewNN Hwy 100 10 quiet disabled
 ./runtime_analysis.sh IDM Hwy 100 10 quiet disabled
 ```
 
-The runtime-analysis script currently supports:
+The optional seventh argument sets the simulation duration in seconds; it
+defaults to `30`. The batch script passes it to `testing_scripts/run_sim.py`
+with `--sim_duration`. For a direct simulation run, `--sim_duration 0` (the
+default) runs through the end of the selected driving cycle, while a positive
+value stops at that time.
+
+The batch script's controller validation currently lists:
 
 ```text
 MPC, ExplicitConnected, NN, PreviewNN, IDM
 ```
 
-The sixth argument controls explicit-MPC CBF behavior. Use `enabled` or
-`disabled`. The script passes `--disable_explicit_cbf` only for
+The batch script still lists legacy `MPC` and `NN` choices. Those names are no
+longer accepted by the main simulation, which uses `PreviewMPC`/`PredictMPC`
+and `PredictNN`, so those two batch choices fail when launched. The examples
+above use controller names accepted by both scripts. The sixth argument controls
+explicit-MPC CBF behavior. Use `enabled` or
+`disabled`; the script passes `--disable_explicit_cbf` only for
 `ExplicitConnected` when `disabled` is selected.
 
 When `--logging_sim` is enabled, runtime results are appended to:
@@ -244,7 +258,7 @@ flag automatically.
 To save per-step ego and preceding-vehicle states:
 
 ```bash
-python3 scripts/run_sim.py --logging_sim \
+python3 testing_scripts/run_sim.py --logging_sim \
     --num_sv 5 --no_gui Hwy ExplicitConnected
 ```
 
@@ -264,7 +278,7 @@ preceding_acceleration, preceding_speed, preceding_position
 To display the remaining speed plots:
 
 ```bash
-python3 scripts/run_sim.py --plot_result \
+python3 testing_scripts/run_sim.py --plot_result \
     --num_sv 5 --no_gui Hwy ExplicitConnected
 ```
 
@@ -276,7 +290,7 @@ are independent of `--plot_result`.
 Use `--no_gui` for server or batch execution:
 
 ```bash
-python3 scripts/run_sim.py --no_gui --num_sv 5 Hwy MPC
+python3 testing_scripts/run_sim.py --no_gui --num_sv 5 Hwy PreviewMPC
 ```
 
 Without `--no_gui`, the script uses `sumo-gui` only when a display is
@@ -285,10 +299,10 @@ available.
 ## Useful files
 
 ```text
-scripts/run_sim.py                  Main simulation entry point
-scripts/controllers/                 Controller implementations by type
-scripts/_controller.py               Compatibility exports for older imports
-scripts/utils.py                    Driving-cycle and simulation utilities
+testing_scripts/run_sim.py           Main simulation entry point
+testing_scripts/controllers/         Controller implementations by type
+testing_scripts/_controller.py       Compatibility exports for older imports
+testing_scripts/utils.py             Driving-cycle and simulation utilities
 runtime_analysis.sh                 Batch runtime analysis
 speed_profile/                      Driving-cycle inputs
 sumo/I-85_highway/                  Highway SUMO configuration
@@ -302,7 +316,7 @@ sumo/CMI/                           CMI SUMO configuration
 Confirm that this file exists:
 
 ```bash
-ls -lh scripts/preview_traffic_following_control_conv_best.pt
+ls -lh training_scripts/PreviewNN/preview_traffic_following_control_conv_best.pt
 ```
 
 ### SUMO or TraCI import failure
@@ -318,11 +332,11 @@ python3 -c "import traci; print(traci.__file__)"
 
 The first run may generate thousands of active-set samples with OSQP. Wait
 for region generation to finish. Subsequent runs should load the matching
-file from `scripts/.explicit_mpc_cache/`.
+file from `testing_scripts/.explicit_mpc_cache/`.
 
 ### Regular NN CUDA error
 
-The regular `NN` implementation currently uses CUDA tensors. Install a
+The `PredictNN` implementation currently uses CUDA tensors. Install a
 CUDA-compatible PyTorch build and verify:
 
 ```bash

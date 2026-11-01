@@ -71,7 +71,7 @@ def initialize_preview_animation(preview_steps, vehicle_index):
     axes[1].set_ylabel("Speed Gap [m/s]")
     axes[1].set_xlabel("Preview Step")
     axes[1].grid(True)
-
+    
     plt.tight_layout()
     return {
         "figure": figure,
@@ -222,18 +222,26 @@ if __name__=="__main__":
     )
     parser.add_argument("--preview_vehicle_index", type=int, default=1, help="vehicle index used for preview animation")
     parser.add_argument("--num_sv", type=int, default=2, help="Number of vehicles in the traffic")
+    parser.add_argument("--sim_duration", type=float, default=0, help="Enter the duration of simulation, 0 is default to finish the driving cycle, otherwise the simulation will stop at the specified time")
     parser.add_argument('leading_speed_profile', choices=['Nyc', 'Hwy', 'Ftp', 'US06','FTPsec1','FTPsec2','FTPsec3'], help='Choose leading vehicles speed profile')
-    parser.add_argument("control_type", choices=['MPC', 'ExplicitUnconnected', 'ExplicitConnected', 'PredictNN', 'PreviewNN', 'IDM'], help='Choose control method for traffic vehicles')
+    parser.add_argument("control_type", choices=['PreviewMPC', 'PredictMPC', 'ExplicitUnconnected', 'ExplicitConnected', 'PredictNN', 'PreviewNN', 'IDM'], help='Choose control method for traffic vehicles')
     args = parser.parse_args()
     
     # Traffic control setting
     USING_EXPLICIT_UNCONNECTED = 0
     USING_EXPLICIT_CONNECTED = 0
-    if args.control_type == 'MPC':
+    if args.control_type == 'PreviewMPC':
         USING_ONLINE_MPC = 1 # If using online MPC to track front vehicle
         USING_NEURAL_NETWORK = 0 # If using neural network controller to track front vehicle
         USING_PREVIEW_NEURAL_NETWORK = 0
         USING_IDM = 0 # If using IDM to traffic front vehicle
+        leading_state_preview = True
+    elif args.control_type == 'PredictMPC':
+        USING_ONLINE_MPC = 1
+        USING_NEURAL_NETWORK = 0
+        USING_PREVIEW_NEURAL_NETWORK = 0
+        USING_IDM = 0
+        leading_state_preview = False
     elif args.control_type == 'ExplicitUnconnected':
         USING_ONLINE_MPC = 0
         USING_NEURAL_NETWORK = 0
@@ -305,9 +313,10 @@ if __name__=="__main__":
     
     # Initialize controller
     dirname = os.path.dirname(__file__)
-    nn_pt_filename = dirname + '/traffic_following_control_dc_trained.pt'
+    parent_dir = os.path.abspath(os.path.join(dirname, os.pardir))
+    nn_pt_filename = parent_dir + '/training_scripts/PredictNN/predicted_traffic_following_control_fcn_best.pt'
     preview_nn_pt_filename = os.path.join(
-        dirname, 'preview_traffic_following_control_conv_best.pt'
+        parent_dir, 'training_scripts/PreviewNN/preview_traffic_following_control_conv_best.pt'
     )
     
     # Setup controller
@@ -366,6 +375,12 @@ if __name__=="__main__":
     front_a_t = np.array(leading_vehicle_speed_profile[:, 2])
     front_s_t = np.array(leading_vehicle_speed_profile[:, 3])
     
+    # Check the simulation duration to decide whether to stop the simulation at a specific time or let it run until the end of the driving cycle
+    if args.sim_duration > 0:
+        end_t = args.sim_duration
+    else:
+        end_t = record_t[-1] + 20.0
+    
     if sumo_sim_manager.open_gui:
         traci.gui.trackVehicle("View #0", "veh1")
         traci.gui.setZoom("View #0", 1000)
@@ -392,7 +407,7 @@ if __name__=="__main__":
             vehicle_index=args.preview_vehicle_index,
         )
     
-    while sumo_sim_manager.step * 0.1 < record_t[-1] + 20:
+    while sumo_sim_manager.step * 0.1 < end_t:
         # Measure one complete SUMO/control step.  The interval includes the
         # SUMO advance, state collection, all follower controller evaluations,
         # control assignment, and per-step statistics.  The deliberate sleep
@@ -468,7 +483,7 @@ if __name__=="__main__":
                                                                      veh_1_acc_t, veh_1_spd_t, veh_1_dist_t,
                                                                      sim_t, online_MPC_control, record_t,
                                                                      front_v_t, front_a_t, 0.5, pv_object=sumo_sim_manager.sumo_veh[preceding_index],
-                                                                     ego_object=sumo_sim_manager.sumo_veh[i], leading_preview=True)
+                                                                     ego_object=sumo_sim_manager.sumo_veh[i], leading_preview=leading_state_preview)
             elif USING_EXPLICIT_UNCONNECTED:
                 explicit_acceleration, explicit_diag = explicit_control.step(
                     ego_state=[veh_1_dist_t, veh_1_spd_t, veh_1_acc_t],

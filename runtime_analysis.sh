@@ -11,6 +11,7 @@ max_vehicle_count="${3:-300}"
 vehicle_step="${4:-10}"
 print_level="${5:-debug}"
 cbf_mode="${6:-disabled}"
+sim_duration="${7:-30}"
 
 valid_controller=false
 for candidate in MPC ExplicitConnected NN PreviewNN IDM; do
@@ -53,14 +54,16 @@ echo "  Max vehicle count: $max_vehicle_count"
 echo "  Vehicle step: $vehicle_step"
 echo "  Print level: $print_level"
 echo "  Explicit MPC CBF: $cbf_mode"
+echo "  Simulation duration: $sim_duration seconds"
 
 for ((veh_num=vehicle_step; veh_num<=max_vehicle_count; veh_num+=vehicle_step)); do
     echo "Running controller=$controller profile=$leading_vehicle_profile num_sv=$veh_num"
-    python3 scripts/run_sim.py \
+    python3 testing_scripts/run_sim.py \
         "${explicit_cbf_args[@]}" \
         --logging_sim \
         --num_sv "$veh_num" \
         --print_level "$print_level" \
+        --sim_duration "$sim_duration" \
         "$leading_vehicle_profile" \
         "$controller"
 done

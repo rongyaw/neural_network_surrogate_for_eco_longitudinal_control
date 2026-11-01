@@ -80,7 +80,7 @@ class car_following_mpc():
         v_max = self.v_max * 0.44704
         
         # Create an optimization problem
-        opti = casadi.Opti()
+        opti = casadi.Opti('conic')
         
         # Define optimization variables
         s = opti.variable(3, self.h)  # [s, v, a]
@@ -94,16 +94,15 @@ class car_following_mpc():
         q_a = casadi.MX(self.control_cost)
         q_u = casadi.MX(1)
         q_g = casadi.MX(1)
-        q_e0 = casadi.MX(1e4)
+        q_e0 = casadi.MX(1e6)
         q_e1 = casadi.MX(1e6)
-        q_e2 = casadi.MX(1e6)
         
-        A = casadi.MX(np.array([[1, self.dt, self.dt ** 2 / 2],
-                                [0, 1,  self.dt],
-                                [0, 0, 1]]))
+        A = casadi.MX(np.array([[1, self.dt, self.dt ** 2 / 4],
+                                [0, 1,  self.dt / 2],
+                                [0, 0, 0]]))
         
-        B = casadi.MX(np.array([[self.dt ** 3 / 6],
-                                [self.dt ** 2 / 4],
+        B = casadi.MX(np.array([[self.dt ** 2 / 4],
+                                [self.dt / 2],
                                 [self.dt]]))
         
         opti.subject_to(s[:, 0] == s_0)
@@ -119,21 +118,21 @@ class car_following_mpc():
             
             # Add constriants
             opti.subject_to(s[1, t] <= v_max + e_1[t])
-            opti.subject_to(s[1, t] >= 0.0 - e_2[t])
+            opti.subject_to(s[1, t] >= 0.0 - e_1[t])
             opti.subject_to(s[0, t] <= s_ref[0, t] - self.d_gap + e_0[t])
-            cost += q_e0 * (e_0[t] ** 2) + q_e1 * (e_1[t] ** 2) + q_e2 * (e_2[t] ** 2)
+            cost += q_e0 * (e_0[t] ** 2) + q_e1 * (e_1[t] ** 2)
             
         # Add final states' cost
         cost += q_g * (s_ref[0, self.h - 1] - self.d_gap - s[0, self.h - 1]) ** 2 + q_a * s[2, self.h - 1] ** 2
-        cost += q_e0 * (e_0[self.h - 1] ** 2) + q_e1 * (e_1[self.h - 1] ** 2) + q_e2 * (e_2[self.h - 1] ** 2)
+        cost += q_e0 * (e_0[self.h - 1] ** 2) + q_e1 * (e_1[self.h - 1] ** 2)
         
         # Add find states' constriants
         opti.subject_to(s[1, self.h - 1] <= v_max + e_1[self.h - 1])
-        opti.subject_to(s[1, self.h - 1] >= 0.0 - e_2[self.h - 1])
+        opti.subject_to(s[1, self.h - 1] >= 0.0 - e_1[self.h - 1])
         opti.subject_to(s[0, self.h - 1] <= s_ref[0, self.h - 1] - self.d_gap + e_0[self.h - 1])
         
         opti.minimize(cost)
-        opti.solver('ipopt', {"expand": True, "print_time": 0}, {"print_level": 0})
+        opti.solver('osqp', {"print_time": 0}, {"verbose": False})
         
         self._mpc_opti = opti
         self._mpc_variables = (s, u, e_0, e_1, e_2)
