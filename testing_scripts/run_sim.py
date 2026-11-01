@@ -223,7 +223,7 @@ if __name__=="__main__":
     parser.add_argument("--preview_vehicle_index", type=int, default=1, help="vehicle index used for preview animation")
     parser.add_argument("--num_sv", type=int, default=2, help="Number of vehicles in the traffic")
     parser.add_argument('leading_speed_profile', choices=['Nyc', 'Hwy', 'Ftp', 'US06','FTPsec1','FTPsec2','FTPsec3'], help='Choose leading vehicles speed profile')
-    parser.add_argument("control_type", choices=['MPC', 'ExplicitUnconnected', 'ExplicitConnected', 'NN', 'PreviewNN', 'IDM'], help='Choose control method for traffic vehicles')
+    parser.add_argument("control_type", choices=['MPC', 'ExplicitUnconnected', 'ExplicitConnected', 'PredictNN', 'PreviewNN', 'IDM'], help='Choose control method for traffic vehicles')
     args = parser.parse_args()
     
     # Traffic control setting
@@ -246,7 +246,7 @@ if __name__=="__main__":
         USING_PREVIEW_NEURAL_NETWORK = 0
         USING_IDM = 0
         USING_EXPLICIT_CONNECTED = 1
-    elif args.control_type == 'NN':
+    elif args.control_type == 'PredictNN':
         USING_ONLINE_MPC = 0 # If using online MPC to track front vehicle
         USING_NEURAL_NETWORK = 1 # If using neural network controller to track front vehicle
         USING_PREVIEW_NEURAL_NETWORK = 0

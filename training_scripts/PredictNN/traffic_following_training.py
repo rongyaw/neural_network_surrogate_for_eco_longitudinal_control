@@ -79,6 +79,9 @@ if __name__ == "__main__":
     test_x = torch.FloatTensor(test_x).cuda()
     test_y = torch.FloatTensor(test_y).cuda()
     
+    valid_x = torch.FloatTensor(valid_x).cuda()
+    valid_y = torch.FloatTensor(valid_y).cuda()
+    
     with open(dirname + '/config/fcn_config.yaml', 'r') as f:
         fcn_config = yaml.safe_load(f)
         
@@ -122,13 +125,21 @@ if __name__ == "__main__":
     plt.plot(range(len(loss_record)), loss_record)
     plt.xlabel('Epoch')
     plt.ylabel('MSE LOSS')
-    plt.show()
+    # plt.show()
 
     # Test accuracy
     error_sum = 0
     with torch.no_grad():
         for i in range(len(test_y)):
             loss_test = model.acc_loss(test_y[i], test_x[i, :])
+    print('The test loss is: ' + str(round(loss_test.tolist(), 5)))
+    
+    # Validation accuracy
+    error_sum = 0
+    with torch.no_grad():
+        for i in range(len(valid_y)):
+            loss_valid = model.acc_loss(valid_y[i], valid_x[i, :])
+    print('The validation loss is: ' + str(round(loss_valid.tolist(), 5)))
 
     # Save the model 
     torch.save(model.state_dict(), dirname + '/predicted_traffic_following_control_fcn_best.pt')
