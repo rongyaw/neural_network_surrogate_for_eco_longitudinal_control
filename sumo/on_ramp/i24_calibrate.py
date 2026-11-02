@@ -38,7 +38,6 @@ EXP = config["EXP"] # experiment label
 N_TRIALS = config["N_TRIALS"] # optimization trials
 N_JOBS = config["N_JOBS"] # cores
 RDS_DIR = config["RDS_DIR"]
-# RDS_DIR = os.path.join("../..", "data/RDS/I24_WB_52_60_11132023.csv")
 # ================================================
 
 # follows convention e.g., 56_7_0, milemarker 56.7, lane 1
@@ -95,7 +94,6 @@ default_params =  {'maxSpeed': 34.91628705652602,
 
 def run_sumo(sim_config, tripinfo_output=None, fcd_output=None):
     """Run a SUMO simulation with the given configuration."""
-    # command = ['sumo', '-c', sim_config, '--tripinfo-output', tripinfo_output, '--fcd-output', fcd_output]
 
     command = [SUMO_EXE, '-c', sim_config] # stop after 5hr of simulation
     if tripinfo_output is not None:
@@ -121,22 +119,17 @@ def update_sumo_configuration(param):
         param (dict): List of parameter values [maxSpeed, minGap, accel, decel, tau]
     """
     
-    # Define the path to your rou.xml file
     file_path = SCENARIO+'.rou.xml'
 
-    # Parse the XML file
     tree = ET.parse(file_path)
     root = tree.getroot()
 
-    # Find the vType element with id="trial"
     for vtype in root.findall('vType'):
         if vtype.get('id') == 'trial':
-            # Update the attributes with the provided parameters
             for key, val in param.items():
                 vtype.set(key, str(val))
             break
 
-    # Write the updated XML content back to the file
     tree.write(file_path, encoding='UTF-8', xml_declaration=True)
     return
 
@@ -150,13 +143,11 @@ def create_temp_config(param, trial_number):
         trial_number (int): The trial number to be used for naming the new file.
     """
     
-    # Define the path to your original rou.xml and sumocfg files
     original_rou_file_path = SCENARIO + '.rou.xml'
     original_net_file_path = SCENARIO + '.net.xml'
     original_sumocfg_file_path = SCENARIO + '.sumocfg'
     original_add_file_path = 'I24_RDS.add.xml'
     
-    # Create the directory for the new files if it doesn't exist
     output_dir = os.path.join('temp', str(trial_number))
     os.makedirs(output_dir, exist_ok=True)
     
@@ -164,10 +155,8 @@ def create_temp_config(param, trial_number):
     rou_tree = ET.parse(original_rou_file_path)
     rou_root = rou_tree.getroot()
 
-    # Find the vType element with id="trial"
     for vtype in rou_root.findall('vType'):
         if vtype.get('id') == 'trial':
-            # Update the attributes with the provided parameters
             for key, val in param.items():
                 vtype.set(key, str(val))
             break
@@ -199,48 +188,30 @@ def create_temp_config(param, trial_number):
 
 def objective(trial):
     """Objective function for optimization."""
-    # Define the parameters to be optimized
     driver_param = {
         param_name: trial.suggest_uniform(param_name, min_val[i], max_val[i])
         for i, param_name in enumerate(param_names)
     }
-    # print(driver_param, trial.number)
     
-    # Update SUMO configuration or route files with these parameters
     temp_config_path, temp_path = create_temp_config(driver_param, trial.number)
 
-    # Run SUMO simulation
     run_sumo(temp_config_path)
     
-    # Extract simulated traffic volumes
     simulated_output = reader.extract_sim_meas(measurement_locations=measurement_locations, file_dir=temp_path)
     
-    # Align time
     # TODO: SIMULATED_OUTPUT 5AM-10AM, while measured_output is 0-24, both in 5min intervals
     start_idx_rds = 60 #int(5*60/5)
     start_idx_sumo = 12 # sumo starts at 4AM to allow some buffer
     length = 5*12-1 #5hr
-    # end_idx = min(simulated_output[MEAS].shape[1], 5*12)-1 # the last time interval of the simulated measurements are usually inaccurate (boundary issue)
-    # end_idx_rds = start_idx + end_idx # at most three hours of simulated measurements
     
     # --- RMSE ---
     diff = simulated_output[MEAS][:,start_idx_sumo:start_idx_sumo+length] - measured_output[MEAS][:, start_idx_rds: start_idx_rds+length] # measured output may have nans
     error = np.sqrt(np.nanmean(diff.flatten()**2))
-    # --- RMSPE ---
-    # relative_diff = (simulated_output[MEAS][:, :end_idx] - np.nan_to_num(measured_output[MEAS][:, start_idx:end_idx_rds], nan=0)) \
-    #              / np.nan_to_num(measured_output[MEAS][:, start_idx:end_idx_rds], nan=0.1) # ensures NaN values in measured_output are replaced with 1 to avoid division by zero or NaN issues.
-    # error = np.sqrt(np.nanmean((relative_diff**2).flatten()))
-
     clear_directory(os.path.join("temp", str(trial.number)))
-    # logging.info(f'Trial {trial.number}: param={driver_param}, error={error}')
     
     return error
 
 def logging_callback(study, trial):
-    # if trial.state == optuna.trial.TrialState.COMPLETE:
-    #     logging.info(f'Trial {trial.number} succeeded: value={trial.value}, params={trial.params}')
-    # elif trial.state == optuna.trial.TrialState.FAIL:
-    #     logging.error(f'Trial {trial.number} failed: exception={trial.user_attrs.get("exception")}')
     
     if study.best_trial.number == trial.number:
         logging.info(f'Current Best Trial: {study.best_trial.number}')
@@ -291,7 +262,6 @@ if __name__ == "__main__":
     except:
         pass
     
-    # Get the best parameters
     best_params = study.best_params
     print('Best parameters:', best_params)
     with open(f'calibration_result/study_{EXP}.pkl', 'wb') as f:

@@ -11,17 +11,11 @@ class Model(nn.Module):
         super().__init__()
         self.fc1 = nn.Linear(in_features, h1)
         self.fc2 = nn.Linear(h1, h2)
-        # self.fc3 = nn.Linear(h2, h3)
-        # self.fc4 = nn.Linear(h3, h4)
-        # self.fc5 = nn.Linear(h4, h5)
         self.out = nn.Linear(h2, out_features)
         
     def forward(self, x):
         x = F.sigmoid(self.fc1(x))
         x = F.sigmoid(self.fc2(x))
-        # x = F.sigmoid(self.fc3(x))
-        # x = F.sigmoid(self.fc4(x))
-        # x = F.sigmoid(self.fc5(x))
         x = self.out(x)
         return x
 
@@ -39,13 +33,12 @@ class NN_controller():
         return a_ego_max
     
     def step_forward(self, s_vt, pv_vt, s_st, pv_st, s_at, pv_at, use_prediction_horizon, sim_t, lambda_smooth):
-        # Calculate the prediction horizon length
         pv_s_end = np.zeros(pv_st.shape)
         pv_v_end = np.zeros(pv_vt.shape)
         a_input = np.array(pv_at)
         a = np.tile(a_input, (49, 1))
         v = pv_vt + np.cumsum(a * 0.5, axis=0)
-        v = np.clip(v, 0, np.Inf)
+        v = np.clip(v, 0, 40.0)
         s = pv_st + np.cumsum(v * 0.5, axis=0)
         pv_s_end = np.clip(s[-1, :] - s_st, -10, 2000)
         pv_v_end = v[-1, :] - s_vt
@@ -60,14 +53,11 @@ class NN_controller():
         
         nn_input = torch.FloatTensor(nn_input_vec.T).cuda()
         
-        # Compute the neural network control
         with torch.no_grad():
             ego_a_nn = self.nn_controller.forward(nn_input)
             s_a_nn = (ego_a_nn.flatten()).tolist()
         
-        # Add damper to EcoNN control to prevent aggressive acceleration
         s_a_nn = (s_a_nn + lambda_smooth * s_at) / (1 + lambda_smooth)
-        # Check if CBF safety constraint is violated
         a_ego_max = self.CBF_acceleration_bound_check(pv_vt=pv_vt, s_vt=s_vt, pv_st=pv_st, s_st=s_st, tao=1.5, alpha=2.0, L=7.0)
         if np.any(s_a_nn > a_ego_max):
             if self.print_level == "debug":

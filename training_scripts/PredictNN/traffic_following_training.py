@@ -19,9 +19,6 @@ class Model(nn.Module):
         super().__init__()
         self.fc1 = nn.Linear(in_features, h1)
         self.fc2 = nn.Linear(h1, h2)
-        # self.fc3 = nn.Linear(h2, h3)
-        # self.fc4 = nn.Linear(h3, h4)
-        # self.fc5 = nn.Linear(h4, h5)
         self.out = nn.Linear(h5, out_features)
         self.dp = nn.Dropout(p=0.2)
         
@@ -30,12 +27,6 @@ class Model(nn.Module):
         x = self.dp(x)
         x = F.sigmoid(self.fc2(x))
         x = self.dp(x)
-        # x = F.sigmoid(self.fc3(x))
-        # x = self.dp(x)
-        # x = F.sigmoid(self.fc4(x))
-        # x = self.dp(x)
-        # x = F.sigmoid(self.fc5(x))
-        # x = self.dp(x)
         x = self.out(x)
         return x
     
@@ -61,7 +52,6 @@ def data_loader(filename):
     return input_state, output_control
 
 if __name__ == "__main__":
-    # Import data and set it to tensors
     dirname = os.path.dirname(__file__)
     
     train_filename = dirname + '/train_pcc_driving_cycle.csv'
@@ -72,7 +62,6 @@ if __name__ == "__main__":
     test_x, test_y = data_loader(test_filename)
     valid_x, valid_y = data_loader(valid_filename)
     
-    # Set numpy to torch
     train_x = torch.FloatTensor(train_x).cuda()
     train_y = torch.FloatTensor(train_y).cuda()
     
@@ -91,9 +80,7 @@ if __name__ == "__main__":
     h4_neuron = fcn_config['fcn_hidden_layer']['h4']
     h5_neuron = fcn_config['fcn_hidden_layer']['h5']
     
-    # Initialize model and optimizer
     model = Model(h1 = h1_neuron, h2 = h2_neuron, h3 = h3_neuron, h4 = h4_neuron, h5 = h5_neuron)
-    #model.load_state_dict(torch.load(home_dir + '/ANL_ws/src/sumo_cra_traffic_sim/scripts/traffic_following_control.pt'))
     model.cuda()
     
     # Setup optimizer
@@ -125,7 +112,6 @@ if __name__ == "__main__":
     plt.plot(range(len(loss_record)), loss_record)
     plt.xlabel('Epoch')
     plt.ylabel('MSE LOSS')
-    # plt.show()
 
     # Test accuracy
     error_sum = 0
@@ -141,5 +127,4 @@ if __name__ == "__main__":
             loss_valid = model.acc_loss(valid_y[i], valid_x[i, :])
     print('The validation loss is: ' + str(round(loss_valid.tolist(), 5)))
 
-    # Save the model 
     torch.save(model.state_dict(), dirname + '/predicted_traffic_following_control_fcn_best.pt')

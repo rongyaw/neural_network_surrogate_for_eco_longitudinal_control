@@ -55,7 +55,6 @@ if __name__=="__main__":
     parser.add_argument("control_type", choices=['NN', 'IDM'], help='Choose control method for traffic vehicles')
     args = parser.parse_args()
     
-    # Traffic control setting
     if args.control_type == 'MPC':
         USING_ONLINE_MPC = 1 # If using online MPC to track front vehicle
         USING_NEURAL_NETWORK = 0 # If using neural network controller to track front vehicle
@@ -82,11 +81,9 @@ if __name__=="__main__":
     sumo_sim_manager = sumo_sim(sumo_config_name=parent_dir + "/sumo/Custom/custom.sumocfg")
     sumo_sim_manager.start_Sumo()
     
-    # Initialize controller
     dirname = os.path.dirname(__file__)
     nn_pt_filename = dirname + '/traffic_following_control_dc_trained.pt'
     
-    # Setup controller
     if USING_NEURAL_NETWORK:
         FCN_control = NN_controller(nn_pt_file=nn_pt_filename, input_num=3)
         controller_name = 'Neural_Network'
@@ -120,7 +117,6 @@ if __name__=="__main__":
         sumo_sim_manager.simulationStepForward()
         sim_t = sumo_sim_manager.step * 0.1
         
-        # Check if new vehicle is needed to be added
         if inflow_timer < inflow_period:
             inflow_timer += 0.1
         else:
@@ -141,7 +137,6 @@ if __name__=="__main__":
         num_veh = len(sumo_sim_manager.vehID_list)
         
         for i in range(0, num_veh):
-            # Check if vehicle still in the traffic fleet
             if not sumo_sim_manager.sumo_veh[i].ID in sumo_sim_manager.vehID_list:
                 sumo_sim_manager.sumo_veh.pop(0)
                 continue
@@ -172,7 +167,6 @@ if __name__=="__main__":
                 
             acc = acc_traffic_step_t[0]
             
-            # Assign the acceleration to ego vehicle
             sumo_sim_manager.sumo_veh[i].assignTargetAcceleration(acc, v_max=30)
         
         runtime_record.append(time.time() - start_t)
@@ -181,7 +175,6 @@ if __name__=="__main__":
             data_logger(sim_t=sim_t, ego_a=veh_1_acc_t, ego_v=veh_1_spd_t, ego_s=veh_1_dist_t,
                         pv_a=veh_0_acc_t, pv_v=veh_0_spd_t, pv_s=veh_0_dist_t, filename= args.leading_speed_profile + "_" + controller_name + ".csv")
         
-        # Record the traffic density and traffic flow
         unique_vehicle_id = traci.edge.getLastStepVehicleIDs(edgeID="E2")
         if len(unique_vehicle_id) == 0:
             continue

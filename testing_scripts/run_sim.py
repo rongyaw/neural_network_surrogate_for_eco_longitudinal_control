@@ -24,6 +24,7 @@ from controllers import (
     ExplicitMPCUnconnectedController,
     IDM,
     NN_controller,
+    PCC_MPC_controller,
     PreviewNN_controller,
     car_following_mpc,
 )
@@ -223,11 +224,10 @@ if __name__=="__main__":
     parser.add_argument("--preview_vehicle_index", type=int, default=1, help="vehicle index used for preview animation")
     parser.add_argument("--num_sv", type=int, default=2, help="Number of vehicles in the traffic")
     parser.add_argument("--sim_duration", type=float, default=0, help="Enter the duration of simulation, 0 is default to finish the driving cycle, otherwise the simulation will stop at the specified time")
-    parser.add_argument('leading_speed_profile', choices=['Nyc', 'Hwy', 'Ftp', 'US06','FTPsec1','FTPsec2','FTPsec3'], help='Choose leading vehicles speed profile')
+    parser.add_argument('leading_speed_profile', choices=['Nyc', 'Hwy', 'US06','FTPsec1','FTPsec2','FTPsec3'], help='Choose leading vehicles speed profile')
     parser.add_argument("control_type", choices=['PreviewMPC', 'PredictMPC', 'ExplicitUnconnected', 'ExplicitConnected', 'PredictNN', 'PreviewNN', 'IDM'], help='Choose control method for traffic vehicles')
     args = parser.parse_args()
     
-    # Traffic control setting
     USING_EXPLICIT_UNCONNECTED = 0
     USING_EXPLICIT_CONNECTED = 0
     if args.control_type == 'PreviewMPC':
@@ -236,39 +236,53 @@ if __name__=="__main__":
         USING_PREVIEW_NEURAL_NETWORK = 0
         USING_IDM = 0 # If using IDM to traffic front vehicle
         leading_state_preview = True
+        controller_name = 'PreviewMPC'
+        print('Use online MPC to control traffic vehicles')
     elif args.control_type == 'PredictMPC':
         USING_ONLINE_MPC = 1
         USING_NEURAL_NETWORK = 0
         USING_PREVIEW_NEURAL_NETWORK = 0
         USING_IDM = 0
         leading_state_preview = False
+        controller_name = 'PredictMPC'
+        print('Use online MPC to control traffic vehicles')
     elif args.control_type == 'ExplicitUnconnected':
         USING_ONLINE_MPC = 0
         USING_NEURAL_NETWORK = 0
         USING_PREVIEW_NEURAL_NETWORK = 0
         USING_IDM = 0
         USING_EXPLICIT_UNCONNECTED = 1
+        controller_name = 'PredictExplicit'
+        print('Use reconstructed 20-stage explicit MPC with unconnected PV prediction')
     elif args.control_type == 'ExplicitConnected':
         USING_ONLINE_MPC = 0
         USING_NEURAL_NETWORK = 0
         USING_PREVIEW_NEURAL_NETWORK = 0
         USING_IDM = 0
         USING_EXPLICIT_CONNECTED = 1
+        controller_name = 'PreviewExplicit'
+        print('Use reconstructed 20-stage explicit MPC with connected PV preview')
     elif args.control_type == 'PredictNN':
         USING_ONLINE_MPC = 0 # If using online MPC to track front vehicle
         USING_NEURAL_NETWORK = 1 # If using neural network controller to track front vehicle
         USING_PREVIEW_NEURAL_NETWORK = 0
         USING_IDM = 0 # If using IDM to traffic front vehicle
+        controller_name = 'PredictNN'
+        print('Use neural network to control traffic vehicles')
     elif args.control_type == 'PreviewNN':
         USING_ONLINE_MPC = 0 # If using online MPC to track front vehicle
         USING_NEURAL_NETWORK = 0 # If using neural network controller to track front vehicle
         USING_PREVIEW_NEURAL_NETWORK = 1
         USING_IDM = 0 # If using IDM to traffic front vehicle
+        controller_name = 'PreviewNN'
+        print('Use preview neural network to control traffic vehicles')
     else:
         USING_ONLINE_MPC = 0 # If using online MPC to track front vehicle
         USING_NEURAL_NETWORK = 0 # If using neural network controller to track front vehicle
         USING_PREVIEW_NEURAL_NETWORK = 0
         USING_IDM = 1 # If using IDM to traffic front vehicle
+        controller_name = 'Intelligent_Driving_Model'
+        print('Use IDM to control traffic vehicles')
         
     num_veh = args.num_sv
     if num_veh < 2:
@@ -287,8 +301,6 @@ if __name__=="__main__":
         spd_filename = parent_dir + "/speed_profile/I85_hwycol.csv"
     elif args.leading_speed_profile == 'Nyc':
         spd_filename = parent_dir + "/speed_profile/I85_nycccol.csv"
-    elif args.leading_speed_profile == 'Ftp':
-        spd_filename = parent_dir + "/speed_profile/I85_ftp_short.csv"
     elif args.leading_speed_profile == 'US06':
         spd_filename = parent_dir + "/speed_profile/US06_CMI_Urban_speed_profile.csv"
     elif args.leading_speed_profile == 'FTPsec1':
@@ -296,13 +308,13 @@ if __name__=="__main__":
     elif args.leading_speed_profile == 'FTPsec2':
         spd_filename = parent_dir + "/speed_profile/FTPcol_sec2_spd_profile.csv"
     elif args.leading_speed_profile == 'FTPsec3':
-        spd_filename = parent_dir + "/speed_profile/FTPcol_sec3_spd_profile.csv"    
+        spd_filename = parent_dir + "/speed_profile/FTPcol_sec3_spd_profile.csv"
     else:
         print('Unable to locate speed profile')
         sys.exit(1)
     leading_vehicle_speed_profile = driving_cycle_spd_profile_reader(spd_filename)
     
-    if args.leading_speed_profile == 'Hwy' or args.leading_speed_profile == 'Nyc' or args.leading_speed_profile == 'Ftp':
+    if args.leading_speed_profile == 'Hwy' or args.leading_speed_profile == 'Nyc':
         sumo_sim_manager = sumo_sim(sumo_config_name=parent_dir + "/sumo/I-85_highway/I-85.sumocfg")
         sumo_sim_manager.start_Sumo(open_gui=not args.no_gui and bool(os.environ.get("DISPLAY")))
         sumo_sim_manager.init_vehicles_large_map(num_vehicle=num_veh)
@@ -311,7 +323,6 @@ if __name__=="__main__":
         sumo_sim_manager.start_Sumo(open_gui=not args.no_gui and bool(os.environ.get("DISPLAY")))
         sumo_sim_manager.init_vehicles_CMI(num_vehicle=num_veh)
     
-    # Initialize controller
     dirname = os.path.dirname(__file__)
     parent_dir = os.path.abspath(os.path.join(dirname, os.pardir))
     nn_pt_filename = parent_dir + '/training_scripts/PredictNN/predicted_traffic_following_control_fcn_best.pt'
@@ -319,15 +330,12 @@ if __name__=="__main__":
         parent_dir, 'training_scripts/PreviewNN/preview_traffic_following_control_conv_best.pt'
     )
     
-    # Setup controller
     if USING_NEURAL_NETWORK:
         FCN_control = NN_controller(
             nn_pt_file=nn_pt_filename,
             input_num=3,
             print_level=args.print_level,
         )
-        controller_name = 'Neural_Network'
-        print('Use neural network to control traffic vehicles')
     elif USING_PREVIEW_NEURAL_NETWORK:
         if not os.path.exists(preview_nn_pt_filename):
             raise FileNotFoundError(
@@ -340,33 +348,26 @@ if __name__=="__main__":
             enable_cbf_safety=not args.disable_preview_cbf,
             print_level=args.print_level,
         )
-        controller_name = 'Preview_Neural_Network'
-        print('Use preview neural network to control traffic vehicles')
     elif USING_ONLINE_MPC:
-        # online_MPC_control = PCC_MPC_controller(dirname=dirname)
-        online_MPC_control = car_following_mpc()
-        controller_name = 'Online_MPC'
-        print('Use online MPC to control traffic vehicles')
+        if args.control_type == 'PreviewMPC':
+            online_MPC_control = car_following_mpc()
+        else:
+            controller_dir = os.path.join(dirname, "controllers")
+            online_MPC_control = PCC_MPC_controller(dirname=controller_dir)
     elif USING_EXPLICIT_UNCONNECTED:
         explicit_control = ExplicitMPCUnconnectedController(
             config=ExplicitMPCConfig(dt=0.5, horizon=20, sample_count=10000,
                                      enable_cbf=not args.disable_explicit_cbf),
             generate_regions=True,
             print_level=args.print_level)
-        controller_name = 'Explicit_Unconnected'
-        print('Use reconstructed 20-stage explicit MPC with unconnected PV prediction')
     elif USING_EXPLICIT_CONNECTED:
         explicit_control = ExplicitMPCConnectedController(
             config=ExplicitMPCConfig(dt=0.5, horizon=20, sample_count=10000,
                                      enable_cbf=not args.disable_explicit_cbf),
             generate_regions=True,
             print_level=args.print_level)
-        controller_name = 'Explicit_Connected'
-        print('Use reconstructed 20-stage explicit MPC with connected PV preview')
     elif USING_IDM:
         IDM_control = IDM(a=2, b=3, s0=7, v0=20, T=1.5)
-        controller_name = 'Intelligent_Driving_Model'
-        print('Use IDM to control traffic vehicles')
     else:
         print('No controller for all vehicles')
         
@@ -375,7 +376,6 @@ if __name__=="__main__":
     front_a_t = np.array(leading_vehicle_speed_profile[:, 2])
     front_s_t = np.array(leading_vehicle_speed_profile[:, 3])
     
-    # Check the simulation duration to decide whether to stop the simulation at a specific time or let it run until the end of the driving cycle
     if args.sim_duration > 0:
         end_t = args.sim_duration
     else:
@@ -416,7 +416,6 @@ if __name__=="__main__":
         sumo_sim_manager.simulationStepForward()
         sim_t = sumo_sim_manager.step * 0.1
         
-        # Initialize power record
         P_t = []
         Spd_t = []
         
@@ -436,18 +435,15 @@ if __name__=="__main__":
         preview_pv_s_traffic = []
         preview_distance_headway_traffic = []
         preview_speed_gap_traffic = []
-        # MPC running
         for i in range(0, num_veh):
             preceding_index = sumo_sim_manager.predecessor_indices[i]
             if preceding_index is None:
-                # Get leading vehicle speed
                 v_lead_id = np.argmin(np.abs([record_t - sim_t]))
                 v_tgt_lead = front_v_t[v_lead_id] #+ 2.0 * (random.random() - 0.5)
                 sumo_sim_manager.sumo_veh[i].assignTargetSpeed(v_tgt_lead)
                 
                 [veh_1_acc_t, veh_1_spd_t, veh_1_dist_t] = sumo_sim_manager.sumo_veh[i].getVehicleStates()
                 lead_s = veh_1_dist_t
-                # Update state preview
                 lead_prev_v, lead_prev_s, lead_prev_a = driving_cycle_state_preview_searching(
                     sim_t=sim_t,
                     record_t=record_t,
@@ -456,7 +452,6 @@ if __name__=="__main__":
                     mpc_dt=PREVIEW_DT,
                     front_s_init=lead_s,
                 )
-                # Load future state preview
                 sumo_sim_manager.sumo_veh[i].update_vehicle_future_states_preview(
                     lead_prev_s[:PREVIEW_STEPS],
                     lead_prev_v[:PREVIEW_STEPS],
@@ -472,10 +467,8 @@ if __name__=="__main__":
             preceding_position_offset = sumo_sim_manager.preceding_position_offset(i)
             veh_0_dist_t += preceding_position_offset
 
-            # Compute vehicle power at time sim_t
             P_t.append(engine_power_estimation(ego_v=veh_1_spd_t, ego_a=veh_1_acc_t))
             
-            # Add the vehicle speed
             Spd_t.append(veh_1_spd_t)
             
             if USING_ONLINE_MPC:
@@ -554,7 +547,6 @@ if __name__=="__main__":
                 
             acc = acc_traffic_step_t[0]
             
-            # Assign the acceleration to ego vehicle
             sumo_sim_manager.sumo_veh[i].assignTargetAcceleration(acc, v_max=30)
 
         if USING_PREVIEW_NEURAL_NETWORK and preview_vehicle_indices:
@@ -623,7 +615,6 @@ if __name__=="__main__":
                 distance_headway_preview=distance_headway_preview,
                 speed_gap_preview=speed_gap_preview,
             )
-        # Add power consumption
         Power_t.append(P_t)
         ego_state_t = sumo_sim_manager.sumo_veh[1].getVehicleStates()
         pv_state_t = sumo_sim_manager.sumo_veh[0].getVehicleStates()
@@ -631,7 +622,6 @@ if __name__=="__main__":
         ego_v.append(ego_state_t[1])
         pv_v.append(pv_state_t[1])
         
-        # Add traffic flow speed
         avg_spd_t = np.mean(np.array(Spd_t))
         Avg_spd_traffic.append(avg_spd_t)
         

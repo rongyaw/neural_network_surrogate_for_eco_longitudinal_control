@@ -62,27 +62,21 @@ class car_following_mpc():
             self.mpc_warm_start_valid = False
         
     def reference_update(self, s_ref, v_ref, a_ref, ego_s, ego_v, ego_a):
-        # Check the length of the reference signals
         h = len(s_ref)
-        # Assign the reference signals to the internal state
         self.s_ref[0,:h] = s_ref
         self.s_ref[1,:h] = v_ref
         self.s_ref[2,:h] = a_ref
         
-        # Assign MPC initial state
         self.s_0[0, 0] = ego_s
         self.s_0[1, 0] = ego_v
         self.s_0[2, 0] = ego_a
         
     def _build_mpc_problem(self):
         """Construct the solver once for the current model and cost settings."""
-        # Convert v_max from mph to m/s
         v_max = self.v_max * 0.44704
         
-        # Create an optimization problem
         opti = casadi.Opti('conic')
         
-        # Define optimization variables
         s = opti.variable(3, self.h)  # [s, v, a]
         u = opti.variable(self.h - 1)  # Acceleration
         e_0 = opti.variable(self.h)
@@ -97,11 +91,11 @@ class car_following_mpc():
         q_e0 = casadi.MX(1e6)
         q_e1 = casadi.MX(1e6)
         
-        A = casadi.MX(np.array([[1, self.dt, self.dt ** 2 / 4],
-                                [0, 1,  self.dt / 2],
-                                [0, 0, 0]]))
+        A = casadi.MX(np.array([[1, self.dt, self.dt ** 2 / 2],
+                                [0, 1,  self.dt],
+                                [0, 0, 1]]))
         
-        B = casadi.MX(np.array([[self.dt ** 2 / 4],
+        B = casadi.MX(np.array([[self.dt ** 3 / 6],
                                 [self.dt / 2],
                                 [self.dt]]))
         
@@ -110,23 +104,18 @@ class car_following_mpc():
         cost = 0
         
         for t in range(self.h - 1):
-            # Define cost function
             cost += q_u * u[t] ** 2 + q_g * (s_ref[0, t] - self.d_gap - s[0, t]) ** 2 + q_a * s[2, t] ** 2
             
-            # Add system state update function
             opti.subject_to(s[:, t + 1] == A @ s[:, t] + B @ u[t])
             
-            # Add constriants
             opti.subject_to(s[1, t] <= v_max + e_1[t])
             opti.subject_to(s[1, t] >= 0.0 - e_1[t])
             opti.subject_to(s[0, t] <= s_ref[0, t] - self.d_gap + e_0[t])
             cost += q_e0 * (e_0[t] ** 2) + q_e1 * (e_1[t] ** 2)
             
-        # Add final states' cost
         cost += q_g * (s_ref[0, self.h - 1] - self.d_gap - s[0, self.h - 1]) ** 2 + q_a * s[2, self.h - 1] ** 2
         cost += q_e0 * (e_0[self.h - 1] ** 2) + q_e1 * (e_1[self.h - 1] ** 2)
         
-        # Add find states' constriants
         opti.subject_to(s[1, self.h - 1] <= v_max + e_1[self.h - 1])
         opti.subject_to(s[1, self.h - 1] >= 0.0 - e_1[self.h - 1])
         opti.subject_to(s[0, self.h - 1] <= s_ref[0, self.h - 1] - self.d_gap + e_0[self.h - 1])

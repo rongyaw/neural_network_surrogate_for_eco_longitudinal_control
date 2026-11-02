@@ -30,7 +30,6 @@ main_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')) # 
 sys.path.insert(0, main_path)
 import utils_data_read as reader
 from onramp_calibrate import clear_directory
-# optuna.logging.set_verbosity(optuna.logging.ERROR)
 
 
 # ================ Configuration ====================
@@ -40,7 +39,6 @@ with open('../config.json', 'r') as config_file:
     config = json.load(config_file)
 measurement_locations = ['upstream_0', 'upstream_1', 'merge_0', 'merge_1', 'merge_2', 'downstream_0', 'downstream_1']
 
-# Define parameter ranges for calibration
 
 param_names = ['maxSpeed', 'minGap', 'accel', 'decel', 'tau', 'lcStrategic', 'lcCooperative', 'lcAssertive', 'lcSpeedGain', 'lcKeepRight']
 min_val = [30.0, 1.0, 1.0, 1.0, 0.5, 0, 0, 0.0001, 0, 0]  
@@ -55,7 +53,6 @@ def simulate_real_worker(i, measurement_locations):
     temp_config_path, temp_path = create_temp_config(param=None, trial_number=i, type="real")
     run_sumo(temp_config_path)
 
-    # Extract simulated traffic volumes
     real_meas = reader.extract_sim_meas(
         ["trial_" + location for location in measurement_locations],
         file_dir=temp_path
@@ -66,7 +63,6 @@ def simulate_real_worker(i, measurement_locations):
     density = real_meas["density"]
     speed = real_meas["speed"]
 
-    # Stack the features (flow, density, speed) along a new dimension to form (time, space, features)
     traffic = np.stack([flow, density, speed], axis=-1)  # Shape: (time, space, features)
     demand = extract_od_matrix(temp_path)
 
@@ -82,22 +78,17 @@ def generate_real_data(num_samples, suffix):
     with multiprocessing.Pool(processes=min(num_samples, multiprocessing.cpu_count())) as pool:
         results = pool.map(partial(simulate_real_worker, measurement_locations=measurement_locations), range(num_samples))
 
-    # Separate traffic and demand for saving
     traffic_patterns = [result[0] for result in results]  # Extract traffic data
     demand_data = [result[1] for result in results]      # Extract demand data
 
-    # Convert the list of traffic patterns to a tensor
     traffic_patterns_tensor = torch.tensor(np.array(traffic_patterns), dtype=torch.float32)
     print(f"Traffic patterns tensor shape: {traffic_patterns_tensor.shape}")
 
-    # Convert the list of demand data to a tensor
     demand_tensor = torch.tensor(np.array(demand_data), dtype=torch.float32)
     print(f"Demand tensor shape: {demand_tensor.shape}")
 
-    # Clear temporary directory
     clear_directory("temp")
 
-    # Save both traffic_patterns_tensor and demand_tensor to "/data/SCENARIO/sim"
     save_traffic_path = os.path.abspath(f"../../data/{SCENARIO}/real/traffic_patterns_{suffix}.pt")
     save_demand_path = os.path.abspath(f"../../data/{SCENARIO}/real/demand_{suffix}.pt")
     
@@ -123,13 +114,10 @@ def simulate_sim_worker(i, measurement_locations):
         for i, param_name in enumerate(param_names)
     }
 
-    # Create temp configuration for the simulation
     temp_config_path, temp_path = create_temp_config(param=driver_param, trial_number=i, type="sim")
     
-    # Run SUMO simulation
     run_sumo(temp_config_path)
 
-    # Extract simulated traffic volumes
     real_meas = reader.extract_sim_meas(
         ["trial_" + location for location in measurement_locations],
         file_dir=temp_path
@@ -140,10 +128,8 @@ def simulate_sim_worker(i, measurement_locations):
     density = real_meas["density"]
     speed = real_meas["speed"]
 
-    # Stack the features (flow, density, speed) along a new dimension to form (time, space, features)
     traffic = np.stack([flow, density, speed], axis=-1)  # Shape: (time, space, features)
     
-    # Extract OD matrix (demand)
     demand = extract_od_matrix(temp_path)
 
     return traffic, demand
@@ -158,26 +144,19 @@ def generate_sim_data(num_samples, suffix):
         # For each sample, simulate traffic and demand
         results = pool.map(partial(simulate_sim_worker, measurement_locations=measurement_locations), range(num_samples))
 
-    # Separate traffic and demand for saving
     traffic_patterns = [result[0] for result in results]  # Extract traffic data
     demand_data = [result[1] for result in results]      # Extract demand data
 
-    # Convert the list of traffic patterns to a tensor
     traffic_patterns_tensor = torch.tensor(np.array(traffic_patterns), dtype=torch.float32)
     
-    # Print shape to confirm
     print(f"Traffic patterns tensor shape: {traffic_patterns_tensor.shape}")
 
-    # Convert the list of demand data to a tensor
     demand_tensor = torch.tensor(np.array(demand_data), dtype=torch.float32)
     
-    # Print shape to confirm
     print(f"Demand tensor shape: {demand_tensor.shape}")
 
-    # Clear temporary directory
     clear_directory("temp")
 
-    # Save both traffic_patterns_tensor and demand_tensor to "/data/SCENARIO/sim"
     save_traffic_path = os.path.abspath(f"../../data/{SCENARIO}/sim/traffic_patterns_{suffix}.pt")
     save_demand_path = os.path.abspath(f"../../data/{SCENARIO}/sim/demand_{suffix}.pt")
     
@@ -204,9 +183,7 @@ def create_temp_config(param, trial_number, type="real"):
     output_dir = os.path.join('temp', str(trial_number))
     os.makedirs(output_dir, exist_ok=True)
     
-    # Update .rou.xml file with new parameters
     if type == "real": # do not change parameters, add noise on flw
-        # shutil.copy(f"{SCENARIO}_gt.rou.xml", os.path.join(output_dir, f"{trial_number}_{SCENARIO}.rou.xml"))
         rou_tree = ET.parse(f"{SCENARIO}_gt.rou.xml")
         rou_root = rou_tree.getroot()
         for flow in rou_root.findall('flow'):
@@ -229,11 +206,9 @@ def create_temp_config(param, trial_number, type="real"):
         new_rou_file_path = os.path.join(output_dir, f"{trial_number}_{SCENARIO}.rou.xml")
         rou_tree.write(new_rou_file_path, encoding='UTF-8', xml_declaration=True)
         
-    # Copy other necessary files
     shutil.copy(f"{SCENARIO}.net.xml", os.path.join(output_dir, f"{trial_number}_{SCENARIO}.net.xml"))
     shutil.copy('detectors.add.xml', os.path.join(output_dir, f"{trial_number}_detectors.add.xml"))
     
-    # Update .sumocfg file
     sumocfg_tree = ET.parse(f"{SCENARIO}.sumocfg")
     sumocfg_root = sumocfg_tree.getroot()
     input_element = sumocfg_root.find('input')
@@ -260,16 +235,13 @@ def extract_od_matrix(temp_path):
     tree = ET.parse(rou_file_path)
     root = tree.getroot()
     
-    # Initialize OD matrix (example: 3 routes, 5 time steps)
     num_routes = config[SCENARIO]["N_ROUTES"]
     num_intervals = config[SCENARIO]["N_INTERVALS"]
     demand_matrix = np.zeros((num_routes, num_intervals))
     
-    # Extract unique routes from route definitions
     routes = [route.get("id") for route in root.findall("route")]
     route_index = {route: i for i, route in enumerate(routes)}
 
-    # Extract flow data
     for flow in root.findall("flow"):
         route = flow.get("route")
         vehs_per_hour = float(flow.get("vehsPerHour"))
@@ -318,20 +290,14 @@ class Discriminator(nn.Module):
         self.fc = nn.Sequential(
             nn.Linear(self.traffic_output_size + self.od_output_size, 128),  # 960 + 64 = 1024
             nn.LeakyReLU(0.2),
-            # nn.BatchNorm1d(128),  # Normalize activations
             nn.Linear(128, 1)
-            # nn.Sigmoid()
         )
 
     def forward(self, traffic_pattern, od_matrix):
         traffic_pattern = traffic_pattern.permute(0, 3, 1, 2).unsqueeze(-1)
-        # print("Traffic input:", traffic_pattern.shape)
         traffic_features = self.traffic_conv(traffic_pattern)
-        # print("Traffic features:", traffic_features.shape)
         
-        # print("OD input:", od_matrix.shape)
         od_features = self.od_conv(od_matrix)
-        # print("OD features:", od_features.shape)
         
         combined = torch.cat([traffic_features, od_features], dim=1)
         output = self.fc(combined)
@@ -361,26 +327,21 @@ def train_discriminator(discriminator, real_traffic_patterns, real_od_matrices, 
     y = torch.cat([torch.ones(len(real_traffic_patterns)), torch.zeros(len(simulated_traffic_patterns))], dim=0)
     y = y.unsqueeze(1)  # Shape: (16,) -> (16, 1)
     
-    # Shuffle the data
     indices = torch.randperm(len(X_traffic))
     X_traffic = X_traffic[indices]
     X_od = X_od[indices]
     y = y[indices]
     
-    # Create a DataLoader for batching
     dataset = torch.utils.data.TensorDataset(X_traffic, X_od, y)
     dataloader = torch.utils.data.DataLoader(dataset, batch_size=batch_size, shuffle=True)
     
-    # Define loss function and optimizer
     lr = 0.0002
     betas = (0.5, 0.999)
-    # criterion = nn.BCELoss() # use with sigmoid in fully connected layer (fc)
     criterion = nn.BCEWithLogitsLoss() # for stability
     optimizer = optim.Adam(discriminator.parameters(), lr=lr, betas=betas)
     
     device = torch.device(device if torch.cuda.is_available() else 'cpu')
 
-    # Open the log file to save training progress
     with open(log_file, 'w') as log:
         log.write("Epoch, Step, Loss\n")  # Write headers to log file
 
@@ -390,7 +351,6 @@ def train_discriminator(discriminator, real_traffic_patterns, real_od_matrices, 
             running_loss = 0.0
             
             for i, (traffic_batch, od_batch, labels_batch) in enumerate(dataloader):
-                # Move data to the GPU if needed
                 traffic_batch = traffic_batch.to(device)
                 od_batch = od_batch.to(device)
                 labels_batch = labels_batch.to(device)
@@ -401,7 +361,6 @@ def train_discriminator(discriminator, real_traffic_patterns, real_od_matrices, 
                 # Forward pass
                 outputs = discriminator(traffic_batch, od_batch)
                 
-                # Calculate the loss
                 loss = criterion(outputs, labels_batch)
                 
                 # Backpropagation
@@ -411,13 +370,11 @@ def train_discriminator(discriminator, real_traffic_patterns, real_od_matrices, 
                 
                 running_loss += loss.item()
             
-            # Print the average loss for the epoch
             if epoch % 10 == 0:
                 print(f'Epoch [{epoch+1}/{num_epochs}], Average Loss: {running_loss / len(dataloader)}')
                 log.write(f'Epoch [{epoch+1}/{num_epochs}], Average Loss: {running_loss / len(dataloader)}\n')
             
             # Optionally save the model after each epoch
-            # torch.save(discriminator.state_dict(), f'discriminator_epoch_{epoch+1}.pth')
 
     print("Training complete!")
 
@@ -442,13 +399,11 @@ def evaluate_discriminator(discriminator, real_traffic_patterns, real_od_matrice
     y = torch.cat([torch.ones(len(real_traffic_patterns)), torch.zeros(len(simulated_traffic_patterns))], dim=0)
     y = y.unsqueeze(1)  # Shape: (16,) -> (16, 1)
     
-    # Shuffle the data
     indices = torch.randperm(len(X_traffic))
     X_traffic = X_traffic[indices]
     X_od = X_od[indices]
     y = y[indices]
     
-    # Create a DataLoader for batching
     dataset = torch.utils.data.TensorDataset(X_traffic, X_od, y)
     dataloader = torch.utils.data.DataLoader(dataset, batch_size=batch_size, shuffle=True)
 
@@ -458,32 +413,24 @@ def evaluate_discriminator(discriminator, real_traffic_patterns, real_od_matrice
 
     with torch.no_grad():  # Disable gradient computation
         for traffic_patterns, od_matrices, labels in dataloader:
-            # Move data to the appropriate device
             traffic_patterns = traffic_patterns.to(device)
             od_matrices = od_matrices.to(device)
             labels = labels.to(device)
 
-            # Get discriminator predictions
             outputs = discriminator(traffic_patterns, od_matrices).squeeze()  # Shape: (batch_size,)
             preds = torch.sigmoid(outputs)  # Apply sigmoid to get probabilities
             print(preds)
-            # print(preds, labels)
             preds = (outputs > 0.5).float()  # Convert probabilities to binary predictions (0 or 1)
 
-            # Store predictions and labels
             all_preds.extend(preds.cpu().numpy())
             all_labels.extend(labels.cpu().numpy())
 
-    # Compute evaluation metrics
-    # print(all_preds)
-    # print(all_labels)
     accuracy = accuracy_score(all_labels, all_preds)
     precision = precision_score(all_labels, all_preds)
     recall = recall_score(all_labels, all_preds)
     f1 = f1_score(all_labels, all_preds)
     roc_auc = roc_auc_score(all_labels, all_preds)
 
-    # Return results as a dictionary
     results = {
         "accuracy": accuracy,
         "precision": precision,
@@ -495,85 +442,21 @@ def evaluate_discriminator(discriminator, real_traffic_patterns, real_od_matrice
 
 # ================ Main Script ====================
 if __name__ == "__main__":
-    # Initialize logging
-    # current_time = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-    # log_dir = '_log'
-    # if not os.path.exists(log_dir):
-    #     os.makedirs(log_dir)
-    # log_file = os.path.join(log_dir, f'{current_time}_optuna_log_{EXP}.txt')
-    # logging.basicConfig(filename=log_file, level=logging.INFO, format='%(asctime)s - %(message)s')
-
-
-    # Generate training and testing data
-    # clear_directory("temp")
-    # num_train_samples = 100
-    # num_test_samples = 50
-    # generate_real_data(num_samples=num_train_samples, suffix="train")
-    # generate_sim_data(num_samples=num_train_samples, suffix="train")
-    # generate_real_data(num_samples=num_test_samples, suffix="test")
-    # generate_sim_data(num_samples=num_test_samples, suffix="test")
-
-    # # Load data for discriminator training
     real_traffic_train = torch.load(f"../../data/{SCENARIO}/real/traffic_patterns_train.pt",weights_only=True)
     real_od_train = torch.load(f"../../data/{SCENARIO}/real/demand_train.pt",weights_only=True)
     sim_traffic_train = torch.load(f"../../data/{SCENARIO}/sim/traffic_patterns_train.pt",weights_only=True)
     sim_od_train = torch.load(f"../../data/{SCENARIO}/sim/demand_train.pt",weights_only=True)
 
-    # Initialize the discriminator
     discriminator = Discriminator(real_traffic_train.shape, real_od_train.shape)
 
-    # Run optimization
     train_discriminator(discriminator, real_traffic_train, real_od_train, sim_traffic_train, sim_od_train)
     torch.save(discriminator.state_dict(), "discriminator.pth")
 
-    # Load data for discriminator testing
     real_traffic_test = torch.load(f"../../data/{SCENARIO}/real/traffic_patterns_test.pt",weights_only=True)
     real_od_test = torch.load(f"../../data/{SCENARIO}/real/demand_test.pt",weights_only=True)
     sim_traffic_test = torch.load(f"../../data/{SCENARIO}/sim/traffic_patterns_test.pt",weights_only=True)
     sim_od_test = torch.load(f"../../data/{SCENARIO}/sim/demand_test.pt",weights_only=True)
 
-    # Load the pretrained model
-    # discriminator = Discriminator(real_traffic_test.shape, real_od_test.shape)
-    # discriminator.load_state_dict(torch.load("discriminator.pth", weights_only=True))
 
-    # Start evaluation (Testing)
     result = evaluate_discriminator(discriminator, real_traffic_test, real_od_test, sim_traffic_test, sim_od_test)
     print(result)
-
-    # print(sim_traffic_test[0])
-
-    ## plot samples
-    # import matplotlib.pyplot as plt
-    # # Extract relevant dimensions
-    # sample_size, space, time, features = real_traffic_test.shape
-    # assert sim_traffic_test.shape == real_traffic_test.shape, "Real and Sim data must have the same shape"
-
-    # # Select the first feature
-    # real_traffic_feature = real_traffic_test[:, :, :, 2]  # Shape: (sample_size, space, time)
-    # sim_traffic_feature = sim_traffic_test[:, :, :, 2]  # Shape: (sample_size, space, time)
-
-    # # Create subplots for each space dimension
-    # fig, axes = plt.subplots(nrows=space, figsize=(10, 2 * space), sharex=True)
-
-    # if space == 1:
-    #     axes = [axes]  # Ensure axes is iterable when space = 1
-
-    # for i in range(space):
-    #     ax = axes[i]
-        
-    #     # Plot all real traffic samples in red
-    #     for j in range(sample_size):
-    #         ax.plot(real_traffic_feature[j, i, :], color="red", alpha=0.5, label="Real" if j == 0 else "")
-        
-    #     # Plot all simulated traffic samples in blue
-    #     for j in range(sample_size):
-    #         ax.plot(sim_traffic_feature[j, i, :], color="blue", alpha=0.5, label="Sim" if j == 0 else "")
-        
-    #     ax.set_title(measurement_locations[i])
-    #     ax.legend()
-
-    # plt.xlabel("Time")
-    # plt.suptitle("Traffic Patterns: Real vs. Simulated")
-    # plt.tight_layout()
-    # plt.savefig("traffic_comparison.png", dpi=300, bbox_inches="tight")
-    # # plt.show()

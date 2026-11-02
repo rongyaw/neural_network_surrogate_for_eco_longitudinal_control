@@ -400,7 +400,6 @@ class _ExplicitMPCBase:
         # KKT primal and dual inequalities define the exact polyhedral region.
         lower = lam0
         lower_gain = Lam
-        # Store a conservative box extracted from the sampled region. This
         # keeps lookup cheap while retaining the exact affine law.
         return z0, Z, upper, upper_gain, lower, lower_gain
 

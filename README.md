@@ -13,7 +13,7 @@ Controller implementations are split by type under `testing_scripts/controllers/
 | --- | --- |
 | `baseline.py` | IDM baseline |
 | `explicit_mpc.py` | Explicit MPC configuration, region model, and connected/unconnected controllers |
-| `online_mpc.py` | CasADi car-following MPC formulated as a quadratic program and solved with OSQP |
+| `preview_mpc.py` | CasADi car-following MPC formulated as a quadratic program and solved with OSQP |
 | `neural.py` | Regular neural-network models and controller |
 | `preview_nn.py` | Preview neural-network model and controller |
 
@@ -285,6 +285,23 @@ python3 testing_scripts/run_sim.py --plot_result \
 Traffic-density charts are no longer generated. The runtime CSV and state log
 are independent of `--plot_result`.
 
+## Trajectory comparison
+
+`trajectory_comparision.py` plots acceleration, speed, and position from a
+logged MPC run and its matching neural-network run. First create both state
+logs in the workspace root. For the preview pair, run:
+
+```bash
+python3 testing_scripts/run_sim.py --logging_sim --num_sv 5 --no_gui Nyc PreviewMPC
+python3 testing_scripts/run_sim.py --logging_sim --num_sv 5 --no_gui Nyc PreviewNN
+python3 trajectory_comparision.py Nyc Preview
+```
+
+The script reads `Nyc_PreviewMPC.csv` and `Nyc_PreviewNN.csv` from the current
+directory. For the predicted pair, use `PredictMPC`, `PredictNN`, and
+`trajectory_comparision.py Nyc Predict` instead. It also accepts the driving
+cycle profile names listed above.
+
 ## Headless and GUI operation
 
 Use `--no_gui` for server or batch execution:
@@ -304,6 +321,7 @@ testing_scripts/controllers/         Controller implementations by type
 testing_scripts/_controller.py       Compatibility exports for older imports
 testing_scripts/utils.py             Driving-cycle and simulation utilities
 runtime_analysis.sh                 Batch runtime analysis
+trajectory_comparision.py           Plot paired MPC and neural-network trajectories
 speed_profile/                      Driving-cycle inputs
 sumo/I-85_highway/                  Highway SUMO configuration
 sumo/CMI/                           CMI SUMO configuration

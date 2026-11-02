@@ -80,15 +80,12 @@ def interpolate_zeros(arr):
         zero_indices = np.where(row < 4)[0]
         
         if len(zero_indices) > 0:
-            # Define the x values for the valid (non-zero) data points
             x = np.arange(len(row))
             valid_indices = np.setdiff1d(x, zero_indices)
             
             if len(valid_indices) > 1:  # Ensure there are at least two points to interpolate
-                # Create the interpolation function based on valid data points
                 interp_func = interp1d(x[valid_indices], row[valid_indices], kind='linear', fill_value="extrapolate")
                 
-                # Replace the zero values with interpolated values
                 interpolated_arr[i, zero_indices] = interp_func(zero_indices)
     
     return interpolated_arr
@@ -110,7 +107,6 @@ def rds_to_matrix(rds_file, det_locations ):
     SUMO lane is 0-indexed (from right), while RDS lanes are 1-index (from left)
     '''
     
-    # Read the CSV file into a DataFrame
     df = pd.read_csv(rds_file)
     df['timestamp'] = pd.to_datetime(df['timestamp'])
 
@@ -153,31 +149,24 @@ def extract_sim_meas(measurement_locations, file_dir = ""):
     Q/V/Occ: [N_dec x N_time]
     measurement_locations: a list of strings that map detector IDs
     """
-    # Initialize an empty list to store the data for each detector
     detector_data = {"speed": [], "volume": [], "occupancy": []}
 
     for detector_id in measurement_locations:
         # Construct the filename for the detector's output XML file
-        # print(f"reading {detector_id}...")
         filename = os.path.join(file_dir, f"det_{detector_id}.out.xml")
         
-        # Check if the file exists
         if not os.path.isfile(filename):
             print(f"File {filename} does not exist. Skipping this detector.")
             continue
         
-        # Parse the XML file
         tree = ET.parse(filename)
         root = tree.getroot()
 
-        # Initialize a list to store the measurements for this detector
         speed = []
         volume = []
         occupancy = []
 
-        # Iterate over each interval element in the XML
         for interval in root.findall('interval'):
-            # Extract the entered attribute (number of vehicles entered in the interval)
             speed.append(float(interval.get('speed')) * 2.237) # convert m/s to mph
             volume.append(float(interval.get('flow')))
             occupancy.append(float(interval.get('occupancy')))
@@ -189,7 +178,6 @@ def extract_sim_meas(measurement_locations, file_dir = ""):
     
     for key, val in detector_data.items():
         detector_data[key] = np.array(val)
-        # print(val.shape)
     
     detector_data["flow"]=detector_data["volume"]
     detector_data["density"]=detector_data["flow"]/detector_data["speed"]
@@ -200,7 +188,6 @@ def extract_mean_speed_all_lanes(xml_file):
     given output of lanearea(E2) detectors, extract meanSpeed for all lanes
     lane_speeds[lane_id] = [speeds at each time interval]
     '''
-    # Parse the XML file
     tree = ET.parse(xml_file)
     root = tree.getroot()
 
@@ -209,7 +196,6 @@ def extract_mean_speed_all_lanes(xml_file):
     time_intervals = []
     prev_time = -1
 
-    # Iterate over all intervals in the XML file
     for interval in root.findall('interval'):
         lane_id = interval.get('id')
         mean_speed = float(interval.get('meanSpeed'))
@@ -225,7 +211,6 @@ def extract_mean_speed_all_lanes(xml_file):
         # Append the meanSpeed to the corresponding lane's list
         lane_speeds[lane_id].append(mean_speed)
 
-    # Calculate travel time
     travel_time_all_lane = {}
     for lane_id, speeds in lane_speeds.items():
         speeds = np.array(speeds)
@@ -262,7 +247,6 @@ def parse_and_reorder_xml(xml_file, output_csv, link_names=None):
     # Stream the XML file with iterparse
     context = ET.iterparse(xml_file, events=('end',))
     
-    # Parse each timestep and collect vehicle data
     print("parsing xml file...")
     for event, elem in context:
         if elem.tag == 'timestep':
@@ -290,21 +274,17 @@ def parse_and_reorder_xml(xml_file, output_csv, link_names=None):
                 ])
             elem.clear()  # Free memory
 
-    # Reorder data by vehicle_id first appearance, then by time
     print("reorder by time...")
     for vehicle_id in vehicle_data:
         vehicle_data[vehicle_id].sort(key=lambda x: float(x[1]))
 
-    # Write the result to a CSV file
     print("writing to csv...")
     multiple_writers = False
     with open(output_csv, mode='w', newline='') as file:
         writer = csv.writer(file)
-        # Write the header
         writer.writerow(['VehicleID', 'Time', 'LaneID', 'LocalY', 'MeanSpeed', 'MeanAccel', 
                          'VehLength', 'VehClass', 'FollowerID', 'LeaderID'])
         
-        # Write the sorted data
         if link_names is None: # write all data
             for vehicle_id in vehicle_data:
                 for row in vehicle_data[vehicle_id]:
@@ -322,7 +302,6 @@ def parse_and_reorder_xml(xml_file, output_csv, link_names=None):
             csv_name = output_csv.split(".")[0]+"_"+key+".csv"
             with open(csv_name, mode='w', newline='') as file:
                 writer = csv.writer(file)
-                # Write the header
                 writer.writerow(['VehicleID', 'Time', 'LaneID', 'LocalY', 'MeanSpeed', 'MeanAccel', 
                                 'VehLength', 'VehClass', 'FollowerID', 'LeaderID'])
                 for vehicle_id in vehicle_data:
@@ -341,20 +320,16 @@ def det_to_csv(xml_file, suffix=""):
     Read detector data {DET}.out.xml and re-write them to .csv files with names {DET}{suffix}.csv
     '''
 
-    # Parse the XML file
     tree = ET.parse(xml_file)
     root = tree.getroot()
 
-    # Open a CSV file for writing
     csv_file_name = xml_file.split(".")[-3]
     with open(f'{csv_file_name}{suffix}.csv', mode='w', newline='') as file:
         writer = csv.writer(file)
         
-        # Write the header row
         header = ["begin", "end", "id", "nVehContrib", "flow", "occupancy", "speed", "harmonicMeanSpeed", "length", "nVehEntered"]
         writer.writerow(header)
         
-        # Write the data rows
         for interval in root.findall('interval'):
             row = [
                 float(interval.get("begin")),
@@ -375,105 +350,28 @@ def det_to_csv(xml_file, suffix=""):
 
 def filter_trajectory_data(input_file, output_file, start_time, end_time):
     # filter fcd.xml output with specified start_time and end_time
-    # Open output file and write the XML header and root opening tag
     time_offset = start_time
     with open(output_file, 'w') as out:
         out.write('<?xml version="1.0" encoding="UTF-8"?>\n')
         out.write('<fcd-export xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ')
         out.write('xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/fcd_file.xsd">\n')
 
-        # Parse the input file iteratively
         for event, elem in ET.iterparse(input_file, events=("start", "end")):
             if event == "end" and elem.tag == "timestep":
                 time = float(elem.attrib["time"])
                 
-                # Check if the timestep falls within the given range
                 if start_time <= time <= end_time:
                     # Adjust the time to start from 0
                     elem.attrib["time"] = f"{time - time_offset:.2f}"
-                    # Write the timestep element to the output file
                     out.write(ET.tostring(elem, encoding="unicode"))
                 
-                # Clear the element from memory to save space
                 elem.clear()
 
-        # Close the root tag
         out.write('</fcd-export>\n')
 
     return
-
-# copied from onramp_calibrate.py
-# def write_vehicle_trajectories_to_csv(readfilename, writefilename):
-#     # Start SUMO simulation with TraCI
-#     traci.start(["sumo", "-c", readfilename+".sumocfg"])
-    
-#     # Replace "your_routes_file.rou.xml" with the actual path to your SUMO route file
-#     route_file_path = readfilename+".rou.xml"
-#     # Get a list of vehicle IDs from the route file
-#     predefined_vehicle_ids = get_vehicle_ids_from_routes(route_file_path)
-
-#     # Print the list of vehicle IDs
-#     print("List of Predefined Vehicle IDs:", predefined_vehicle_ids)
-
-
-#     # Open the CSV file for writing
-#     with open(writefilename, 'w') as csv_file:
-#         # Write header
-#         # Column 1:	Vehicle ID
-#         # Column 2:	Frame ID
-#         # Column 3:	Lane ID
-#         # Column 4:	LocalY
-#         # Column 5:	Mean Speed
-#         # Column 6:	Mean Acceleration
-#         # Column 7:	Vehicle length
-#         # Column 8:	Vehicle Class ID
-#         # Column 9:	Follower ID
-#         # Column 10: Leader ID
-
-#         csv_file.write("VehicleID, Time, LaneID, LocalY, MeanSpeed, MeanAccel, VehLength, VehClass, FollowerID, LeaderID\n")
-#         # vehicle_id = "carflow1.131"
-#         # Run simulation steps
-#         step = 0
-#         while traci.simulation.getMinExpectedNumber() > 0:
-#             # Get simulation time
-#             simulation_time = traci.simulation.getTime()
-
-#             # Get IDs of all vehicles
-#             vehicle_ids = traci.vehicle.getIDList()
-
-#             # Iterate over all vehicles
-#             for vehicle_id in vehicle_ids:
-#                 # Get vehicle position and speed
-#                 position = traci.vehicle.getPosition(vehicle_id)
-#                 laneid = traci.vehicle.getLaneID(vehicle_id)
-#                 speed = traci.vehicle.getSpeed(vehicle_id)
-#                 accel = traci.vehicle.getAcceleration(vehicle_id)
-#                 cls = traci.vehicle.getVehicleClass(vehicle_id)
-
-#                 # Write data to the CSV file - similar to NGSIM schema
-#                 csv_file.write(f"{vehicle_id} {simulation_time} {laneid} {position[0]} {speed} {accel} {-1} {cls} {-1} {-1}\n")
-
-#             # try to overwite acceleration of one vehicle
-#             # if 300< step <400:
-#             #     traci.vehicle.setSpeed(vehicle_id, 0)
-#             # Simulate one step
-#             traci.simulationStep()
-#             step += 1
-
-#     # Close connection
-#     traci.close()
-#     print("Complete!")
-
-#     return
-
 
 if __name__ == "__main__":
 
     file_path = r'PATH TO RDS.dat.gz'
     write_file_path = r'data/RDS/I24_WB_52_60_11132023.csv'
-    # read_and_filter_file(file_path, write_file_path, 52, 57.5)
-    # 
-    # vis_rds_color(write_file_path=write_file_path, lane_number=None)
-    # plot_ramp_volumes(write_file_path)
-
-    

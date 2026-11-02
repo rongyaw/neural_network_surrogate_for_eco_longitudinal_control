@@ -30,11 +30,8 @@ class SUMO_Traffic_Light():
         self.GR_duration = green_duration
     
     def TL_update(self, TL_id):
-        # Update traffic signal timing
         TL_t = self.TL_timing[TL_id]
-        # Check the status and duration
         TL_status = self.status_TL[TL_id]
-        # Update traffic light status
         if TL_status == 0:
             if TL_t > self.RD_duration:
                 TL_status = 2
@@ -92,7 +89,6 @@ class SUMO_vehicles():
             traci.vehicle.setSpeedMode(vehID=self.ID, speedMode=96)
     
     def update_preceding_traffic_light(self, TL_s):
-        # Find the traffic that is in front of the traffic light
         [_, _, ego_s] = self.getVehicleStates()
         TL_s = np.array(TL_s)
         TL_id = np.where(TL_s > ego_s)[0]
@@ -436,7 +432,6 @@ def TTCi_estimate(ego_v, front_v, front_s):
     return ttc_i
 
 def driving_cycle_state_preview_searching(sim_t, record_t, front_v_t, front_a_t, mpc_dt, front_s_init):
-    # Find leading vehicle's driving cycle
     cycle_vs = np.empty(20)
     cycle_vs.fill(np.nan)
     cycle_as = np.empty(20)
@@ -466,39 +461,20 @@ def traffic_online_MPC_control_step(veh_0_acc_t, veh_0_spd_t, veh_0_dist_t,
     
     if leading_preview:
         cycle_vs, cycle_ss, cycle_as = driving_cycle_state_preview_searching(sim_t=sim_t, record_t=record_t, front_v_t=front_v_t, front_a_t=front_a_t, mpc_dt=mpc_dt, front_s_init=veh_0_dist_t)
+        online_MPC_control.reference_update(s_ref=cycle_ss, v_ref=cycle_vs, a_ref=cycle_as, ego_s=veh_1_dist_t, ego_v=veh_1_spd_t, ego_a=veh_1_acc_t)
+        online_MPC_control.mpc_solver()
+        veh_1_pred_s = online_MPC_control.mpc_sol_s
+        veh_1_pred_v = online_MPC_control.mpc_sol_v
+        a_MPC = online_MPC_control.mpc_sol_a[1]
     else:
-        # Predict the future states based on the acceleration of the preceding vehicle assuming speed limit with 40 m/s and constant acceleration
-        cycle_vs = np.empty(20)
-        cycle_vs.fill(np.nan)
-        cycle_as = np.empty(20)
-        cycle_as.fill(np.nan)
-        cycle_ss = np.empty(20)
-        cycle_ss.fill(np.nan)
-        
-        for i in range(20):
-            if i == 0:
-                cycle_as[i] = 0.0
-                cycle_vs[i] = veh_0_spd_t
-            else:
-                cycle_as[i] = veh_0_acc_t if (veh_0_spd_t + cycle_as[i-1] * mpc_dt) < 40.0 else 0.0
-                cycle_vs[i] = min(veh_0_spd_t + cycle_as[i-1] * mpc_dt, 40.0)
-        cycle_ss = (scipy.integrate.cumulative_trapezoid(cycle_vs, dx=mpc_dt, initial=0.0) + veh_0_dist_t)
-    
-    # Assign initial states for the MPC controller
-    online_MPC_control.reference_update(s_ref=cycle_ss, v_ref=cycle_vs, a_ref=cycle_as, ego_s=veh_1_dist_t, ego_v=veh_1_spd_t, ego_a=veh_1_acc_t)
-    online_MPC_control.mpc_solver()
-    veh_1_pred_s = online_MPC_control.mpc_sol_s
-    veh_1_pred_v = online_MPC_control.mpc_sol_v
-    a_MPC = online_MPC_control.mpc_sol_a[1]
+        cycle_vs = []#pv_object.pv_v_prev
+        cycle_ss = []#pv_object.pv_s_pre
+        veh_1_pred_s, veh_1_pred_v, a_MPC = online_MPC_control.svs.setCommand_SUMO(t = sim_t, ego_s=veh_1_dist_t, ego_v=veh_1_spd_t, ego_a=veh_1_acc_t,
+                                                   pv_s=veh_0_dist_t, pv_v=veh_0_spd_t, pv_a=veh_0_acc_t, cycle_ss=cycle_ss, cycle_vs=cycle_vs, cycle_dt=mpc_dt)
     
     if leading_preview:
         ego_object.update_vehicle_future_states_preview(np.array(veh_1_pred_s), veh_1_pred_v)
     
-    # Check if CBF safety constraint is violated
-    # a_ego_max = CBF_acceleration_bound_check(pv_vt=veh_0_spd_t, s_vt=veh_1_spd_t, pv_st=veh_0_dist_t, s_st=veh_1_dist_t, tao=1.8, alpha=2.0, L=7.0)
-    # if a_MPC > a_ego_max:
-    #     print(f"CBF safety constraint is violated at time {sim_t}! Adjusting MPC control to ensure safety...")
-    #     a_MPC = np.minimum(a_MPC, a_ego_max)
     
     return [a_MPC]
 

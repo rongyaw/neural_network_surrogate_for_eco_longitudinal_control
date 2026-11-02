@@ -15,7 +15,8 @@ from .preview_nn import (
     PreviewModel,
     PreviewNN_controller,
 )
-from .online_mpc import car_following_mpc
+from ._controller import PCC_MPC_controller
+from .preview_mpc import car_following_mpc
 
 __all__ = [
     "IDM",
@@ -28,5 +29,6 @@ __all__ = [
     "NN_controller",
     "PreviewModel",
     "PreviewNN_controller",
+    "PCC_MPC_controller",
     "car_following_mpc",
 ]
