@@ -209,7 +209,7 @@ class PreviewNN_controller():
                 pv_st=np.asarray(pv_st, dtype=float).reshape(-1),
                 s_st=np.asarray(s_st, dtype=float).reshape(-1),
                 tao=0.8,
-                alpha=2.0,
+                alpha=3.0,
                 L=5.0,
             )
             if np.any(acceleration_prediction > a_ego_max):
