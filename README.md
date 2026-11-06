@@ -58,14 +58,6 @@ python -m pip install numpy scipy pandas matplotlib osqp traci torch casadi
 For GPU use, install the PyTorch build matching the installed CUDA version
 instead of the generic `torch` package if necessary.
 
-The `PredictNN` controller currently moves its model to CUDA, so it requires a
-CUDA-enabled PyTorch installation and a visible GPU. `PreviewNN` and the
-explicit-MPC controllers can use the CPU when CUDA is unavailable.
-
-The repository also contains a ROS1 `package.xml`. ROS/catkin is only needed
-for ROS package integration; it is not required for the direct
-`testing_scripts/run_sim.py` workflow.
-
 ## Setup
 
 From the workspace root, activate your Python environment:
@@ -218,20 +210,6 @@ defaults to `30`. The batch script passes it to `testing_scripts/run_sim.py`
 with `--sim_duration`. For a direct simulation run, `--sim_duration 0` (the
 default) runs through the end of the selected driving cycle, while a positive
 value stops at that time.
-
-The batch script's controller validation currently lists:
-
-```text
-MPC, ExplicitConnected, NN, PreviewNN, IDM
-```
-
-The batch script still lists legacy `MPC` and `NN` choices. Those names are no
-longer accepted by the main simulation, which uses `PreviewMPC`/`PredictMPC`
-and `PredictNN`, so those two batch choices fail when launched. The examples
-above use controller names accepted by both scripts. The sixth argument controls
-explicit-MPC CBF behavior. Use `enabled` or
-`disabled`; the script passes `--disable_explicit_cbf` only for
-`ExplicitConnected` when `disabled` is selected.
 
 When `--logging_sim` is enabled, runtime results are appended to:
 
