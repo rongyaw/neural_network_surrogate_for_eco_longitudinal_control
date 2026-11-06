@@ -67,6 +67,15 @@ cd /home/tonyyaoyao/neural_network_surrogate_for_eco_longitudinal_control
 source .venv/bin/activate
 ```
 
+Run the training scripts yourself before using the simulation. The training
+scripts are under `training_scripts/`; they generate the neural-network
+checkpoints listed below. The simulation does not run training automatically.
+
+```text
+python3 training_scripts/PredictNN/traffic_following_training.py
+python3 training_scripts/PreviewNN/preview_traffic_following_training.py
+```
+
 The neural-network checkpoints used by the simulation are:
 
 ```text
