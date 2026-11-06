@@ -52,7 +52,7 @@ Create an environment and install the packages used by the active simulation:
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
-python -m pip install numpy scipy pandas matplotlib osqp traci torch casadi
+python -m pip install numpy scipy pandas matplotlib osqp traci torch casadi==3.6.2
 ```
 
 For GPU use, install the PyTorch build matching the installed CUDA version
