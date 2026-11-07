@@ -17,6 +17,7 @@ from .preview_nn import (
 )
 from ._controller import PCC_MPC_controller
 from .preview_mpc import car_following_mpc
+from .c_gen_mpc import CGeneratedPreviewMPC
 
 __all__ = [
     "IDM",
@@ -31,4 +32,5 @@ __all__ = [
     "PreviewNN_controller",
     "PCC_MPC_controller",
     "car_following_mpc",
+    "CGeneratedPreviewMPC",
 ]

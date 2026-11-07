@@ -22,11 +22,11 @@ from controllers import (
     ExplicitMPCConfig,
     ExplicitMPCConnectedController,
     ExplicitMPCUnconnectedController,
+    CGeneratedPreviewMPC,
     IDM,
     NN_controller,
     PCC_MPC_controller,
     PreviewNN_controller,
-    car_following_mpc,
 )
 
 
@@ -350,7 +350,7 @@ if __name__=="__main__":
         )
     elif USING_ONLINE_MPC:
         if args.control_type == 'PreviewMPC':
-            online_MPC_control = car_following_mpc()
+            online_MPC_control = CGeneratedPreviewMPC()
         else:
             controller_dir = os.path.join(dirname, "controllers")
             online_MPC_control = PCC_MPC_controller(dirname=controller_dir)

@@ -13,7 +13,8 @@ Controller implementations are split by type under `testing_scripts/controllers/
 | --- | --- |
 | `baseline.py` | IDM baseline |
 | `explicit_mpc.py` | Explicit MPC configuration, region model, and connected/unconnected controllers |
-| `preview_mpc.py` | CasADi car-following MPC formulated as a quadratic program and solved with OSQP |
+| `preview_mpc.py` | Python CasADi car-following MPC retained for comparison |
+| `c_gen_mpc/` | CasADi C-code generator and adapter used by `PreviewMPC` |
 | `neural.py` | Regular neural-network models and controller |
 | `preview_nn.py` | Preview neural-network model and controller |
 
@@ -27,12 +28,13 @@ a compatibility facade for older scripts.
 - Python 3.8 or newer
 - SUMO and SUMO tools
 - A working TraCI installation
+- A C compiler (`cc` or `gcc`) to build the generated Preview MPC library
 
 On Ubuntu, SUMO can be installed with:
 
 ```bash
 sudo apt update
-sudo apt install sumo sumo-tools
+sudo apt install sumo sumo-tools build-essential
 ```
 
 The current script expects SUMO at:
@@ -67,11 +69,25 @@ cd /home/tonyyaoyao/neural_network_surrogate_for_eco_longitudinal_control
 source .venv/bin/activate
 ```
 
-Run the training scripts yourself before using the simulation. The training
-scripts are under `training_scripts/`; they generate the neural-network
-checkpoints listed below. The simulation does not run training automatically.
+Build the generated C implementation for `PreviewMPC` once after activating
+the environment:
 
-```text
+```bash
+python3 testing_scripts/controllers/c_gen_mpc/preview_mpc.py
+```
+
+This generates and compiles the CasADi solver in
+`testing_scripts/controllers/c_gen_mpc/`. Rebuild it when the Preview MPC
+formulation or CasADi version changes. `PreviewMPC` exits with this build
+command if the shared library is missing; it does not silently use the Python
+solver. The original Python implementation remains available for comparison.
+
+The neural-network controllers need checkpoints produced by the training
+scripts. Run training yourself before using `PredictNN` or `PreviewNN`; the
+simulation does not train models automatically. `PreviewMPC` does not require
+neural-network training.
+
+```bash
 python3 training_scripts/PredictNN/traffic_following_training.py
 python3 training_scripts/PreviewNN/preview_traffic_following_training.py
 ```
@@ -101,7 +117,7 @@ Available controllers:
 
 | Controller | Description |
 | --- | --- |
-| `PreviewMPC` | CasADi online MPC using previewed driving-cycle states for the lead vehicle |
+| `PreviewMPC` | CasADi-generated C MPC using previewed driving-cycle states for the lead vehicle |
 | `PredictMPC` | CasADi online MPC using predicted lead-vehicle states |
 | `ExplicitUnconnected` | Reconstructed explicit MPC with locally estimated constant-acceleration PV preview |
 | `ExplicitConnected` | Reconstructed explicit MPC with communicated/driving-cycle PV preview |
@@ -305,6 +321,7 @@ available.
 ```text
 testing_scripts/run_sim.py           Main simulation entry point
 testing_scripts/controllers/         Controller implementations by type
+testing_scripts/controllers/c_gen_mpc/ Preview MPC C generator and Python adapter
 testing_scripts/_controller.py       Compatibility exports for older imports
 testing_scripts/utils.py             Driving-cycle and simulation utilities
 runtime_analysis.sh                 Batch runtime analysis
